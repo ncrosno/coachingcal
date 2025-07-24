@@ -1,0 +1,52 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Copy files to deployment structure
+        run: |
+          # Landing page at root
+          cp index.html .
+          
+          # BCS calendar in subfolder
+          mkdir -p bcs
+          cp bcs/index.html bcs/
+          cp bcs/crosscountry_distance_program_2025.json bcs/
+          
+          # Pacing tables
+          mkdir -p bcs/pacing-tables
+          cp pacing-tables/*.md bcs/pacing-tables/
+          
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: '.'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v3
