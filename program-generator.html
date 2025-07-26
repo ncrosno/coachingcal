@@ -600,6 +600,45 @@ Include any JV-only or MS-only races and note travel requirements."></textarea>
         // Initialize Stripe
         const stripe = Stripe('pk_live_51MIzUQJL4KlprJHSTlE9ta78jib75wkPXDAUIEzkVNBGlOGQteGWSNmg1ERGR2UxKgTBhSw00GMHnpW2xslmgqSA001E1DKSU7');
         
+        // FormSubmit email function
+        async function submitToFormSubmit(formData) {
+            console.log('Starting FormSubmit submission...', formData);
+            
+            const formSubmitData = new FormData();
+            
+            // Add all form fields to FormData
+            Object.keys(formData).forEach(key => {
+                const value = formData[key] || '';
+                formSubmitData.append(key, value);
+                console.log(`Added field: ${key} = ${value}`);
+            });
+            
+            // Add FormSubmit specific fields
+            formSubmitData.append('_subject', `New Custom Training Program Request - ${formData.school_name}`);
+            formSubmitData.append('_template', 'table'); // Use table format
+            formSubmitData.append('_captcha', 'false'); // Disable captcha for API submissions
+            
+            console.log('Sending FormSubmit request...');
+            
+            try {
+                const response = await fetch('https://formsubmit.co/f58455f082620ff49dc47babfeea2106', {
+                    method: 'POST',
+                    body: formSubmitData,
+                    mode: 'no-cors' // FormSubmit requires no-cors mode
+                });
+                
+                console.log('FormSubmit response received:', response);
+                
+                // Note: With no-cors mode, we can't check response.ok or read the response
+                // FormSubmit will handle the email sending silently
+                return true;
+                
+            } catch (error) {
+                console.error('FormSubmit fetch error:', error);
+                throw error;
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('programForm');
             const submitBtn = document.getElementById('submitBtn');
@@ -661,6 +700,15 @@ Include any JV-only or MS-only races and note travel requirements."></textarea>
                 
                 // Store form data in sessionStorage
                 sessionStorage.setItem('programData', JSON.stringify(formData));
+                
+                // Send form data to FormSubmit for email notification (non-blocking)
+                submitToFormSubmit(formData).catch(emailError => {
+                    console.warn('Email submission failed:', emailError);
+                    // Continue with payment even if email fails
+                });
+                
+                // Small delay to let FormSubmit request start
+                await new Promise(resolve => setTimeout(resolve, 100));
                 
                 try {
                     // Redirect to Stripe Checkout
