@@ -704,11 +704,58 @@
                 
                 <div style="margin-top: 2rem; padding: 1rem; background: #e8f5e8; border-radius: 8px;">
                     <h4 style="color: #2e7d32; margin-bottom: 0.5rem;"><i class="fas fa-check-circle"></i> Your Training Plan is Ready!</h4>
-                    <p style="margin: 0; color: #2e7d32;">This scientifically-designed plan provides optimal progression while minimizing injury risk. Each 4-week block builds systematically toward your peak performance.</p>
+                    <p style="margin: 0 0 1rem 0; color: #2e7d32;">This scientifically-designed plan provides optimal progression while minimizing injury risk. Each 4-week block builds systematically toward your peak performance.</p>
+                    <button onclick="requestCustomProgram()" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-rocket"></i> Request Custom Program with These Targets
+                    </button>
                 </div>
             `;
             
             document.getElementById('results').innerHTML = html;
+        }
+
+        function requestCustomProgram() {
+            // Get current targets
+            const maxMileage = parseFloat(document.getElementById('maxMileage').value);
+            const buildWeeks = parseInt(document.getElementById('buildWeeks').value);
+            const taperWeeks = parseInt(document.getElementById('taperWeeks').value);
+            const supercycleIncrease = parseFloat(document.getElementById('supercycleIncrease').value) / 100;
+            const progressionRate = getProgressionRate(parseFloat(document.getElementById('progressionRate').value));
+            
+            // Generate targets
+            const result = generateBlockTargets(maxMileage, buildWeeks, taperWeeks, supercycleIncrease, progressionRate);
+            const targets = result.targets;
+            
+            // Format targets as text
+            let targetsText = "";
+            targets.forEach((miles, i) => {
+                const weekNum = i + 1;
+                const peakWeek = buildWeeks;
+                
+                let suffix = "";
+                if (weekNum === peakWeek) {
+                    suffix = " (PEAK)";
+                } else if (weekNum > peakWeek) {
+                    suffix = " (taper)";
+                } else {
+                    // Check if this is a recovery week (looking for dips in the pattern)
+                    if (i > 0 && i < targets.length - 1 && targets[i] < targets[i-1] && targets[i] < targets[i+1]) {
+                        suffix = " (recovery)";
+                    }
+                }
+                
+                targetsText += `Week ${weekNum}: ${miles} miles${suffix}\n`;
+            });
+            
+            // Create URL with parameters
+            const params = new URLSearchParams();
+            params.set('weekly_targets', targetsText.trim());
+            params.set('peak_mileage', maxMileage.toString());
+            params.set('total_weeks', (buildWeeks + taperWeeks).toString());
+            params.set('peak_week', buildWeeks.toString());
+            
+            // Redirect to program generator
+            window.location.href = `/program-generator.html?${params.toString()}`;
         }
 
         // Generate initial plan on page load

@@ -28,7 +28,7 @@ Modern cross country training program with automated calendar publishing.
 - **GitHub Pages** hosting with custom domain
 
 ## 🏃‍♂️ Training Philosophy
-Based on Jack Daniels methodology enhanced with 2020-2025 exercise science:
+Based on modern endurance training methodology enhanced with 2020-2025 exercise science:
 - **80/15/5 intensity distribution** (Zone 2/Threshold/VO2max)
 - **HRV monitoring** for optimal adaptation
 - **Polarized training** approach

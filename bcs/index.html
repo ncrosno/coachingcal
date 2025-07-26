@@ -38,6 +38,29 @@
             align-items: center;
         }
         
+        .center-nav {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .request-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+        }
+        
+        .request-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
@@ -706,6 +729,19 @@
                 text-align: center;
             }
             
+            .center-nav {
+                order: 2;
+            }
+            
+            .team-info {
+                order: 3;
+            }
+            
+            .request-btn {
+                font-size: 0.8rem;
+                padding: 0.5rem 1rem;
+            }
+            
             .logo {
                 font-size: 1.4rem;
             }
@@ -929,6 +965,11 @@
             <div class="logo">
                 <a href="/" style="color: inherit; text-decoration: none;">
                     <i class="fas fa-running"></i> CoachingCal
+                </a>
+            </div>
+            <div class="center-nav">
+                <a href="/program-generator.html" class="request-btn">
+                    <i class="fas fa-calendar-plus"></i> Request My Own Custom Training Plan
                 </a>
             </div>
             <div class="team-info">
