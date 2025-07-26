@@ -1,0 +1,465 @@
+{
+  "program_metadata": {
+    "program_name": "BCS Cross Country Training Program v6",
+    "season": "2025",
+    "start_date": "2025-08-04",
+    "total_weeks": 16,
+    "peak_week": 14,
+    "peak_mileage": 55,
+    "vdot": 56.8,
+    "training_paces": {
+      "easy": "7:35-8:45 per mile",
+      "threshold": "6:15-6:25 per mile",
+      "interval": "5:30-5:35 per mile",
+      "repetition": "5:05-5:25 per mile"
+    }
+  },
+  "2025-08-04": {
+    "mileage": 4.0,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-08-05": {
+    "mileage": 5.5,
+    "description": "Tempo Run\\n[LT2] Threshold Training\\n2.5 miles easy + 1.5 miles at threshold pace + 1.5 miles easy\\nPace: 6:15-6:25 per mile for threshold portion\\nEffort: Comfortably hard - can speak 3-4 words at a time"
+  },
+  "2025-08-06": {
+    "mileage": 4.0,
+    "description": "Recovery Run\\n[Z2] Active Recovery\\nPace: 8:00-8:45 per mile (slower than easy pace)\\nEffort: Very easy, promote blood flow and aid recovery"
+  },
+  "2025-08-07": {
+    "mileage": 5.0,
+    "description": "Tire Pulls/Sled Pulls\\n[Strength/Z2] Resistance training\\n1.5 miles easy + 6 x 200m tire/sled pulls (90 sec recovery) + 2.5 miles easy\\nEffort: Maintain steady, strong effort (not pace-dependent)\\nPurpose: Strength endurance, low-impact conditioning"
+  },
+  "2025-08-08": {
+    "mileage": 4.0,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-08-09": {
+    "mileage": 9.5,
+    "description": "Long Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace throughout\\nBuild aerobic capacity and endurance"
+  },
+  "2025-08-10": {
+    "mileage": 0.0,
+    "description": "Rest Day\\nComplete rest for recovery and adaptation"
+  },
+  "2025-08-11": {
+    "mileage": 4.5,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-08-12": {
+    "mileage": 5.5,
+    "description": "Cruise Intervals\\n[LT2] Lactate Threshold\\n1.5 miles easy + 4 x 4 minutes at threshold pace (90 sec recovery) + 1 mile easy\\nPace: 6:15-6:25 per mile for intervals\\nEffort: Same as tempo run with brief recoveries"
+  },
+  "2025-08-13": {
+    "mileage": 4.0,
+    "description": "Recovery Run\\n[Z2] Active Recovery\\nPace: 8:00-8:45 per mile (slower than easy pace)\\nEffort: Very easy, promote blood flow and aid recovery"
+  },
+  "2025-08-14": {
+    "mileage": 6.0,
+    "description": "School starts - afternoon practices start\\nShort Intervals\\n[NP] Neuromuscular Power\\n1.5 miles easy + 6 x 400m at repetition pace (2 min recovery) + 1.5 miles easy\\nPace: 5:05-5:25 per mile for 400m repeats\\nEffort: Faster than 5K pace - 5-15 seconds per 400m faster"
+  },
+  "2025-08-15": {
+    "mileage": 4.5,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-08-16": {
+    "mileage": 9.5,
+    "description": "Long Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace throughout\\nBuild aerobic capacity and endurance"
+  },
+  "2025-08-17": {
+    "mileage": 0.0,
+    "description": "Rest Day\\nComplete rest for recovery and adaptation"
+  },
+  "2025-08-18": {
+    "mileage": 5.0,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-08-19": {
+    "mileage": 5.5,
+    "description": "Tempo Run\\n[LT2] Threshold Training\\n2 miles easy + 2 miles at threshold pace + 1.5 miles easy\\nPace: 6:15-6:25 per mile for threshold portion\\nEffort: Comfortably hard - can speak 3-4 words at a time"
+  },
+  "2025-08-20": {
+    "mileage": 4.5,
+    "description": "Recovery Run\\n[Z2] Active Recovery\\nPace: 8:00-8:45 per mile (slower than easy pace)\\nEffort: Very easy, promote blood flow and aid recovery"
+  },
+  "2025-08-21": {
+    "mileage": 6.0,
+    "description": "VO2max Intervals\\n[AP] Aerobic Power Development\\n2 miles easy + 4 x 3 minutes at interval pace (2 min recovery) + 1 mile easy\\nPace: 5:30-5:35 per mile for intervals\\nEffort: Current 5K race pace - hard but sustainable"
+  },
+  "2025-08-22": {
+    "mileage": 4.5,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-08-23": {
+    "mileage": 10.5,
+    "description": "MS + HS @ Pleasant Grove - Eagle Run\\nRace Day\\n[RACE] Race Simulation\\n1.5 miles warmup + 3.1 mile race + 1.5 miles cooldown\\nPace: 5:30-5:35 per mile for race portion\\nEffort: Race effort for 5K distance"
+  },
+  "2025-08-24": {
+    "mileage": 0.0,
+    "description": "Rest Day\\nComplete rest for recovery and adaptation after race"
+  },
+  "2025-08-25": {
+    "mileage": 6.0,
+    "description": "Tempo Run\\n[LT2] Threshold Training\\n2 miles easy + 2.5 miles at threshold pace + 1.5 miles easy\\nPace: 6:15-6:25 per mile for threshold portion\\nEffort: Comfortably hard - can speak 3-4 words at a time"
+  },
+  "2025-08-26": {
+    "mileage": 4.5,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-08-27": {
+    "mileage": 6.5,
+    "description": "VO2max Intervals\\n[AP] Aerobic Power Development\\n2 miles easy + 5 x 3 minutes at interval pace (2 min recovery) + 1.5 miles easy\\nPace: 5:30-5:35 per mile for intervals\\nEffort: Current 5K race pace - hard but sustainable"
+  },
+  "2025-08-28": {
+    "mileage": 4.0,
+    "description": "Recovery Run\\n[Z2] Active Recovery\\nPace: 8:00-8:45 per mile (slower than easy pace)\\nEffort: Very easy, promote blood flow and aid recovery"
+  },
+  "2025-08-29": {
+    "mileage": 5.5,
+    "description": "Fartlek Run\\n[Mixed] Aerobic Power + Threshold\\n1.5 miles easy + 3 miles fartlek (30 sec hard / 90 sec easy x 12) + 1 mile easy\\nPace: Hard efforts at 5:30-5:35 per mile, easy at 7:35-8:45\\nEffort: Playful speed work with varying intensities"
+  },
+  "2025-08-30": {
+    "mileage": 12.5,
+    "description": "Long Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace throughout\\nBuild aerobic capacity and endurance"
+  },
+  "2025-08-31": {
+    "mileage": 0.0,
+    "description": "Rest Day\\nComplete rest for recovery and adaptation"
+  },
+  "2025-09-01": {
+    "mileage": 6.5,
+    "description": "Cruise Intervals\\n[LT2] Lactate Threshold\\n2 miles easy + 6 x 4 minutes at threshold pace (90 sec recovery) + 1.5 miles easy\\nPace: 6:15-6:25 per mile for intervals\\nEffort: Same as tempo run with brief recoveries"
+  },
+  "2025-09-02": {
+    "mileage": 5.0,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-09-03": {
+    "mileage": 7.0,
+    "description": "Short Intervals\\n[NP] Neuromuscular Power\\n2 miles easy + 10 x 400m at repetition pace (2 min recovery) + 2 miles easy\\nPace: 5:05-5:25 per mile for 400m repeats\\nEffort: Faster than 5K pace - 5-15 seconds per 400m faster"
+  },
+  "2025-09-04": {
+    "mileage": 4.5,
+    "description": "Recovery Run\\n[Z2] Active Recovery\\nPace: 8:00-8:45 per mile (slower than easy pace)\\nEffort: Very easy, promote blood flow and aid recovery"
+  },
+  "2025-09-05": {
+    "mileage": 6.0,
+    "description": "MS @ ARC - American River Open (MS only)\\nTempo Run\\n[LT2] Threshold Training\\n2 miles easy + 3 miles at threshold pace + 1 mile easy\\nPace: 6:15-6:25 per mile for threshold portion\\nEffort: Comfortably hard - can speak 3-4 words at a time"
+  },
+  "2025-09-06": {
+    "mileage": 13.0,
+    "description": "Long Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace throughout\\nBuild aerobic capacity and endurance"
+  },
+  "2025-09-07": {
+    "mileage": 0.0,
+    "description": "Rest Day\\nComplete rest for recovery and adaptation"
+  },
+  "2025-09-08": {
+    "mileage": 7.0,
+    "description": "Tempo Run\\n[LT2] Threshold Training\\n2 miles easy + 3.5 miles at threshold pace + 1.5 miles easy\\nPace: 6:15-6:25 per mile for threshold portion\\nEffort: Comfortably hard - can speak 3-4 words at a time"
+  },
+  "2025-09-09": {
+    "mileage": 5.5,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-09-10": {
+    "mileage": 7.5,
+    "description": "VO2max Intervals\\n[AP] Aerobic Power Development\\n2.5 miles easy + 6 x 3 minutes at interval pace (2 min recovery) + 1.5 miles easy\\nPace: 5:30-5:35 per mile for intervals\\nEffort: Current 5K race pace - hard but sustainable"
+  },
+  "2025-09-11": {
+    "mileage": 4.5,
+    "description": "Recovery Run\\n[Z2] Active Recovery\\nPace: 8:00-8:45 per mile (slower than easy pace)\\nEffort: Very easy, promote blood flow and aid recovery"
+  },
+  "2025-09-12": {
+    "mileage": 6.0,
+    "description": "Tire Pulls/Sled Pulls\\n[Strength/Z2] Resistance training\\n2 miles easy + 8 x 200m tire/sled pulls (90 sec recovery) + 2.5 miles easy\\nEffort: Maintain steady, strong effort (not pace-dependent)\\nPurpose: Strength endurance, low-impact conditioning"
+  },
+  "2025-09-13": {
+    "mileage": 15.0,
+    "description": "Long Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace throughout\\nBuild aerobic capacity and endurance"
+  },
+  "2025-09-14": {
+    "mileage": 0.0,
+    "description": "Rest Day\\nComplete rest for recovery and adaptation"
+  },
+  "2025-09-15": {
+    "mileage": 5.5,
+    "description": "Easy Tempo\\n[LT2] Light Threshold Training\\n2 miles easy + 2 miles at threshold pace + 1.5 miles easy\\nPace: 6:15-6:25 per mile for threshold portion\\nEffort: Comfortably hard - recovery week, moderate effort"
+  },
+  "2025-09-16": {
+    "mileage": 4.5,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-09-17": {
+    "mileage": 5.0,
+    "description": "Light Intervals\\n[AP] Aerobic Power Development\\n1.5 miles easy + 4 x 2 minutes at interval pace (90 sec recovery) + 1.5 miles easy\\nPace: 5:30-5:35 per mile for intervals\\nEffort: Current 5K race pace - recovery week intensity"
+  },
+  "2025-09-18": {
+    "mileage": 4.0,
+    "description": "Recovery Run\\n[Z2] Active Recovery\\nPace: 8:00-8:45 per mile (slower than easy pace)\\nEffort: Very easy, promote blood flow and aid recovery"
+  },
+  "2025-09-19": {
+    "mileage": 5.0,
+    "description": "Fartlek Run\\n[Mixed] Aerobic Power + Threshold\\n1.5 miles easy + 2.5 miles fartlek (20 sec hard / 2 min easy x 8) + 1 mile easy\\nPace: Hard efforts at 5:30-5:35 per mile, easy at 7:35-8:45\\nEffort: Recovery week - playful, not aggressive"
+  },
+  "2025-09-20": {
+    "mileage": 15.5,
+    "description": "Long Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace throughout\\nBuild aerobic capacity and endurance"
+  },
+  "2025-09-21": {
+    "mileage": 0.0,
+    "description": "Rest Day\\nComplete rest for recovery and adaptation"
+  },
+  "2025-09-22": {
+    "mileage": 6.5,
+    "description": "Tempo Run\\n[LT2] Threshold Training\\n2 miles easy + 3 miles at threshold pace + 1.5 miles easy\\nPace: 6:15-6:25 per mile for threshold portion\\nEffort: Comfortably hard - can speak 3-4 words at a time"
+  },
+  "2025-09-23": {
+    "mileage": 5.0,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-09-24": {
+    "mileage": 7.0,
+    "description": "HS @ Folsom Lake College - SVC #1\\nRace Day\\n[RACE] Race Simulation\\n2 miles warmup + 3.1 mile race + 2 miles cooldown\\nPace: 5:30-5:35 per mile for race portion\\nEffort: Race effort for 5K distance"
+  },
+  "2025-09-25": {
+    "mileage": 4.0,
+    "description": "Recovery Run\\n[Z2] Active Recovery\\nPace: 8:00-8:45 per mile (slower than easy pace)\\nEffort: Very easy, promote blood flow and aid recovery after race"
+  },
+  "2025-09-26": {
+    "mileage": 5.5,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-09-27": {
+    "mileage": 15.0,
+    "description": "Long Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace throughout\\nBuild aerobic capacity and endurance"
+  },
+  "2025-09-28": {
+    "mileage": 0.0,
+    "description": "Rest Day\\nComplete rest for recovery and adaptation"
+  },
+  "2025-09-29": {
+    "mileage": 7.5,
+    "description": "Cruise Intervals\\n[LT2] Lactate Threshold\\n2 miles easy + 5 x 4 minutes at threshold pace (90 sec recovery) + 1 mile easy\\nPace: 6:15-6:25 per mile for intervals\\nEffort: Same as tempo run with brief recoveries"
+  },
+  "2025-09-30": {
+    "mileage": 7.0,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-10-01": {
+    "mileage": 8.0,
+    "description": "VO2max Intervals\\n[AP] Aerobic Power Development\\n2 miles easy + 5 x 3 minutes at interval pace (2 min recovery) + 1.5 miles easy\\nPace: 5:30-5:35 per mile for intervals\\nEffort: Current 5K race pace - hard but sustainable"
+  },
+  "2025-10-02": {
+    "mileage": 6.0,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - pre-race preparation"
+  },
+  "2025-10-03": {
+    "mileage": 5.0,
+    "description": "MS @ ARC - PR Palooza (MS only)\\nRecovery Run\\n[Z2] Active Recovery\\nPace: 8:00-8:45 per mile (slower than easy pace)\\nEffort: Very easy, prepare for race tomorrow"
+  },
+  "2025-10-04": {
+    "mileage": 7.0,
+    "description": "HS @ Folsome HS, Tom Laythe Invitational\\nRace Day\\n[RACE] Race Simulation\\n2 miles warmup + 3.1 mile race + 2 miles cooldown\\nPace: 5:30-5:35 per mile for race portion\\nEffort: Race effort for 5K distance"
+  },
+  "2025-10-05": {
+    "mileage": 6.0,
+    "description": "Easy Run\\n[Z2] Active Recovery\\nPace: 8:00-8:45 per mile (slower than easy pace)\\nEffort: Very easy post-race recovery run"
+  },
+  "2025-10-06": {
+    "mileage": 8.0,
+    "description": "Tempo Run\\n[LT2] Threshold Training\\n2.5 miles easy + 4 miles at threshold pace + 1.5 miles easy\\nPace: 6:15-6:25 per mile for threshold portion\\nEffort: Comfortably hard - can speak 3-4 words at a time"
+  },
+  "2025-10-07": {
+    "mileage": 6.5,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - pre-race preparation"
+  },
+  "2025-10-08": {
+    "mileage": 7.5,
+    "description": "HS @ Rosemont - SVC #2\\nRace Day\\n[RACE] Race Simulation\\n2.5 miles warmup + 3.1 mile race + 2 miles cooldown\\nPace: 5:30-5:35 per mile for race portion\\nEffort: Race effort for 5K distance"
+  },
+  "2025-10-09": {
+    "mileage": 5.0,
+    "description": "Recovery Run\\n[Z2] Active Recovery\\nPace: 8:00-8:45 per mile (slower than easy pace)\\nEffort: Very easy, promote blood flow and aid recovery after race"
+  },
+  "2025-10-10": {
+    "mileage": 6.5,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-10-11": {
+    "mileage": 16.5,
+    "description": "MS @ BC - 2nd Annual Speed Trail Invitational (MS only)\\nLong Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace throughout\\nBuild aerobic capacity and endurance"
+  },
+  "2025-10-12": {
+    "mileage": 0.0,
+    "description": "Rest Day\\nComplete rest for recovery and adaptation"
+  },
+  "2025-10-13": {
+    "mileage": 6.0,
+    "description": "Easy Tempo\\n[LT2] Light Threshold Training\\n2 miles easy + 2.5 miles at threshold pace + 1.5 miles easy\\nPace: 6:15-6:25 per mile for threshold portion\\nEffort: Comfortably hard - recovery week, moderate effort"
+  },
+  "2025-10-14": {
+    "mileage": 5.5,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-10-15": {
+    "mileage": 5.5,
+    "description": "Light Intervals\\n[AP] Aerobic Power Development\\n1.5 miles easy + 5 x 2 minutes at interval pace (90 sec recovery) + 1.5 miles easy\\nPace: 5:30-5:35 per mile for intervals\\nEffort: Current 5K race pace - recovery week intensity"
+  },
+  "2025-10-16": {
+    "mileage": 4.5,
+    "description": "Recovery Run\\n[Z2] Active Recovery\\nPace: 8:00-8:45 per mile (slower than easy pace)\\nEffort: Very easy, promote blood flow and aid recovery"
+  },
+  "2025-10-17": {
+    "mileage": 5.5,
+    "description": "Fartlek Run\\n[Mixed] Aerobic Power + Threshold\\n1.5 miles easy + 3 miles fartlek (20 sec hard / 2 min easy x 10) + 1 mile easy\\nPace: Hard efforts at 5:30-5:35 per mile, easy at 7:35-8:45\\nEffort: Recovery week - playful, not aggressive"
+  },
+  "2025-10-18": {
+    "mileage": 16.5,
+    "description": "Long Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace throughout\\nBuild aerobic capacity and endurance"
+  },
+  "2025-10-19": {
+    "mileage": 0.0,
+    "description": "Rest Day\\nComplete rest for recovery and adaptation"
+  },
+  "2025-10-20": {
+    "mileage": 7.5,
+    "description": "Tempo Run\\n[LT2] Threshold Training\\n2.5 miles easy + 3.5 miles at threshold pace + 1.5 miles easy\\nPace: 6:15-6:25 per mile for threshold portion\\nEffort: Comfortably hard - can speak 3-4 words at a time"
+  },
+  "2025-10-21": {
+    "mileage": 6.0,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-10-22": {
+    "mileage": 8.0,
+    "description": "VO2max Intervals\\n[AP] Aerobic Power Development\\n2.5 miles easy + 6 x 3 minutes at interval pace (2 min recovery) + 2 miles easy\\nPace: 5:30-5:35 per mile for intervals\\nEffort: Current 5K race pace - hard but sustainable"
+  },
+  "2025-10-23": {
+    "mileage": 5.0,
+    "description": "Recovery Run\\n[Z2] Active Recovery\\nPace: 8:00-8:45 per mile (slower than easy pace)\\nEffort: Very easy, promote blood flow and aid recovery"
+  },
+  "2025-10-24": {
+    "mileage": 4.0,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - pre-race preparation"
+  },
+  "2025-10-25": {
+    "mileage": 7.5,
+    "description": "MS + HS - Flat Sac Invitational\\nRace Day\\n[RACE] Race Simulation\\n2.5 miles warmup + 3.1 mile race + 2 miles cooldown\\nPace: 5:30-5:35 per mile for race portion\\nEffort: Race effort for 5K distance"
+  },
+  "2025-10-26": {
+    "mileage": 9.0,
+    "description": "Long Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace throughout\\nPost-race recovery long run"
+  },
+  "2025-10-27": {
+    "mileage": 8.5,
+    "description": "Cruise Intervals\\n[LT2] Lactate Threshold\\n3 miles easy + 6 x 4 minutes at threshold pace (90 sec recovery) + 2 miles easy\\nPace: 6:15-6:25 per mile for intervals\\nEffort: Same as tempo run with brief recoveries"
+  },
+  "2025-10-28": {
+    "mileage": 6.5,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - pre-race preparation"
+  },
+  "2025-10-29": {
+    "mileage": 7.5,
+    "description": "HS @ Folsom Lake College - SVC Championships\\nRace Day\\n[RACE] Championship Race\\n2.5 miles warmup + 3.1 mile race + 2 miles cooldown\\nPace: 5:30-5:35 per mile for race portion\\nEffort: Championship race effort - competition phase"
+  },
+  "2025-10-30": {
+    "mileage": 5.0,
+    "description": "Recovery Run\\n[Z2] Active Recovery\\nPace: 8:00-8:45 per mile (slower than easy pace)\\nEffort: Very easy, promote blood flow and aid recovery after championship race"
+  },
+  "2025-10-31": {
+    "mileage": 7.0,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-11-01": {
+    "mileage": 17.0,
+    "description": "Long Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace throughout\\nBuild aerobic capacity and endurance"
+  },
+  "2025-11-02": {
+    "mileage": 0.0,
+    "description": "Rest Day\\nComplete rest for recovery and adaptation"
+  },
+  "2025-11-03": {
+    "mileage": 9.0,
+    "description": "Tempo Run - PEAK WEEK\\n[LT2] Threshold Training\\n3 miles easy + 4 miles at threshold pace + 2 miles easy\\nPace: 6:15-6:25 per mile for threshold portion\\nEffort: Comfortably hard - peak week intensity"
+  },
+  "2025-11-04": {
+    "mileage": 7.0,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-11-05": {
+    "mileage": 9.5,
+    "description": "VO2max Intervals - PEAK WEEK\\n[AP] Aerobic Power Development\\n3 miles easy + 7 x 3 minutes at interval pace (2 min recovery) + 2.5 miles easy\\nPace: 5:30-5:35 per mile for intervals\\nEffort: Current 5K race pace - peak week volume"
+  },
+  "2025-11-06": {
+    "mileage": 5.5,
+    "description": "Recovery Run\\n[Z2] Active Recovery\\nPace: 8:00-8:45 per mile (slower than easy pace)\\nEffort: Very easy, promote blood flow and aid recovery"
+  },
+  "2025-11-07": {
+    "mileage": 5.0,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - pre-race preparation"
+  },
+  "2025-11-08": {
+    "mileage": 7.5,
+    "description": "HS @ Angels Camp - Sub Sections\\nRace Day\\n[RACE] Sub-Sectional Championship\\n2.5 miles warmup + 3.1 mile race + 2 miles cooldown\\nPace: 5:30-5:35 per mile for race portion\\nEffort: Championship race effort - key race"
+  },
+  "2025-11-09": {
+    "mileage": 11.5,
+    "description": "Long Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace throughout\\nPost-championship recovery long run"
+  },
+  "2025-11-10": {
+    "mileage": 6.0,
+    "description": "Easy Run - TAPER WEEK\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - taper week begins"
+  },
+  "2025-11-11": {
+    "mileage": 5.5,
+    "description": "Light Tempo - TAPER\\n[LT2] Light Threshold Training\\n2 miles easy + 2 miles at threshold pace + 1.5 miles easy\\nPace: 6:15-6:25 per mile for threshold portion\\nEffort: Moderate - taper week intensity"
+  },
+  "2025-11-12": {
+    "mileage": 4.5,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-11-13": {
+    "mileage": 5.0,
+    "description": "Light Intervals - TAPER\\n[AP] Light Aerobic Power\\n1.5 miles easy + 4 x 2 minutes at interval pace (90 sec recovery) + 1.5 miles easy\\nPace: 5:30-5:35 per mile for intervals\\nEffort: Controlled - taper week"
+  },
+  "2025-11-14": {
+    "mileage": 3.5,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - pre-race preparation"
+  },
+  "2025-11-15": {
+    "mileage": 7.0,
+    "description": "HS @ Folsom HS - Section Championships\\nRace Day\\n[RACE] Sectional Championship\\n2 miles warmup + 3.1 mile race + 2 miles cooldown\\nPace: 5:30-5:35 per mile for race portion\\nEffort: Sectional championship race effort"
+  },
+  "2025-11-16": {
+    "mileage": 6.4,
+    "description": "Recovery Run\\n[Z2] Active Recovery\\nPace: 8:00-8:45 per mile (slower than easy pace)\\nEffort: Very easy, promote recovery after sectional championship"
+  },
+  "2025-11-17": {
+    "mileage": 4.5,
+    "description": "Easy Run - FINAL TAPER\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - final taper week"
+  },
+  "2025-11-18": {
+    "mileage": 4.0,
+    "description": "Light Tempo - FINAL TAPER\\n[LT2] Light Threshold Training\\n1.5 miles easy + 1.5 miles at threshold pace + 1 mile easy\\nPace: 6:15-6:25 per mile for threshold portion\\nEffort: Light - final taper intensity"
+  },
+  "2025-11-19": {
+    "mileage": 3.5,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - can speak in full sentences"
+  },
+  "2025-11-20": {
+    "mileage": 4.0,
+    "description": "Light Strides\\n[NP] Neuromuscular Activation\\n2.5 miles easy + 6 x 100m strides (full recovery) + 1 mile easy\\nPace: Gradual acceleration to 5:05-5:25 per mile for strides\\nEffort: Controlled acceleration - final tune-up"
+  },
+  "2025-11-21": {
+    "mileage": 3.0,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace - pre-state preparation"
+  },
+  "2025-11-22": {
+    "mileage": 6.1,
+    "description": "Easy Run\\n[Z2] Aerobic Base Building\\nPace: 7:35-8:45 per mile\\nEffort: Conversational pace throughout\\nMaintain fitness while tapering"
+  },
+  "2025-11-23": {
+    "mileage": 3.0,
+    "description": "Rest/Easy\\n[Z2] Light Recovery\\nPace: 8:00-8:45 per mile\\nEffort: Very easy - final preparation for state championships"
+  }
+}
