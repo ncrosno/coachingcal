@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross Country Pacing Tables - CoachingCal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s;
+        }
+        
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .navigation {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .nav-link {
+            color: #667eea;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            background: rgba(102, 126, 234, 0.1);
+        }
+        
+        .table-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+        
+        .table-section h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        .table-section .subtitle {
+            color: #666;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .instructions {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #667eea;
+        }
+        
+        .instructions li {
+            margin-bottom: 0.3rem;
+        }
+        
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .pacing-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        
+        .pacing-table th {
+            background: #667eea;
+            color: white;
+            padding: 1rem 0.8rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .pacing-table td {
+            padding: 0.8rem;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+        
+        .pacing-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .pacing-table tr:hover {
+            background: #e3f2fd;
+        }
+        
+        /* Zone-specific colors */
+        #zone2 .pacing-table th { background: #4caf50; }
+        #lt1 .pacing-table th { background: #2196f3; }
+        #lt2 .pacing-table th { background: #ff9800; }
+        #vo2max .pacing-table th { background: #f44336; }
+        #race .pacing-table th { background: #9c27b0; }
+        #intervals .pacing-table th { background: #607d8b; }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .table-section {
+                padding: 1rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .pacing-table {
+                font-size: 0.8rem;
+            }
+            
+            .pacing-table th,
+            .pacing-table td {
+                padding: 0.6rem 0.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Calendar
+        </a>
+        
+        <div class="header">
+            <h1><i class="fas fa-tachometer-alt"></i> Cross Country Pacing Tables</h1>
+            <p class="subtitle">Find your current 1600m PR and use the corresponding training paces</p>
+        </div>
+        
+        <div class="navigation">
+            <div class="nav-links">
+                <a href="#zone2" class="nav-link">Zone 2 (Easy)</a>
+                <a href="#lt1" class="nav-link">LT1 (Moderate)</a>
+                <a href="#lt2" class="nav-link">LT2 (Threshold)</a>
+                <a href="#vo2max" class="nav-link">VO2max</a>
+                <a href="#race" class="nav-link">Race Pace</a>
+                <a href="#intervals" class="nav-link">Interval Splits</a>
+            </div>
+        </div>
+
+<div class="table-section" id="zone2">
+    <h2>Zone 2 Training Paces</h2>
+    <p class='subtitle'><em>*Instructions:*</em></p>
+
+    
+    <div class="table-wrapper">
+        <table class="pacing-table">
+            <thead>
+                <tr>
+                    <th>1600m PR</th>
+                    <th>Zone 2 Pace</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4:45</td>
+                    <td>6:32</td>
+                </tr>
+                <tr>
+                    <td>5:00</td>
+                    <td>6:53</td>
+                </tr>
+                <tr>
+                    <td>5:15</td>
+                    <td>7:13</td>
+                </tr>
+                <tr>
+                    <td>5:30</td>
+                    <td>7:33</td>
+                </tr>
+                <tr>
+                    <td>5:45</td>
+                    <td>7:53</td>
+                </tr>
+                <tr>
+                    <td>6:00</td>
+                    <td>8:14</td>
+                </tr>
+                <tr>
+                    <td>6:15</td>
+                    <td>8:34</td>
+                </tr>
+                <tr>
+                    <td>6:30</td>
+                    <td>8:54</td>
+                </tr>
+                <tr>
+                    <td>6:45</td>
+                    <td>9:14</td>
+                </tr>
+                <tr>
+                    <td>7:00</td>
+                    <td>9:35</td>
+                </tr>
+                <tr>
+                    <td>7:15</td>
+                    <td>9:55</td>
+                </tr>
+                <tr>
+                    <td>7:30</td>
+                    <td>10:15</td>
+                </tr>
+                <tr>
+                    <td>7:45</td>
+                    <td>10:35</td>
+                </tr>
+                <tr>
+                    <td>8:00</td>
+                    <td>10:56</td>
+                </tr>
+                <tr>
+                    <td>8:15</td>
+                    <td>11:16</td>
+                </tr>
+                <tr>
+                    <td>8:30</td>
+                    <td>11:36</td>
+                </tr>
+                <tr>
+                    <td>8:45</td>
+                    <td>11:56</td>
+                </tr>
+                <tr>
+                    <td>9:00</td>
+                    <td>12:17</td>
+                </tr>
+                <tr>
+                    <td>9:15</td>
+                    <td>12:37</td>
+                </tr>
+                <tr>
+                    <td>9:30</td>
+                    <td>12:57</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="table-section" id="lt1">
+    <h2>LT1 (Aerobic Threshold) Paces</h2>
+    <p class='subtitle'><em>*Instructions:*</em></p>
+
+    
+    <div class="table-wrapper">
+        <table class="pacing-table">
+            <thead>
+                <tr>
+                    <th>1600m PR</th>
+                    <th>LT1 Pace</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4:45</td>
+                    <td>5:43</td>
+                </tr>
+                <tr>
+                    <td>5:00</td>
+                    <td>6:01</td>
+                </tr>
+                <tr>
+                    <td>5:15</td>
+                    <td>6:18</td>
+                </tr>
+                <tr>
+                    <td>5:30</td>
+                    <td>6:36</td>
+                </tr>
+                <tr>
+                    <td>5:45</td>
+                    <td>6:54</td>
+                </tr>
+                <tr>
+                    <td>6:00</td>
+                    <td>7:11</td>
+                </tr>
+                <tr>
+                    <td>6:15</td>
+                    <td>7:29</td>
+                </tr>
+                <tr>
+                    <td>6:30</td>
+                    <td>7:47</td>
+                </tr>
+                <tr>
+                    <td>6:45</td>
+                    <td>8:04</td>
+                </tr>
+                <tr>
+                    <td>7:00</td>
+                    <td>8:22</td>
+                </tr>
+                <tr>
+                    <td>7:15</td>
+                    <td>8:40</td>
+                </tr>
+                <tr>
+                    <td>7:30</td>
+                    <td>8:58</td>
+                </tr>
+                <tr>
+                    <td>7:45</td>
+                    <td>9:15</td>
+                </tr>
+                <tr>
+                    <td>8:00</td>
+                    <td>9:33</td>
+                </tr>
+                <tr>
+                    <td>8:15</td>
+                    <td>9:51</td>
+                </tr>
+                <tr>
+                    <td>8:30</td>
+                    <td>10:08</td>
+                </tr>
+                <tr>
+                    <td>8:45</td>
+                    <td>10:26</td>
+                </tr>
+                <tr>
+                    <td>9:00</td>
+                    <td>10:44</td>
+                </tr>
+                <tr>
+                    <td>9:15</td>
+                    <td>11:01</td>
+                </tr>
+                <tr>
+                    <td>9:30</td>
+                    <td>11:19</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="table-section" id="lt2">
+    <h2>LT2 (Lactate Threshold) Paces</h2>
+    <p class='subtitle'><em>*Instructions:*</em></p>
+
+    
+    <div class="table-wrapper">
+        <table class="pacing-table">
+            <thead>
+                <tr>
+                    <th>1600m PR</th>
+                    <th>LT2 Pace</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4:45</td>
+                    <td>5:14</td>
+                </tr>
+                <tr>
+                    <td>5:00</td>
+                    <td>5:30</td>
+                </tr>
+                <tr>
+                    <td>5:15</td>
+                    <td>5:46</td>
+                </tr>
+                <tr>
+                    <td>5:30</td>
+                    <td>6:02</td>
+                </tr>
+                <tr>
+                    <td>5:45</td>
+                    <td>6:19</td>
+                </tr>
+                <tr>
+                    <td>6:00</td>
+                    <td>6:35</td>
+                </tr>
+                <tr>
+                    <td>6:15</td>
+                    <td>6:51</td>
+                </tr>
+                <tr>
+                    <td>6:30</td>
+                    <td>7:07</td>
+                </tr>
+                <tr>
+                    <td>6:45</td>
+                    <td>7:23</td>
+                </tr>
+                <tr>
+                    <td>7:00</td>
+                    <td>7:40</td>
+                </tr>
+                <tr>
+                    <td>7:15</td>
+                    <td>7:56</td>
+                </tr>
+                <tr>
+                    <td>7:30</td>
+                    <td>8:12</td>
+                </tr>
+                <tr>
+                    <td>7:45</td>
+                    <td>8:28</td>
+                </tr>
+                <tr>
+                    <td>8:00</td>
+                    <td>8:44</td>
+                </tr>
+                <tr>
+                    <td>8:15</td>
+                    <td>9:01</td>
+                </tr>
+                <tr>
+                    <td>8:30</td>
+                    <td>9:17</td>
+                </tr>
+                <tr>
+                    <td>8:45</td>
+                    <td>9:33</td>
+                </tr>
+                <tr>
+                    <td>9:00</td>
+                    <td>9:49</td>
+                </tr>
+                <tr>
+                    <td>9:15</td>
+                    <td>10:05</td>
+                </tr>
+                <tr>
+                    <td>9:30</td>
+                    <td>10:22</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="table-section" id="vo2max">
+    <h2>VO2max Interval Paces</h2>
+    <p class='subtitle'><em>*Instructions:*</em></p>
+
+    
+    <div class="table-wrapper">
+        <table class="pacing-table">
+            <thead>
+                <tr>
+                    <th>1600m PR</th>
+                    <th>VO2max Pace</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4:45</td>
+                    <td>4:48</td>
+                </tr>
+                <tr>
+                    <td>5:00</td>
+                    <td>5:03</td>
+                </tr>
+                <tr>
+                    <td>5:15</td>
+                    <td>5:18</td>
+                </tr>
+                <tr>
+                    <td>5:30</td>
+                    <td>5:33</td>
+                </tr>
+                <tr>
+                    <td>5:45</td>
+                    <td>5:48</td>
+                </tr>
+                <tr>
+                    <td>6:00</td>
+                    <td>6:03</td>
+                </tr>
+                <tr>
+                    <td>6:15</td>
+                    <td>6:18</td>
+                </tr>
+                <tr>
+                    <td>6:30</td>
+                    <td>6:33</td>
+                </tr>
+                <tr>
+                    <td>6:45</td>
+                    <td>6:48</td>
+                </tr>
+                <tr>
+                    <td>7:00</td>
+                    <td>7:03</td>
+                </tr>
+                <tr>
+                    <td>7:15</td>
+                    <td>7:18</td>
+                </tr>
+                <tr>
+                    <td>7:30</td>
+                    <td>7:33</td>
+                </tr>
+                <tr>
+                    <td>7:45</td>
+                    <td>7:48</td>
+                </tr>
+                <tr>
+                    <td>8:00</td>
+                    <td>8:03</td>
+                </tr>
+                <tr>
+                    <td>8:15</td>
+                    <td>8:18</td>
+                </tr>
+                <tr>
+                    <td>8:30</td>
+                    <td>8:33</td>
+                </tr>
+                <tr>
+                    <td>8:45</td>
+                    <td>8:48</td>
+                </tr>
+                <tr>
+                    <td>9:00</td>
+                    <td>9:03</td>
+                </tr>
+                <tr>
+                    <td>9:15</td>
+                    <td>9:18</td>
+                </tr>
+                <tr>
+                    <td>9:30</td>
+                    <td>9:33</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="table-section" id="race">
+    <h2>5K Race Pace Table</h2>
+    <p class='subtitle'><em>*Instructions:*</em></p>
+
+    
+    <div class="table-wrapper">
+        <table class="pacing-table">
+            <thead>
+                <tr>
+                    <th>1600m PR</th>
+                    <th>5K Race Pace</th>
+                    <th>Projected 5K Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4:45</td>
+                    <td>4:51</td>
+                    <td>15:02</td>
+                </tr>
+                <tr>
+                    <td>5:00</td>
+                    <td>5:06</td>
+                    <td>15:48</td>
+                </tr>
+                <tr>
+                    <td>5:15</td>
+                    <td>5:21</td>
+                    <td>16:35</td>
+                </tr>
+                <tr>
+                    <td>5:30</td>
+                    <td>5:36</td>
+                    <td>17:21</td>
+                </tr>
+                <tr>
+                    <td>5:45</td>
+                    <td>5:51</td>
+                    <td>18:08</td>
+                </tr>
+                <tr>
+                    <td>6:00</td>
+                    <td>6:06</td>
+                    <td>18:54</td>
+                </tr>
+                <tr>
+                    <td>6:15</td>
+                    <td>6:21</td>
+                    <td>19:41</td>
+                </tr>
+                <tr>
+                    <td>6:30</td>
+                    <td>6:36</td>
+                    <td>20:27</td>
+                </tr>
+                <tr>
+                    <td>6:45</td>
+                    <td>6:51</td>
+                    <td>21:14</td>
+                </tr>
+                <tr>
+                    <td>7:00</td>
+                    <td>7:06</td>
+                    <td>22:00</td>
+                </tr>
+                <tr>
+                    <td>7:15</td>
+                    <td>7:21</td>
+                    <td>22:47</td>
+                </tr>
+                <tr>
+                    <td>7:30</td>
+                    <td>7:36</td>
+                    <td>23:33</td>
+                </tr>
+                <tr>
+                    <td>7:45</td>
+                    <td>7:51</td>
+                    <td>24:20</td>
+                </tr>
+                <tr>
+                    <td>8:00</td>
+                    <td>8:06</td>
+                    <td>25:06</td>
+                </tr>
+                <tr>
+                    <td>8:15</td>
+                    <td>8:21</td>
+                    <td>25:53</td>
+                </tr>
+                <tr>
+                    <td>8:30</td>
+                    <td>8:36</td>
+                    <td>26:39</td>
+                </tr>
+                <tr>
+                    <td>8:45</td>
+                    <td>8:51</td>
+                    <td>27:26</td>
+                </tr>
+                <tr>
+                    <td>9:00</td>
+                    <td>9:06</td>
+                    <td>28:12</td>
+                </tr>
+                <tr>
+                    <td>9:15</td>
+                    <td>9:21</td>
+                    <td>28:59</td>
+                </tr>
+                <tr>
+                    <td>9:30</td>
+                    <td>9:36</td>
+                    <td>29:45</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="table-section" id="intervals">
+    <h2>Interval Split Times</h2>
+    <p class='subtitle'><em>*Instructions:*</em></p>
+
+    
+    <div class="table-wrapper">
+        <table class="pacing-table">
+            <thead>
+                <tr>
+                    <th>1600m PR</th>
+                    <th>400m Time</th>
+                    <th>800m Time</th>
+                    <th>400m Mile Pace</th>
+                    <th>800m Mile Pace</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4:45</td>
+                    <td>2:25</td>
+                    <td>4:51</td>
+                    <td>4:51</td>
+                    <td>4:51</td>
+                </tr>
+                <tr>
+                    <td>5:00</td>
+                    <td>2:33</td>
+                    <td>5:06</td>
+                    <td>5:06</td>
+                    <td>5:06</td>
+                </tr>
+                <tr>
+                    <td>5:15</td>
+                    <td>2:40</td>
+                    <td>5:21</td>
+                    <td>5:21</td>
+                    <td>5:21</td>
+                </tr>
+                <tr>
+                    <td>5:30</td>
+                    <td>2:48</td>
+                    <td>5:36</td>
+                    <td>5:36</td>
+                    <td>5:36</td>
+                </tr>
+                <tr>
+                    <td>5:45</td>
+                    <td>2:55</td>
+                    <td>5:51</td>
+                    <td>5:51</td>
+                    <td>5:51</td>
+                </tr>
+                <tr>
+                    <td>6:00</td>
+                    <td>3:03</td>
+                    <td>6:06</td>
+                    <td>6:06</td>
+                    <td>6:06</td>
+                </tr>
+                <tr>
+                    <td>6:15</td>
+                    <td>3:10</td>
+                    <td>6:21</td>
+                    <td>6:21</td>
+                    <td>6:21</td>
+                </tr>
+                <tr>
+                    <td>6:30</td>
+                    <td>3:18</td>
+                    <td>6:36</td>
+                    <td>6:36</td>
+                    <td>6:36</td>
+                </tr>
+                <tr>
+                    <td>6:45</td>
+                    <td>3:25</td>
+                    <td>6:51</td>
+                    <td>6:51</td>
+                    <td>6:51</td>
+                </tr>
+                <tr>
+                    <td>7:00</td>
+                    <td>3:33</td>
+                    <td>7:06</td>
+                    <td>7:06</td>
+                    <td>7:06</td>
+                </tr>
+                <tr>
+                    <td>7:15</td>
+                    <td>3:40</td>
+                    <td>7:21</td>
+                    <td>7:21</td>
+                    <td>7:21</td>
+                </tr>
+                <tr>
+                    <td>7:30</td>
+                    <td>3:48</td>
+                    <td>7:36</td>
+                    <td>7:36</td>
+                    <td>7:36</td>
+                </tr>
+                <tr>
+                    <td>7:45</td>
+                    <td>3:55</td>
+                    <td>7:51</td>
+                    <td>7:51</td>
+                    <td>7:51</td>
+                </tr>
+                <tr>
+                    <td>8:00</td>
+                    <td>4:03</td>
+                    <td>8:06</td>
+                    <td>8:06</td>
+                    <td>8:06</td>
+                </tr>
+                <tr>
+                    <td>8:15</td>
+                    <td>4:10</td>
+                    <td>8:21</td>
+                    <td>8:21</td>
+                    <td>8:21</td>
+                </tr>
+                <tr>
+                    <td>8:30</td>
+                    <td>4:18</td>
+                    <td>8:36</td>
+                    <td>8:36</td>
+                    <td>8:36</td>
+                </tr>
+                <tr>
+                    <td>8:45</td>
+                    <td>4:25</td>
+                    <td>8:51</td>
+                    <td>8:51</td>
+                    <td>8:51</td>
+                </tr>
+                <tr>
+                    <td>9:00</td>
+                    <td>4:33</td>
+                    <td>9:06</td>
+                    <td>9:06</td>
+                    <td>9:06</td>
+                </tr>
+                <tr>
+                    <td>9:15</td>
+                    <td>4:40</td>
+                    <td>9:21</td>
+                    <td>9:21</td>
+                    <td>9:21</td>
+                </tr>
+                <tr>
+                    <td>9:30</td>
+                    <td>4:48</td>
+                    <td>9:36</td>
+                    <td>9:36</td>
+                    <td>9:36</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    </div>
+</body>
+</html>
