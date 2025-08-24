@@ -1,0 +1,2634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross Country Training Calendar - CoachingCal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .center-nav {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .request-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+        }
+        
+        .request-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .team-info {
+            text-align: right;
+        }
+        
+        .team-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .season {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .controls {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 1rem;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .nav-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.5rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+        }
+        
+        .current-month {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            min-width: 140px;
+            text-align: center;
+            padding: 0 0.5rem;
+        }
+        
+        .view-controls {
+            display: flex;
+            gap: 0.4rem;
+            align-items: center;
+        }
+        
+        .view-btn {
+            background: transparent;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 0.4rem 0.7rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        
+        .view-btn.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .view-dropdown {
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 0.4rem 0.7rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            font-family: inherit;
+            min-width: 120px;
+            transition: all 0.3s ease;
+        }
+        
+        .view-dropdown:focus {
+            outline: none;
+            background: #f8f9ff;
+            border-color: #5a6fd8;
+        }
+        
+        .view-dropdown:hover {
+            background: #f8f9ff;
+        }
+        
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr) minmax(100px, 0.8fr);
+            gap: 1px;
+            background: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .calendar-header {
+            background: #667eea;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .calendar-day {
+            background: white;
+            min-height: 120px;
+            padding: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .calendar-day:hover {
+            background: #f8f9ff;
+            transform: scale(1.02);
+            z-index: 10;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .calendar-day.other-month {
+            background: #f5f5f5;
+            color: #999;
+        }
+        
+        .calendar-day.today {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+        
+        /* Today styling for week view - keep white background, darker header */
+        .calendar-day.week-day.today {
+            background: white !important;
+            color: inherit !important;
+        }
+        
+        .calendar-day.week-day.today .week-day-header {
+            background: #3d4ed8 !important; /* Even darker blue */
+        }
+        
+        .week-total {
+            background: #f0f4ff;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-left: 2px solid #667eea;
+        }
+        
+        .week-total:hover {
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .week-total-number {
+            font-size: 1.4rem;
+            color: #667eea;
+            margin-bottom: 0.3rem;
+        }
+        
+        .week-total-label {
+            font-size: 0.7rem;
+            color: #666;
+            text-transform: uppercase;
+        }
+        
+        .day-number {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .workout-summary {
+            font-size: 0.75rem;
+            line-height: 1.3;
+            flex-grow: 1;
+        }
+        
+        .workout-type {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+        
+        .zone2 { background: #e8f5e8; color: #2d5016; }
+        .lt1 { background: #e3f2fd; color: #0d47a1; }
+        .lt2 { background: #fff3e0; color: #e65100; }
+        .vo2max { background: #ffebee; color: #c62828; }
+        .speed { background: #fff3e0; color: #ff6f00; }
+        .strength { background: #f3e5f5; color: #4a148c; }
+        .race { background: #fff9c4; color: #f57f17; }
+        .recovery { background: #e8f5e8; color: #388e3c; }
+        .rest { background: #f5f5f5; color: #666; }
+        
+        .workout-mileage {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 0.8rem;
+            margin-top: auto;
+        }
+        
+        .workout-detail {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        
+        .workout-detail.active {
+            display: block;
+        }
+        
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+        
+        .overlay.active {
+            display: block;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+        }
+        
+        .workout-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+            border-bottom: 2px solid #f0f4ff;
+            padding-bottom: 0.5rem;
+        }
+        
+        .workout-content {
+            line-height: 1.5;
+            color: #444;
+            font-size: 0.9rem;
+        }
+        
+        .workout-content p {
+            margin-bottom: 0.8rem;
+        }
+        
+        .workout-content .workout-section {
+            background: #f8f9ff;
+            padding: 0.8rem;
+            border-radius: 8px;
+            margin-bottom: 0.8rem;
+            border-left: 3px solid #667eea;
+        }
+        
+        .workout-content .workout-phase {
+            margin-bottom: 0.6rem;
+            padding: 0.5rem 0;
+        }
+        
+        .workout-content .workout-phase:not(:last-child) {
+            border-bottom: 1px solid #eee;
+        }
+        
+        .workout-content strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .legend {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+        }
+        
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+        }
+        
+        .google-cal-btn {
+            background: #4285f4;
+            color: white;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: all 0.3s ease;
+        }
+        
+        .google-cal-btn:hover {
+            background: #3367d6;
+            transform: translateY(-2px);
+        }
+        
+        /* Pacing Tables Section */
+        .pacing-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .pacing-section h3 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pacing-section p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .pacing-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+        }
+        
+        .pacing-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1rem;
+            background: white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: 2px solid #eee;
+            transition: all 0.3s ease;
+        }
+        
+        .pacing-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .pacing-link.zone2:hover { border-color: #4caf50; color: #4caf50; }
+        .pacing-link.lt1:hover { border-color: #2196f3; color: #2196f3; }
+        .pacing-link.lt2:hover { border-color: #ff9800; color: #ff9800; }
+        .pacing-link.race:hover { border-color: #ffc107; color: #ffc107; }
+        .pacing-link.vo2max:hover { border-color: #f44336; color: #f44336; }
+        .pacing-link.speed:hover { border-color: #ff6f00; color: #ff6f00; }
+        .pacing-link.intervals:hover { border-color: #9c27b0; color: #9c27b0; }
+        
+        .pacing-icon {
+            font-size: 1.2rem;
+        }
+        
+        /* Enhanced Week View Styles */
+        .week-day {
+            min-height: 200px;
+            padding: 0.5rem;
+        }
+        
+        /* Single week view gets extra height for full details */
+        .week-day.detailed {
+            min-height: 250px;
+        }
+        
+        /* Ensure week-day elements work properly in calendar grid */
+        .calendar-day.week-day {
+            min-height: 200px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            padding: 0.5rem !important;
+        }
+        
+        .calendar-day.week-day.detailed {
+            min-height: 250px !important;
+        }
+        
+        .calendar-day.week-day .week-day-header {
+            background: #667eea !important;
+            color: white !important;
+            padding: 0.5rem !important;
+            border-radius: 5px !important;
+            margin-bottom: 0.5rem !important;
+            text-align: center !important;
+            display: block !important;
+        }
+        
+        .calendar-day.week-day .week-day-header .day-number {
+            color: white !important;
+            font-size: 0.9rem !important;
+            margin-bottom: 0.2rem !important;
+        }
+        
+        .calendar-day.week-day .week-day-header .day-name {
+            font-size: 0.7rem !important;
+            opacity: 0.9 !important;
+        }
+        
+        .calendar-day.week-day .week-workout-details {
+            flex: 1 !important;
+            display: block !important;
+        }
+        
+        .calendar-day.week-day .week-mileage,
+        .calendar-day.week-day .week-workout-title,
+        .calendar-day.week-day .week-workout-points {
+            display: block !important;
+        }
+        
+        .calendar-day.week-day .workout-type {
+            display: inline-block !important;
+            padding: 2px 6px !important;
+            border-radius: 4px !important;
+            font-size: 0.7rem !important;
+            font-weight: 500 !important;
+            margin-bottom: 0.3rem !important;
+        }
+        
+        .week-day-header {
+            background: #667eea;
+            color: white;
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        .day-name {
+            font-size: 0.7rem;
+            opacity: 0.9;
+        }
+        
+        .week-workout-details {
+            flex: 1;
+        }
+        
+        .week-mileage {
+            font-weight: bold;
+            color: #333;
+            margin: 0.3rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .week-workout-title {
+            font-weight: 500;
+            color: #444;
+            margin: 0.3rem 0;
+            font-size: 0.8rem;
+            line-height: 1.2;
+        }
+        
+        .week-workout-points {
+            margin: 0.3rem 0;
+            padding-left: 1rem;
+            font-size: 0.7rem;
+            color: #666;
+        }
+        
+        .week-workout-points li {
+            margin-bottom: 0.2rem;
+            line-height: 1.2;
+        }
+        
+        .no-workout {
+            text-align: center;
+            color: #999;
+            font-style: italic;
+            padding: 1rem 0;
+        }
+        
+        /* Mobile List View */
+        .list-view {
+            display: none;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .list-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .list-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .list-item:last-child {
+            border-bottom: none;
+        }
+        
+        .list-date {
+            min-width: 80px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .list-day {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 2px;
+        }
+        
+        .list-workout {
+            flex: 1;
+            margin-left: 1rem;
+        }
+        
+        .list-workout-type {
+            font-size: 0.8rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-bottom: 4px;
+            display: inline-block;
+        }
+        
+        .list-mileage {
+            font-weight: bold;
+            color: #333;
+            margin-left: auto;
+            font-size: 1.1rem;
+        }
+        
+        .view-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            margin-left: 1rem;
+        }
+        
+        .view-toggle:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Tablet view - compact grid */
+        @media (max-width: 768px) and (min-width: 481px) {
+            .calendar-container {
+                padding: 0 1rem;
+            }
+            
+            .controls {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .nav-controls {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .workout-detail {
+                margin: 1rem;
+                max-width: calc(100% - 2rem);
+                padding: 1.5rem;
+            }
+            
+            .view-toggle {
+                display: none;
+            }
+            
+            /* Compact calendar grid for tablet */
+            .calendar-grid {
+                font-size: 0.7rem;
+                gap: 1px;
+            }
+            
+            .calendar-day {
+                min-height: 60px;
+                padding: 0.2rem;
+            }
+            
+            .day-number {
+                font-size: 0.8rem;
+                font-weight: bold;
+            }
+            
+            .workout-summary {
+                font-size: 0.6rem;
+            }
+            
+            .workout-type {
+                padding: 1px 3px;
+                font-size: 0.5rem;
+            }
+            
+            .week-total {
+                font-size: 0.6rem;
+                padding: 0.3rem;
+            }
+            
+            /* Tablet week view adjustments */
+            .week-day {
+                min-height: 120px;
+                padding: 0.3rem;
+            }
+            
+            .week-day-header {
+                padding: 0.3rem;
+                margin-bottom: 0.3rem;
+            }
+            
+            .week-mileage {
+                font-size: 0.7rem;
+            }
+            
+            .week-workout-title {
+                font-size: 0.7rem;
+            }
+            
+            .week-workout-points {
+                font-size: 0.6rem;
+                padding-left: 0.8rem;
+            }
+        }
+        
+        /* Mobile phone view - vertical stack */
+        @media (max-width: 480px) {
+            /* Compact fixed header */
+            .header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                padding: 0.3rem 0;
+                z-index: 1000;
+            }
+            
+            /* Add padding to body to account for fixed header */
+            body {
+                padding-top: 60px;
+            }
+            
+            .header-content {
+                padding: 0 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0;
+            }
+            
+            /* Hide everything except logo */
+            .center-nav, .team-info {
+                display: none;
+            }
+            
+            .logo {
+                font-size: 1.2rem;
+            }
+            
+            /* Add hamburger menu button - only show on mobile */
+            .mobile-menu-btn {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 1.3rem;
+                color: #667eea;
+                cursor: pointer;
+                padding: 0.3rem;
+            }
+            
+            /* Mobile menu overlay */
+            .mobile-menu-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.5);
+                z-index: 1500;
+            }
+            
+            .mobile-menu-overlay.active {
+                display: block;
+            }
+            
+            /* Mobile menu panel */
+            .mobile-menu {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 280px;
+                height: 100vh;
+                background: white;
+                box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+                z-index: 1600;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .mobile-menu.active {
+                display: block;
+                transform: translateX(0);
+            }
+            
+            .mobile-menu-header {
+                padding: 1rem;
+                border-bottom: 1px solid #eee;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .mobile-menu-close {
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                color: #999;
+                cursor: pointer;
+            }
+            
+            .mobile-menu-content {
+                padding: 1rem;
+            }
+            
+            .mobile-menu-section {
+                margin-bottom: 1.5rem;
+            }
+            
+            .mobile-menu-section h3 {
+                font-size: 0.9rem;
+                color: #667eea;
+                text-transform: uppercase;
+                margin-bottom: 0.5rem;
+                font-weight: 600;
+            }
+            
+            .mobile-menu-item {
+                display: block;
+                padding: 0.8rem 0;
+                color: #333;
+                text-decoration: none;
+                border-bottom: 1px solid #f5f5f5;
+                font-size: 0.9rem;
+            }
+            
+            .mobile-menu-item:hover {
+                background: #f8f9ff;
+                margin: 0 -1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .mobile-menu-button {
+                display: block;
+                width: 100%;
+                padding: 0.8rem;
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-size: 0.9rem;
+                font-weight: 600;
+                cursor: pointer;
+                margin-bottom: 0.5rem;
+                text-decoration: none;
+                text-align: center;
+            }
+            
+            .mobile-menu-button:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+            }
+            
+            .calendar-container {
+                padding: 0 0.5rem;
+            }
+            
+            /* Compact controls */
+            .container {
+                margin-top: 0.5rem;
+                padding: 0 0.5rem;
+            }
+            
+            .controls {
+                padding: 0.5rem;
+                margin-bottom: 0.5rem;
+                gap: 0.5rem;
+            }
+            
+            .nav-controls {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+            }
+            
+            .nav-btn {
+                font-size: 0.6rem;
+                padding: 0.25rem 0.4rem;
+            }
+            
+            .current-month {
+                font-size: 0.8rem;
+                min-width: auto;
+                flex: 1;
+                text-align: center;
+                order: 3;
+                width: 100%;
+                margin-top: 0.3rem;
+                font-weight: 500;
+            }
+            
+            .view-controls {
+                width: 100%;
+                display: flex;
+                gap: 0.3rem;
+            }
+            
+            .google-cal-btn {
+                display: none;
+            }
+            
+            .view-dropdown {
+                font-size: 0.65rem;
+                padding: 0.2rem 0.3rem;
+                min-width: auto;
+                flex: 1;
+            }
+            
+            .view-toggle {
+                display: none;
+            }
+            
+            .workout-detail {
+                margin: 0.5rem;
+                max-width: calc(100% - 1rem);
+                width: calc(100% - 1rem);
+                max-height: 85vh;
+                padding: 1.2rem;
+                overflow-y: auto;
+                border-radius: 12px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            }
+            
+            /* Convert calendar grid to vertical list on phones */
+            .calendar-grid {
+                display: flex !important;
+                flex-direction: column;
+                background: none;
+                gap: 0;
+            }
+            
+            .calendar-header {
+                display: none; /* Hide day headers on phone */
+            }
+            
+            /* Compact horizontal cards */
+            .calendar-day {
+                display: grid !important;
+                grid-template-columns: 40px 1fr auto;
+                align-items: center;
+                gap: 0.5rem;
+                width: 100%;
+                margin-bottom: 0.3rem;
+                min-height: auto;
+                padding: 0.5rem;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                border: 1px solid #f0f0f0;
+            }
+            
+            .week-day {
+                display: block;
+                width: 100%;
+                margin-bottom: 0.5rem;
+                min-height: auto;
+                padding: 0.75rem;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                border: 1px solid #f0f0f0;
+            }
+            
+            .calendar-day.other-month {
+                display: none; /* Hide other month days completely on phone */
+            }
+            
+            /* Today highlighting */
+            .calendar-day.today {
+                background: #f0f4ff;
+                border: 2px solid #667eea;
+            }
+            
+            .calendar-day.today .day-number {
+                background: #667eea;
+                color: white;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            /* Today styling for mobile week view - keep white background, darker header */
+            .week-day.today {
+                background: white !important;
+                border: 2px solid #4a5fd8 !important;
+            }
+            
+            .week-day.today .week-day-header {
+                background: #3d4ed8 !important; /* Even darker blue */
+            }
+            
+            /* Week totals - only show if there's mileage */
+            .week-total {
+                background: linear-gradient(135deg, #667eea, #764ba2) !important;
+                color: white !important;
+                text-align: center;
+                font-weight: bold;
+                padding: 0.4rem;
+                margin: 0.3rem 0;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.3rem;
+                min-height: 40px;
+            }
+            
+            .week-total:empty {
+                display: none; /* Hide empty week totals */
+            }
+            
+            .week-total-number {
+                font-size: 0.9rem !important;
+                color: white !important;
+                font-weight: bold;
+                margin: 0;
+            }
+            
+            .week-total-label {
+                font-size: 0.65rem !important;
+                color: white !important;
+                font-weight: 500;
+                text-transform: uppercase;
+                margin: 0;
+            }
+            
+            .week-number {
+                font-size: 0.6rem !important;
+                color: rgba(255,255,255,0.8) !important;
+                margin-bottom: 0.2rem;
+            }
+            
+            /* Phone-specific day styling - compact horizontal layout */
+            .calendar-day .day-number {
+                font-size: 1rem;
+                font-weight: bold;
+                color: #667eea;
+                margin: 0;
+                text-align: center;
+            }
+            
+            .calendar-day .workout-summary {
+                font-size: 0.75rem;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 0.2rem;
+            }
+            
+            .calendar-day .workout-type {
+                padding: 0.1rem 0.3rem;
+                font-size: 0.55rem;
+                margin: 0;
+                align-self: flex-start;
+            }
+            
+            .calendar-day .workout-summary > div:nth-child(2) {
+                font-size: 0.7rem;
+                color: #555;
+                line-height: 1.2;
+            }
+            
+            .calendar-day .workout-mileage {
+                font-size: 0.8rem;
+                font-weight: 600;
+                color: #667eea;
+                margin: 0;
+            }
+            
+            /* Week view - much more compact horizontal cards */
+            .week-day {
+                display: grid !important;
+                grid-template-columns: 50px 1fr 70px;
+                align-items: flex-start;
+                gap: 0.5rem;
+                padding: 0.4rem !important;
+                margin-bottom: 0.25rem !important;
+                min-height: 50px;
+            }
+            
+            /* Single week view on mobile - allow more height for details */
+            .week-day.detailed {
+                min-height: auto !important;
+                align-items: flex-start !important;
+                padding: 0.6rem !important;
+            }
+            
+            .week-day-header {
+                background: #667eea;
+                color: white;
+                padding: 0.3rem;
+                border-radius: 4px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 40px;
+            }
+            
+            .week-day-header .day-number {
+                color: white;
+                font-size: 1.1rem;
+                font-weight: bold;
+                margin: 0;
+                line-height: 1;
+            }
+            
+            .week-day-header .day-name {
+                font-size: 0.7rem;
+                color: white;
+                opacity: 0.9;
+                margin: 0;
+                line-height: 1;
+                margin-top: 2px;
+            }
+            
+            .week-workout-details {
+                display: flex;
+                flex-direction: column;
+                gap: 0.15rem;
+                margin: 0;
+            }
+            
+            .week-workout-info {
+                flex: 1;
+            }
+            
+            .week-mileage {
+                font-size: 1rem;
+                font-weight: bold;
+                color: #667eea;
+                margin: 0;
+                text-align: right;
+                white-space: nowrap;
+            }
+            
+            .week-workout-title {
+                font-size: 0.7rem;
+                margin: 0;
+                color: #333;
+                line-height: 1.2;
+            }
+            
+            .workout-type {
+                font-size: 0.55rem !important;
+                padding: 0.1rem 0.3rem !important;
+                margin-bottom: 0.1rem !important;
+                display: inline-block;
+            }
+            
+            .week-workout-points {
+                display: none;
+            }
+            
+            .no-workout {
+                font-size: 0.7rem;
+                color: #999;
+                font-style: italic;
+                margin: 0;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .calendar-grid {
+                font-size: 0.9rem;
+            }
+            
+            /* Hide mobile elements on desktop */
+            .mobile-menu-btn,
+            .mobile-menu-overlay,
+            .mobile-menu {
+                display: none !important;
+            }
+            
+            /* Restore desktop header layout */
+            body {
+                padding-top: 0;
+            }
+            
+            .header {
+                position: sticky;
+                padding: 1rem 0;
+            }
+            
+            .header-content {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 2rem;
+                gap: 0;
+            }
+            
+            .center-nav {
+                display: flex;
+                flex: 1;
+                justify-content: center;
+            }
+            
+            .team-info {
+                display: block;
+            }
+            
+            .logo {
+                font-size: 1.8rem;
+            }
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .error {
+            background: #ffebee;
+            color: #c62828;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="/" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-running"></i> CoachingCal
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="center-nav">
+                <a href="/program-generator.html" class="request-btn">
+                    <i class="fas fa-calendar-plus"></i> Request My Own Custom Training Plan
+                </a>
+            </div>
+            <div class="team-info">
+                <div class="team-name" id="teamName">Bradshaw Christian School - Advanced</div>
+                <div class="season">Cross Country - Fall 2025</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div>
+                <div style="font-weight: 600; color: #333;">Menu</div>
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose">×</button>
+        </div>
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-section">
+                <h3>Team</h3>
+                <div style="padding: 0.5rem 0; border-bottom: 1px solid #f5f5f5;">
+                    <div style="font-weight: 600; color: #333;" id="mobileTeamName">Bradshaw Christian School - Advanced</div>
+                    <div style="font-size: 0.8rem; color: #666;">Cross Country - Fall 2025</div>
+                </div>
+            </div>
+            <div class="mobile-menu-section">
+                <h3>Actions</h3>
+                <a href="/program-generator.html" class="mobile-menu-button">
+                    <i class="fas fa-calendar-plus"></i> Request Custom Training Plan
+                </a>
+            </div>
+            <div class="mobile-menu-section">
+                <h3>Resources</h3>
+                <a href="pacing-tables.html" class="mobile-menu-item">
+                    <i class="fas fa-tachometer-alt"></i> Pacing Tables
+                </a>
+                <a href="#" class="mobile-menu-item" onclick="alert('Google Calendar sync coming soon!')">
+                    <i class="fab fa-google"></i> Add to Google Calendar
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="controls">
+            <div class="nav-controls">
+                <button class="nav-btn" id="prevMonth">
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <div class="current-month" id="currentMonth">August 2025</div>
+                <button class="nav-btn" id="nextMonth">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="view-controls">
+                <select class="view-dropdown" id="levelSelect">
+                    <option value="advanced" selected>Advanced</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="beginner">Beginner</option>
+                </select>
+                <select class="view-dropdown" id="timeframeDropdown">
+                    <option value="month" selected>Month</option>
+                    <option value="season">Season</option>
+                    <option value="1">1 Week</option>
+                    <option value="2">2 Weeks</option>
+                    <option value="3">3 Weeks</option>
+                    <option value="4">4 Weeks</option>
+                    <option value="5">5 Weeks</option>
+                    <option value="6">6 Weeks</option>
+                    <option value="7">7 Weeks</option>
+                    <option value="8">8 Weeks</option>
+                    <option value="9">9 Weeks</option>
+                    <option value="10">10 Weeks</option>
+                    <option value="11">11 Weeks</option>
+                    <option value="12">12 Weeks</option>
+                    <option value="13">13 Weeks</option>
+                    <option value="14">14 Weeks</option>
+                    <option value="15">15 Weeks</option>
+                    <option value="16">16 Weeks</option>
+                    <option value="17">17 Weeks</option>
+                    <option value="18">18 Weeks</option>
+                    <option value="19">19 Weeks</option>
+                    <option value="20">20 Weeks</option>
+                </select>
+                <button class="view-toggle" id="viewToggle">
+                    <i class="fas fa-list"></i> List View
+                </button>
+                <a href="#" class="google-cal-btn" id="googleCalBtn">
+                    <i class="fab fa-google"></i> Add to Google Calendar
+                </a>
+            </div>
+        </div>
+
+        <div id="loadingMessage" class="loading">
+            <i class="fas fa-spinner fa-spin"></i> Loading workout schedule...
+        </div>
+
+        <div id="errorMessage" class="error" style="display: none;">
+            Error loading workout data. Please try again later.
+        </div>
+
+        <div class="calendar-grid" id="calendarGrid" style="display: none;">
+            <div class="calendar-header">Monday</div>
+            <div class="calendar-header">Tuesday</div>
+            <div class="calendar-header">Wednesday</div>
+            <div class="calendar-header">Thursday</div>
+            <div class="calendar-header">Friday</div>
+            <div class="calendar-header">Saturday</div>
+            <div class="calendar-header">Sunday</div>
+            <div class="calendar-header">Week Total</div>
+        </div>
+
+        <div class="list-view" id="listView">
+            <!-- List items will be populated by JavaScript -->
+        </div>
+
+        <!-- Pacing Tables Section -->
+        <div class="pacing-section">
+            <h3><i class="fas fa-tachometer-alt"></i> Pacing Tables</h3>
+            <p>Find your current 1600m PR and use the corresponding training paces</p>
+            <div class="pacing-links">
+                <a href="pacing-tables.html#zone2" class="pacing-link zone2">
+                    <span class="pacing-icon">🟢</span>
+                    Zone 2 (Easy)
+                </a>
+                <a href="pacing-tables.html#lt1" class="pacing-link lt1">
+                    <span class="pacing-icon">🔵</span>
+                    LT1 (Moderate)
+                </a>
+                <a href="pacing-tables.html#lt2" class="pacing-link lt2">
+                    <span class="pacing-icon">🟠</span>
+                    LT2 (Tempo)
+                </a>
+                <a href="pacing-tables.html#race" class="pacing-link race">
+                    <span class="pacing-icon">🟡</span>
+                    5K Race Pace
+                </a>
+                <a href="pacing-tables.html#vo2max" class="pacing-link vo2max">
+                    <span class="pacing-icon">🔴</span>
+                    VO2max
+                </a>
+                <a href="pacing-tables.html#intervals" class="pacing-link intervals">
+                    <span class="pacing-icon">⏱️</span>
+                    Interval Splits
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="workout-detail" id="workoutDetail">
+        <button class="close-btn" id="closeDetail">&times;</button>
+        <div class="workout-title" id="workoutTitle"></div>
+        <div class="workout-content" id="workoutContent"></div>
+    </div>
+
+    <script>
+        class WorkoutCalendar {
+            constructor() {
+                this.workouts = {};
+                
+                // Initialize to today's date, but set to first of month for calendar display
+                const today = new Date();
+                this.actualToday = new Date(today); // Store actual today
+                
+                // For August 4th, 2025 (today), start calendar at August 2025
+                this.currentDate = new Date(today.getFullYear(), today.getMonth(), 1);
+                
+                this.currentLevel = 'advanced'; // Default training level
+                this.rawData = null; // Store raw data for level switching
+                this.weekMetadata = {}; // Store week metadata
+                this.isMobile = window.innerWidth <= 480;
+                this.isFirstWeekNavigation = true; // Flag for initial week setup
+                this.init();
+            }
+
+            async init() {
+                // Initialize default values first
+                this.currentTimeframe = this.isMobile ? '1' : 'month';
+                this.isListView = false;
+                
+                // Parse URL parameters to restore state (may override defaults)
+                this.parseURLParams();
+                
+                // Set up week views to show the week containing today (for any week-based timeframe)
+                // Only skip if URL has a specific date parameter, not just because URL params were loaded
+                const hasURLDate = new URLSearchParams(window.location.search).has('date');
+                if (this.currentTimeframe !== 'month' && this.currentTimeframe !== 'season' && !hasURLDate) {
+                    console.log('Setting up week view to show current week');
+                    console.log('Today is:', this.actualToday.toDateString(), '(day of week:', this.actualToday.getDay(), ')');
+                    const dayOfWeek = this.actualToday.getDay();
+                    const daysToSubtract = dayOfWeek === 0 ? 6 : dayOfWeek - 1; // Monday = 0 days back, Sunday = 6 days back
+                    this.currentDate = new Date(this.actualToday);
+                    this.currentDate.setDate(this.actualToday.getDate() - daysToSubtract);
+                    console.log('Week starts on:', this.currentDate.toDateString());
+                    console.log('URL has date param:', hasURLDate, 'so', hasURLDate ? 'NOT setting up current week' : 'setting up current week');
+                    this.isFirstWeekNavigation = false; // No longer first time
+                }
+                
+                await this.loadWorkouts();
+                
+                // Only auto-jump if no URL date parameter was loaded
+                if (!this.urlParamsLoaded) {
+                    this.autoJumpToDataMonth();
+                }
+                
+                this.setupEventListeners();
+                
+                // Update dropdown to match current state
+                document.getElementById('timeframeDropdown').value = this.currentTimeframe;
+                document.getElementById('levelSelect').value = this.currentLevel;
+                
+                this.updateViewToggleButton();
+                this.renderView();
+                
+                // Update URL for initial state
+                this.updateURL();
+                
+                // Auto-scroll to current day on mobile after rendering
+                if (this.isMobile) {
+                    setTimeout(() => this.scrollToCurrentDay(), 500);
+                }
+            }
+
+            async loadWorkouts() {
+                try {
+                    // Try to load from GitHub (will work when hosted)
+                    const response = await fetch('program_multilevel.json');
+                    if (response.ok) {
+                        const rawData = await response.json();
+                        this.rawData = rawData; // Store raw data
+                        console.log('Raw data loaded, program metadata:', rawData.program_metadata);
+                        // Flatten the nested week structure for current level
+                        this.workouts = this.flattenWorkoutData(rawData, this.currentLevel);
+                        console.log('Flattened workouts count:', Object.keys(this.workouts).length);
+                    } else {
+                        throw new Error('Failed to load from server');
+                    }
+                    
+                    document.getElementById('loadingMessage').style.display = 'none';
+                    document.getElementById('calendarGrid').style.display = 'grid';
+                } catch (error) {
+                    console.error('Error loading workouts:', error);
+                    document.getElementById('loadingMessage').style.display = 'none';
+                    document.getElementById('errorMessage').style.display = 'block';
+                }
+            }
+
+            flattenWorkoutData(rawData, level = 'advanced') {
+                const flattened = {};
+                this.weekMetadata = {}; // Store week metadata for later use
+                
+                // Extract all daily workouts from week containers
+                Object.keys(rawData).forEach(key => {
+                    if (key.startsWith('week_')) {
+                        const weekData = rawData[key];
+                        
+                        // Store week metadata
+                        if (weekData.week_metadata) {
+                            this.weekMetadata[weekData.week_metadata.week_number] = weekData.week_metadata;
+                        }
+                        
+                        Object.keys(weekData).forEach(dateKey => {
+                            // Skip metadata, only process date keys (YYYY-MM-DD format)
+                            if (dateKey.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                                const dayData = weekData[dateKey];
+                                // Extract data for the specified level
+                                if (dayData[level]) {
+                                    flattened[dateKey] = {
+                                        day_metadata: dayData.day_metadata,
+                                        workout_type: dayData.workout_type,
+                                        intensity: dayData.intensity,
+                                        category: dayData.category,
+                                        mileage: dayData[level].mileage,
+                                        description: dayData[level].description,
+                                        completed: dayData[level].completed,
+                                        actual_mileage: dayData[level].actual_mileage,
+                                        notes: dayData[level].notes
+                                    };
+                                }
+                            }
+                        });
+                    }
+                });
+                
+                return flattened;
+            }
+
+            parseURLParams() {
+                const urlParams = new URLSearchParams(window.location.search);
+                this.urlParamsLoaded = false;
+                
+                // Parse level parameter
+                const level = urlParams.get('level');
+                if (level && ['advanced', 'intermediate', 'beginner'].includes(level)) {
+                    this.currentLevel = level;
+                    document.getElementById('levelSelect').value = level;
+                    this.urlParamsLoaded = true;
+                }
+                
+                // Parse timeframe parameter
+                const timeframe = urlParams.get('view');
+                if (timeframe) {
+                    this.currentTimeframe = timeframe;
+                    document.getElementById('timeframeDropdown').value = timeframe;
+                    this.urlParamsLoaded = true;
+                }
+                
+                // Parse list view parameter
+                const listView = urlParams.get('list');
+                if (listView === 'true') {
+                    this.isListView = true;
+                    this.urlParamsLoaded = true;
+                }
+                
+                // Parse date parameter
+                const dateParam = urlParams.get('date');
+                if (dateParam) {
+                    // Parse YYYY-MM-DD format
+                    const dateParts = dateParam.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+                    if (dateParts) {
+                        const year = parseInt(dateParts[1]);
+                        const month = parseInt(dateParts[2]) - 1; // Month is 0-indexed
+                        const day = parseInt(dateParts[3]);
+                        
+                        // Set to first of the month for consistency
+                        this.currentDate = new Date(year, month, 1);
+                        this.urlParamsLoaded = true;
+                    }
+                }
+            }
+            
+            updateURL() {
+                const params = new URLSearchParams();
+                
+                // Add level parameter (ensure it's valid)
+                if (this.currentLevel && this.currentLevel !== 'advanced') {
+                    params.set('level', this.currentLevel);
+                }
+                
+                // Add timeframe parameter (ensure it's valid)
+                if (this.currentTimeframe && this.currentTimeframe !== 'month') {
+                    params.set('view', this.currentTimeframe);
+                }
+                
+                // Add list view parameter
+                if (this.isListView === true) {
+                    params.set('list', 'true');
+                }
+                
+                // Add date parameter if not current month
+                const currentMonth = new Date();
+                currentMonth.setDate(1);
+                currentMonth.setHours(0, 0, 0, 0);
+                
+                const compareDate = new Date(this.currentDate);
+                compareDate.setHours(0, 0, 0, 0);
+                
+                if (compareDate.getTime() !== currentMonth.getTime()) {
+                    // Format as YYYY-MM-DD
+                    const year = this.currentDate.getFullYear();
+                    const month = String(this.currentDate.getMonth() + 1).padStart(2, '0');
+                    const day = String(this.currentDate.getDate()).padStart(2, '0');
+                    params.set('date', `${year}-${month}-${day}`);
+                }
+                
+                // Update URL without page reload
+                const newURL = params.toString() ? 
+                    `${window.location.pathname}?${params.toString()}` : 
+                    window.location.pathname;
+                    
+                window.history.replaceState({}, '', newURL);
+            }
+            
+            scrollToCurrentDay() {
+                const todayElement = document.querySelector('.calendar-day.today');
+                
+                if (todayElement) {
+                    todayElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                } else {
+                    console.log('Today element not found for scrolling');
+                }
+            }
+
+            setupEventListeners() {
+                document.getElementById('prevMonth').addEventListener('click', () => {
+                    this.navigatePrevious();
+                    this.renderView();
+                    this.updateURL();
+                });
+
+                document.getElementById('nextMonth').addEventListener('click', () => {
+                    this.navigateNext();
+                    this.renderView();
+                    this.updateURL();
+                });
+
+                // Level dropdown functionality
+                document.getElementById('levelSelect').addEventListener('change', (e) => {
+                    this.currentLevel = e.target.value;
+                    // Update team name display
+                    const levelName = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
+                    document.getElementById('teamName').textContent = `Bradshaw Christian School - ${levelName}`;
+                    
+                    if (this.rawData) {
+                        this.workouts = this.flattenWorkoutData(this.rawData, this.currentLevel);
+                        this.renderView();
+                        this.updateURL();
+                        
+                        // Auto-scroll to current day on mobile after level change
+                        if (this.isMobile) {
+                            setTimeout(() => this.scrollToCurrentDay(), 300);
+                        }
+                    }
+                });
+                
+                // Timeframe dropdown functionality
+                document.getElementById('timeframeDropdown').addEventListener('change', (e) => {
+                    this.currentTimeframe = e.target.value;
+                    
+                    // When switching to any week view, set currentDate to show the week containing today
+                    if (this.currentTimeframe !== 'month' && this.currentTimeframe !== 'season') {
+                        console.log('Switching to week view on desktop, setting up current week');
+                        const dayOfWeek = this.actualToday.getDay();
+                        const daysToSubtract = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+                        this.currentDate = new Date(this.actualToday);
+                        this.currentDate.setDate(this.actualToday.getDate() - daysToSubtract);
+                        console.log('Week starts on:', this.currentDate.toDateString());
+                    }
+                    
+                    this.updateNavigationButtons();
+                    this.renderView();
+                    this.updateURL();
+                    
+                    // Auto-scroll to current day on mobile after view change
+                    if (this.isMobile) {
+                        setTimeout(() => this.scrollToCurrentDay(), 300);
+                    }
+                });
+
+                // View toggle functionality
+                document.getElementById('viewToggle').addEventListener('click', () => {
+                    this.isListView = !this.isListView;
+                    this.updateViewToggleButton();
+                    this.renderView();
+                    this.updateURL();
+                });
+
+                document.getElementById('overlay').addEventListener('click', () => {
+                    this.closeWorkoutDetail();
+                });
+
+                document.getElementById('closeDetail').addEventListener('click', () => {
+                    this.closeWorkoutDetail();
+                });
+
+                // Google Calendar button
+                document.getElementById('googleCalBtn').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    alert('Google Calendar sync coming soon! For now, screenshot or bookmark this page.');
+                });
+                
+                // Handle window resize for mobile detection
+                window.addEventListener('resize', () => {
+                    const wasMobile = this.isMobile;
+                    this.isMobile = window.innerWidth <= 480;
+                    
+                    // If switching to mobile and not already in week view, switch to week view
+                    if (this.isMobile && !wasMobile && this.currentTimeframe === 'month') {
+                        this.currentTimeframe = '1';
+                        document.getElementById('timeframeDropdown').value = '1';
+                        this.renderView();
+                        this.updateURL();
+                        setTimeout(() => this.scrollToCurrentDay(), 300);
+                    }
+                });
+            }
+
+            navigatePrevious() {
+                if (this.currentTimeframe === 'month') {
+                    this.currentDate.setMonth(this.currentDate.getMonth() - 1);
+                } else if (this.currentTimeframe === 'season') {
+                    // Move back 3 months for season view
+                    this.currentDate.setMonth(this.currentDate.getMonth() - 3);
+                } else {
+                    // Week-based navigation - navigate by the specified number of weeks
+                    const weeks = parseInt(this.currentTimeframe);
+                    // If it's mobile and first time, use actual today as reference
+                    if (this.isMobile && this.isFirstWeekNavigation) {
+                        const referenceDate = this.actualToday;
+                        const dayOfWeek = referenceDate.getDay();
+                        const daysToSubtract = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+                        const currentWeekStart = new Date(referenceDate);
+                        currentWeekStart.setDate(referenceDate.getDate() - daysToSubtract);
+                        currentWeekStart.setDate(currentWeekStart.getDate() - (weeks * 7));
+                        this.currentDate = currentWeekStart;
+                        this.isFirstWeekNavigation = false;
+                    } else {
+                        this.currentDate.setDate(this.currentDate.getDate() - (weeks * 7));
+                    }
+                }
+            }
+
+            navigateNext() {
+                if (this.currentTimeframe === 'month') {
+                    this.currentDate.setMonth(this.currentDate.getMonth() + 1);
+                } else if (this.currentTimeframe === 'season') {
+                    // Move forward 3 months for season view
+                    this.currentDate.setMonth(this.currentDate.getMonth() + 3);
+                } else {
+                    // Week-based navigation - navigate by the specified number of weeks
+                    const weeks = parseInt(this.currentTimeframe);
+                    // If it's mobile and first time, use actual today as reference
+                    if (this.isMobile && this.isFirstWeekNavigation) {
+                        const referenceDate = this.actualToday;
+                        const dayOfWeek = referenceDate.getDay();
+                        const daysToSubtract = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+                        const currentWeekStart = new Date(referenceDate);
+                        currentWeekStart.setDate(referenceDate.getDate() - daysToSubtract);
+                        currentWeekStart.setDate(currentWeekStart.getDate() + (weeks * 7));
+                        this.currentDate = currentWeekStart;
+                        this.isFirstWeekNavigation = false;
+                    } else {
+                        this.currentDate.setDate(this.currentDate.getDate() + (weeks * 7));
+                    }
+                }
+            }
+
+            updateNavigationButtons() {
+                const prevBtn = document.getElementById('prevMonth');
+                const nextBtn = document.getElementById('nextMonth');
+                
+                if (this.currentTimeframe === 'month') {
+                    prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i> Previous';
+                    nextBtn.innerHTML = 'Next <i class="fas fa-chevron-right"></i>';
+                } else if (this.currentTimeframe === 'season') {
+                    prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i> Previous Season';
+                    nextBtn.innerHTML = 'Next Season <i class="fas fa-chevron-right"></i>';
+                } else {
+                    const weeks = parseInt(this.currentTimeframe);
+                    const weekLabel = weeks === 1 ? 'Week' : 'Weeks';
+                    prevBtn.innerHTML = `<i class="fas fa-chevron-left"></i> Previous ${weeks} ${weekLabel}`;
+                    nextBtn.innerHTML = `Next ${weeks} ${weekLabel} <i class="fas fa-chevron-right"></i>`;
+                }
+            }
+
+            renderView() {
+                this.updateNavigationButtons();
+                
+                if (this.isListView) {
+                    this.renderListView();
+                } else if (this.currentTimeframe === 'month') {
+                    this.renderCalendar();
+                } else if (this.currentTimeframe === 'season') {
+                    this.renderSeasonView();
+                } else {
+                    // Week-based view
+                    this.renderWeekBasedView();
+                }
+            }
+
+            updateViewToggleButton() {
+                const button = document.getElementById('viewToggle');
+                if (this.isListView) {
+                    button.innerHTML = '<i class="fas fa-calendar"></i> Calendar View';
+                } else {
+                    button.innerHTML = '<i class="fas fa-list"></i> List View';
+                }
+            }
+
+            renderSeasonView() {
+                // Season view shows approximately 3-4 months of data
+                const listView = document.getElementById('listView');
+                const calendarGrid = document.getElementById('calendarGrid');
+                
+                // Show calendar grid for season view
+                listView.style.display = 'none';
+                calendarGrid.style.display = 'grid';
+                
+                const year = this.currentDate.getFullYear();
+                const month = this.currentDate.getMonth();
+                
+                // Update display to show season range
+                const startMonth = new Date(year, month, 1);
+                const endMonth = new Date(year, month + 2, 0); // End of 3rd month
+                const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                
+                let seasonDisplay = `${monthNames[startMonth.getMonth()]} - ${monthNames[endMonth.getMonth()]} ${year}`;
+                document.getElementById('currentMonth').textContent = seasonDisplay;
+                
+                const grid = document.getElementById('calendarGrid');
+                
+                // Clear existing content
+                const cells = grid.querySelectorAll('.calendar-day, .week-total');
+                cells.forEach(cell => cell.remove());
+                
+                // Render 3 months worth of weeks
+                const firstDayOfSeason = new Date(year, month, 1);
+                const dayOfWeek = firstDayOfSeason.getDay();
+                const daysToSubtract = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+                const startDate = new Date(firstDayOfSeason);
+                startDate.setDate(startDate.getDate() - daysToSubtract);
+                
+                let weekMileage = 0;
+                let currentWeekNumber = null;
+                for (let i = 0; i < 126; i++) { // ~18 weeks worth of days
+                    const cellDate = new Date(startDate);
+                    cellDate.setDate(startDate.getDate() + i);
+                    
+                    const dayElement = this.createDayElement(cellDate, month, month + 2);
+                    grid.appendChild(dayElement);
+                    
+                    const dateStr = this.formatDateForLookup(cellDate);
+                    const workout = this.workouts[dateStr];
+                    if (workout) {
+                        weekMileage += workout.mileage || 0;
+                        // Capture week number from any workout in this week
+                        if (workout.day_metadata && workout.day_metadata.week_number) {
+                            currentWeekNumber = workout.day_metadata.week_number;
+                        }
+                    }
+                    
+                    if ((i + 1) % 7 === 0) {
+                        const weekTotal = this.createWeekTotal(weekMileage, currentWeekNumber);
+                        grid.appendChild(weekTotal);
+                        weekMileage = 0;
+                        currentWeekNumber = null;
+                    }
+                }
+            }
+            
+            renderWeekBasedView() {
+                const weeks = parseInt(this.currentTimeframe);
+                const listView = document.getElementById('listView');
+                const calendarGrid = document.getElementById('calendarGrid');
+                
+                // Show calendar grid for week-based view
+                listView.style.display = 'none';
+                calendarGrid.style.display = 'grid';
+                
+                // Get the current week range - use actual today for mobile, currentDate for navigation
+                const referenceDate = this.isMobile ? this.actualToday : this.currentDate;
+                const dayOfWeek = referenceDate.getDay();
+                const daysToSubtract = dayOfWeek === 0 ? 6 : dayOfWeek - 1; // Monday = 0 days back, Sunday = 6 days back
+                const startOfPeriod = new Date(referenceDate);
+                startOfPeriod.setDate(referenceDate.getDate() - daysToSubtract);
+                
+                // Update display to show week range
+                const endOfPeriod = new Date(startOfPeriod);
+                endOfPeriod.setDate(startOfPeriod.getDate() + (weeks * 7) - 1);
+                
+                const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                
+                let periodDisplay;
+                if (startOfPeriod.getMonth() === endOfPeriod.getMonth()) {
+                    periodDisplay = `${monthNames[startOfPeriod.getMonth()]} ${startOfPeriod.getDate()}-${endOfPeriod.getDate()}, ${startOfPeriod.getFullYear()}`;
+                } else {
+                    periodDisplay = `${monthNames[startOfPeriod.getMonth()]} ${startOfPeriod.getDate()} - ${monthNames[endOfPeriod.getMonth()]} ${endOfPeriod.getDate()}, ${startOfPeriod.getFullYear()}`;
+                }
+                
+                document.getElementById('currentMonth').textContent = periodDisplay;
+                
+                const grid = document.getElementById('calendarGrid');
+                
+                // Clear existing content
+                const cells = grid.querySelectorAll('.calendar-day, .week-total');
+                cells.forEach(cell => cell.remove());
+                
+                // Generate the specified number of weeks
+                let weekMileage = 0;
+                let currentWeekNumber = null;
+                for (let i = 0; i < weeks * 7; i++) {
+                    const cellDate = new Date(startOfPeriod);
+                    cellDate.setDate(startOfPeriod.getDate() + i);
+                    
+                    // For 1-week view, use detailed week day element, otherwise use regular
+                    const dayElement = weeks === 1 ? 
+                        this.createWeekDayElement(cellDate) : 
+                        this.createDayElement(cellDate, cellDate.getMonth());
+                    
+                    grid.appendChild(dayElement);
+                    
+                    const dateStr = this.formatDateForLookup(cellDate);
+                    const workout = this.workouts[dateStr];
+                    if (workout) {
+                        weekMileage += workout.mileage || 0;
+                        // Capture week number from any workout in this week
+                        if (workout.day_metadata && workout.day_metadata.week_number) {
+                            currentWeekNumber = workout.day_metadata.week_number;
+                        }
+                    }
+                    
+                    if ((i + 1) % 7 === 0) {
+                        const weekTotal = this.createWeekTotal(weekMileage, currentWeekNumber);
+                        grid.appendChild(weekTotal);
+                        weekMileage = 0;
+                        currentWeekNumber = null;
+                    }
+                }
+            }
+
+
+            renderListView() {
+                const listView = document.getElementById('listView');
+                const calendarGrid = document.getElementById('calendarGrid');
+                
+                // Show list, hide calendar
+                listView.style.display = 'block';
+                calendarGrid.style.display = 'none';
+                
+                // Clear existing list items
+                listView.innerHTML = '';
+                
+                // Get current month's dates with workouts
+                const year = this.currentDate.getFullYear();
+                const month = this.currentDate.getMonth();
+                const firstDay = new Date(year, month, 1);
+                const lastDay = new Date(year, month + 1, 0);
+                
+                const workoutDates = [];
+                
+                // Collect all dates with workouts in current month
+                for (let day = 1; day <= lastDay.getDate(); day++) {
+                    const date = new Date(year, month, day);
+                    const dateStr = this.formatDateForLookup(date);
+                    const workout = this.workouts[dateStr];
+                    
+                    if (workout) {
+                        workoutDates.push({ date, workout, dateStr });
+                    }
+                }
+                
+                // Create list items
+                workoutDates.forEach(({ date, workout }) => {
+                    const listItem = this.createListItem(date, workout);
+                    listView.appendChild(listItem);
+                });
+                
+                // If no workouts, show message
+                if (workoutDates.length === 0) {
+                    const noData = document.createElement('div');
+                    noData.className = 'list-item';
+                    noData.innerHTML = '<div style="text-align: center; width: 100%; color: #666;">No workouts scheduled for this month</div>';
+                    listView.appendChild(noData);
+                }
+            }
+
+            createWeekDayElement(date) {
+                const dayDiv = document.createElement('div');
+                dayDiv.className = 'calendar-day week-day';
+                
+                // Add detailed class for single week view
+                if (this.currentTimeframe === '1') {
+                    dayDiv.classList.add('detailed');
+                }
+                
+                const isToday = this.isToday(date);
+                
+                if (isToday) {
+                    dayDiv.classList.add('today');
+                }
+
+                // Day header with date and day name
+                const dayHeader = document.createElement('div');
+                dayHeader.className = 'week-day-header';
+                
+                const dayNumber = document.createElement('div');
+                dayNumber.className = 'day-number';
+                dayNumber.textContent = date.getDate();
+                
+                const dayName = document.createElement('div');
+                dayName.className = 'day-name';
+                const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                dayName.textContent = dayNames[date.getDay()];
+                
+                dayHeader.appendChild(dayNumber);
+                dayHeader.appendChild(dayName);
+                dayDiv.appendChild(dayHeader);
+
+                // Workout details
+                const dateStr = this.formatDateForLookup(date);
+                const workout = this.workouts[dateStr];
+                
+                if (workout) {
+                    const workoutDetails = this.createWeekWorkoutDetails(workout);
+                    dayDiv.appendChild(workoutDetails);
+                    
+                    // Only add click handler if not in single week view (since details are already shown)
+                    if (this.currentTimeframe !== '1') {
+                        dayDiv.style.cursor = 'pointer';
+                        dayDiv.addEventListener('click', () => {
+                            this.showWorkoutDetail(date, workout);
+                        });
+                    }
+                } else {
+                    const noWorkout = document.createElement('div');
+                    noWorkout.className = 'no-workout';
+                    noWorkout.textContent = 'Rest Day';
+                    dayDiv.appendChild(noWorkout);
+                }
+
+                return dayDiv;
+            }
+
+            createWeekWorkoutDetails(workout) {
+                const detailsDiv = document.createElement('div');
+                detailsDiv.className = 'week-workout-details';
+
+                // Parse workout type and description
+                const description = workout.description || '';
+                const workoutType = this.getWorkoutType(description);
+                
+                // Create workout info container
+                const workoutInfoDiv = document.createElement('div');
+                workoutInfoDiv.className = 'week-workout-info';
+                
+                // Workout type badge
+                const typeSpan = document.createElement('div');
+                typeSpan.className = `workout-type ${workoutType.class}`;
+                typeSpan.textContent = workoutType.name;
+                workoutInfoDiv.appendChild(typeSpan);
+
+                // Parse and display full workout details for week view
+                const lines = description.replace(/\\n/g, '\n').split('\n').filter(line => line.trim() !== '');
+                
+                lines.forEach((line, index) => {
+                    line = line.trim();
+                    
+                    if (line) {
+                        const lineDiv = document.createElement('div');
+                        
+                        if (index === 0) {
+                            // First line - main title with automatic line breaks
+                            lineDiv.className = 'week-workout-title';
+                            let formattedText = line.replace(/\[.*?\]/g, '').trim();
+                            // Add line breaks before " - " and " + "
+                            formattedText = formattedText.replace(/ - /g, '<br>- ').replace(/ \+ /g, '<br>+ ');
+                            lineDiv.innerHTML = formattedText;
+                        } else if (line.startsWith('-') || line.startsWith('•')) {
+                            // Bullet points
+                            lineDiv.className = 'week-workout-detail';
+                            lineDiv.style.fontSize = '0.65rem';
+                            lineDiv.style.color = '#555';
+                            lineDiv.style.marginTop = '0.1rem';
+                            lineDiv.style.paddingLeft = '0.5rem';
+                            lineDiv.textContent = line;
+                        } else if (line.length > 5) {
+                            // Other detailed lines
+                            lineDiv.className = 'week-workout-detail';
+                            lineDiv.style.fontSize = '0.65rem';
+                            lineDiv.style.color = '#555';
+                            lineDiv.style.marginTop = '0.1rem';
+                            lineDiv.style.lineHeight = '1.2';
+                            lineDiv.textContent = line;
+                        }
+                        
+                        if (lineDiv.textContent) {
+                            workoutInfoDiv.appendChild(lineDiv);
+                        }
+                    }
+                });
+
+                detailsDiv.appendChild(workoutInfoDiv);
+
+                // Mileage on the right
+                const mileageDiv = document.createElement('div');
+                mileageDiv.className = 'week-mileage';
+                mileageDiv.textContent = `${workout.mileage || 0} miles`;
+                detailsDiv.appendChild(mileageDiv);
+
+                return detailsDiv;
+            }
+
+            extractKeyDetails(description) {
+                const lines = description.replace(/\\n/g, '\n').split('\n');
+                const keyDetails = [];
+                
+                for (let line of lines) {
+                    line = line.trim();
+                    
+                    // Skip empty lines and the first line (title)
+                    if (!line || line.startsWith('[')) continue;
+                    
+                    // Skip focus and check lines for now (could include them later if desired)
+                    if (line.includes('Focus:') || line.includes('Check:')) continue;
+                    
+                    // Add meaningful workout details
+                    if (line.length > 10) { // Skip very short lines
+                        let detail = line;
+                        // Limit length for week view
+                        if (detail.length > 60) {
+                            detail = detail.substring(0, 57) + '...';
+                        }
+                        keyDetails.push(detail);
+                    }
+                }
+                
+                // Limit to 3 key details for space
+                return keyDetails.slice(0, 3);
+            }
+
+            createListItem(date, workout) {
+                const listItem = document.createElement('div');
+                listItem.className = 'list-item';
+                
+                // Date section
+                const dateSection = document.createElement('div');
+                const listDate = document.createElement('div');
+                listDate.className = 'list-date';
+                listDate.textContent = date.getDate();
+                
+                const listDay = document.createElement('div');
+                listDay.className = 'list-day';
+                const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                listDay.textContent = dayNames[date.getDay()];
+                
+                dateSection.appendChild(listDate);
+                dateSection.appendChild(listDay);
+                
+                // Workout section
+                const workoutSection = document.createElement('div');
+                workoutSection.className = 'list-workout';
+                
+                // Workout type
+                const description = workout.description || '';
+                const workoutType = this.getWorkoutType(description);
+                const typeSpan = document.createElement('div');
+                typeSpan.className = `list-workout-type ${workoutType.class}`;
+                typeSpan.textContent = workoutType.name;
+                
+                // Workout title (first line of description)
+                const lines = description.replace(/\\n/g, '\n').split('\n');
+                const title = lines[0].replace(/\[.*?\]/g, '').trim();
+                const titleDiv = document.createElement('div');
+                titleDiv.textContent = title;
+                titleDiv.style.fontWeight = '500';
+                titleDiv.style.marginTop = '4px';
+                
+                workoutSection.appendChild(typeSpan);
+                workoutSection.appendChild(titleDiv);
+                
+                // Mileage section
+                const mileageDiv = document.createElement('div');
+                mileageDiv.className = 'list-mileage';
+                mileageDiv.textContent = `${workout.mileage || 0} mi`;
+                
+                // Assemble list item
+                listItem.appendChild(dateSection);
+                listItem.appendChild(workoutSection);
+                listItem.appendChild(mileageDiv);
+                
+                // Add click handler
+                listItem.addEventListener('click', () => {
+                    this.showWorkoutDetail(date, workout);
+                });
+                
+                return listItem;
+            }
+
+            autoJumpToDataMonth() {
+                // Check if current month has any workout data
+                const currentYear = this.currentDate.getFullYear();
+                const currentMonth = this.currentDate.getMonth();
+                
+                let hasCurrentMonthData = false;
+                
+                // Check all days in current month for data
+                const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const dateStr = this.formatDateForLookup(new Date(currentYear, currentMonth, day));
+                    if (this.workouts[dateStr]) {
+                        hasCurrentMonthData = true;
+                        break;
+                    }
+                }
+                
+                console.log(`Current month (${currentYear}-${currentMonth + 1}) has data:`, hasCurrentMonthData);
+                console.log('Available workout dates:', Object.keys(this.workouts).slice(0, 10));
+                
+                // If no data in current month, find first month with data
+                if (!hasCurrentMonthData) {
+                    const workoutDates = Object.keys(this.workouts).sort();
+                    if (workoutDates.length > 0) {
+                        const firstWorkoutDate = new Date(workoutDates[0]);
+                        console.log('Jumping to first workout month:', firstWorkoutDate);
+                        this.currentDate = new Date(firstWorkoutDate.getFullYear(), firstWorkoutDate.getMonth(), 1);
+                    }
+                }
+            }
+
+            renderCalendar() {
+                const listView = document.getElementById('listView');
+                const calendarGrid = document.getElementById('calendarGrid');
+                
+                // Show calendar, hide list
+                listView.style.display = 'none';
+                calendarGrid.style.display = 'grid';
+                
+                const year = this.currentDate.getFullYear();
+                const month = this.currentDate.getMonth();
+                
+                // Update month display
+                const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                    'July', 'August', 'September', 'October', 'November', 'December'];
+                document.getElementById('currentMonth').textContent = `${monthNames[month]} ${year}`;
+
+                // Get first day of month and number of days
+                const firstDay = new Date(year, month, 1);
+                const lastDay = new Date(year, month + 1, 0);
+                
+                // Calculate start date (Monday of the week containing the 1st)
+                const startDate = new Date(firstDay);
+                const dayOfWeek = firstDay.getDay();
+                const daysToSubtract = dayOfWeek === 0 ? 6 : dayOfWeek - 1; // Adjust for Monday start
+                startDate.setDate(startDate.getDate() - daysToSubtract);
+
+                const grid = document.getElementById('calendarGrid');
+                
+                // Clear existing days and week totals (keep headers)
+                const cells = grid.querySelectorAll('.calendar-day, .week-total');
+                cells.forEach(cell => cell.remove());
+
+                // Generate 6 weeks (42 days + 6 week totals = 48 cells)
+                let weekMileage = 0;
+                let currentWeekNumber = null;
+                for (let i = 0; i < 42; i++) {
+                    const cellDate = new Date(startDate);
+                    cellDate.setDate(startDate.getDate() + i);
+                    
+                    const dayElement = this.createDayElement(cellDate, month);
+                    grid.appendChild(dayElement);
+                    
+                    // Add to weekly mileage (include ALL days shown, not just current month)
+                    const dateStr = this.formatDateForLookup(cellDate);
+                    const workout = this.workouts[dateStr];
+                    if (workout) {
+                        weekMileage += workout.mileage || 0;
+                        // Capture week number from any workout in this week
+                        if (workout.day_metadata && workout.day_metadata.week_number) {
+                            currentWeekNumber = workout.day_metadata.week_number;
+                        }
+                    }
+                    
+                    // Add week total after Sunday (every 7th day)
+                    if ((i + 1) % 7 === 0) {
+                        const weekTotal = this.createWeekTotal(weekMileage, currentWeekNumber);
+                        grid.appendChild(weekTotal);
+                        weekMileage = 0; // Reset for next week
+                        currentWeekNumber = null; // Reset for next week
+                    }
+                }
+            }
+            
+            createWeekTotal(mileage, weekNumber = null) {
+                const totalDiv = document.createElement('div');
+                totalDiv.className = 'calendar-day week-total';
+                
+                // Only show content if there's mileage > 0
+                if (mileage > 0) {
+                    // Week number at the top (only if we have mileage)
+                    if (weekNumber) {
+                        const weekDiv = document.createElement('div');
+                        weekDiv.className = 'week-number';
+                        weekDiv.textContent = `Week ${weekNumber}`;
+                        weekDiv.style.fontSize = '0.7rem';
+                        weekDiv.style.fontWeight = '600';
+                        weekDiv.style.color = '#667eea';
+                        weekDiv.style.marginBottom = '0.3rem';
+                        totalDiv.appendChild(weekDiv);
+                    }
+                    
+                    const numberDiv = document.createElement('div');
+                    numberDiv.className = 'week-total-number';
+                    numberDiv.textContent = mileage.toFixed(1);
+                    
+                    const labelDiv = document.createElement('div');
+                    labelDiv.className = 'week-total-label';
+                    labelDiv.textContent = 'miles';
+                    
+                    totalDiv.appendChild(numberDiv);
+                    totalDiv.appendChild(labelDiv);
+                }
+                
+                return totalDiv;
+            }
+
+            createDayElement(date, currentMonth, endMonth = null) {
+                const dayDiv = document.createElement('div');
+                dayDiv.className = 'calendar-day';
+                
+                let isCurrentMonth;
+                if (endMonth !== null) {
+                    // Season view - check if date is within the season range
+                    isCurrentMonth = date.getMonth() >= currentMonth && date.getMonth() <= endMonth;
+                } else {
+                    // Regular month view
+                    isCurrentMonth = date.getMonth() === currentMonth;
+                }
+                
+                const isToday = this.isToday(date);
+                
+                if (!isCurrentMonth) {
+                    dayDiv.classList.add('other-month');
+                }
+                
+                if (isToday) {
+                    dayDiv.classList.add('today');
+                }
+
+                // Day number
+                const dayNumber = document.createElement('div');
+                dayNumber.className = 'day-number';
+                dayNumber.textContent = date.getDate();
+                dayDiv.appendChild(dayNumber);
+
+                // Workout info
+                const dateStr = this.formatDateForLookup(date);
+                const workout = this.workouts[dateStr];
+                
+                if (workout) {
+                    const workoutSummary = this.createWorkoutSummary(workout);
+                    dayDiv.appendChild(workoutSummary);
+                    
+                    dayDiv.style.cursor = 'pointer';
+                    dayDiv.addEventListener('click', () => {
+                        this.showWorkoutDetail(date, workout);
+                    });
+                }
+
+                return dayDiv;
+            }
+
+            createWorkoutSummary(workout) {
+                const summaryDiv = document.createElement('div');
+                summaryDiv.className = 'workout-summary';
+
+                // Parse workout type
+                const description = workout.description || '';
+                const workoutType = this.getWorkoutType(description);
+                
+                const typeSpan = document.createElement('div');
+                typeSpan.className = `workout-type ${workoutType.class}`;
+                typeSpan.textContent = workoutType.name;
+                summaryDiv.appendChild(typeSpan);
+
+                // Workout title (first line of description)
+                const lines = description.replace(/\\n/g, '\n').split('\n');
+                const title = lines[0].replace(/\[.*?\]/g, '').trim();
+                
+                const titleDiv = document.createElement('div');
+                titleDiv.textContent = title.substring(0, 30) + (title.length > 30 ? '...' : '');
+                titleDiv.style.fontSize = '0.7rem';
+                titleDiv.style.marginBottom = '0.2rem';
+                summaryDiv.appendChild(titleDiv);
+
+                // Mileage
+                if (workout.mileage > 0) {
+                    const mileageDiv = document.createElement('div');
+                    mileageDiv.className = 'workout-mileage';
+                    mileageDiv.textContent = `${workout.mileage} miles`;
+                    summaryDiv.appendChild(mileageDiv);
+                }
+
+                return summaryDiv;
+            }
+
+            getWorkoutType(description) {
+                // Check for current workout types used in the program
+                if (description.includes('[STRENGTH]') || description.includes('[Strength]')) return {name: 'Strength', class: 'strength'};
+                if (description.includes('[POWER]')) return {name: 'Power', class: 'strength'};
+                if (description.includes('[SHARPENING]')) return {name: 'Sharpening', class: 'vo2max'};
+                if (description.includes('[VO2MAX]')) return {name: 'VO2max', class: 'vo2max'};
+                if (description.includes('[INTERVAL]')) return {name: 'Interval', class: 'vo2max'};
+                if (description.includes('[SPEED]')) return {name: 'Speed', class: 'speed'};
+                if (description.includes('[LT]')) return {name: 'Threshold', class: 'lt1'};
+                if (description.includes('[FARTLEK]')) return {name: 'Fartlek', class: 'lt1'};
+                if (description.includes('[Z2]')) return {name: 'Zone 2', class: 'zone2'};
+                if (description.includes('[RACE]')) return {name: 'Race', class: 'race'};
+                if (description.includes('[REST]')) return {name: 'Rest', class: 'rest'};
+                if (description.includes('[R]')) return {name: 'Recovery', class: 'recovery'};
+                
+                // Legacy tags for backwards compatibility
+                if (description.includes('[LT2]')) return {name: 'LT2', class: 'lt2'};
+                if (description.includes('[LT1]')) return {name: 'LT1', class: 'lt1'};
+                if (description.includes('[AP]')) return {name: 'VO2max', class: 'vo2max'};
+                if (description.includes('[SP]')) return {name: 'Strength', class: 'strength'};
+                
+                // Text-based fallbacks
+                if (description.toLowerCase().includes('rest day')) return {name: 'Rest', class: 'rest'};
+                if (description.toLowerCase().includes('easy day')) return {name: 'Easy', class: 'zone2'};
+                
+                // Default fallback
+                return {name: 'Easy', class: 'zone2'};
+            }
+
+            showWorkoutDetail(date, workout) {
+                const title = document.getElementById('workoutTitle');
+                const content = document.getElementById('workoutContent');
+                
+                // Format date
+                const dateStr = date.toLocaleDateString('en-US', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+
+                title.innerHTML = `${dateStr}<br><small style="color: #667eea; font-weight: 600;">${workout.mileage} miles</small>`;
+                
+                // Format workout description with better structure
+                const description = workout.description.replace(/\\n/g, '\n');
+                const lines = description.split('\n').filter(line => line.trim() !== '');
+                
+                let formattedContent = '';
+                let currentSection = '';
+                
+                lines.forEach((line, index) => {
+                    line = line.trim();
+                    
+                    // Handle workout type tags
+                    if (line.includes('[') && line.includes(']')) {
+                        const tag = line.match(/\[([^\]]+)\]/);
+                        if (tag) {
+                            formattedContent += `<div class="workout-section">`;
+                            formattedContent += `<strong style="color: #667eea; font-size: 0.85rem; text-transform: uppercase;">[${tag[1]}]</strong><br>`;
+                            formattedContent += line.replace(/\[([^\]]+)\]/, '').trim();
+                            formattedContent += `</div>`;
+                        }
+                    }
+                    // Handle bullet points
+                    else if (line.startsWith('-') || line.startsWith('•')) {
+                        formattedContent += `<div class="workout-phase">• ${line.substring(1).trim()}</div>`;
+                    }
+                    // Handle regular lines
+                    else if (line.length > 0) {
+                        if (index === 0) {
+                            // First line is usually the main description
+                            formattedContent += `<div class="workout-section">${line}</div>`;
+                        } else {
+                            formattedContent += `<div class="workout-phase">${line}</div>`;
+                        }
+                    }
+                });
+                
+                content.innerHTML = formattedContent;
+
+                document.getElementById('overlay').classList.add('active');
+                document.getElementById('workoutDetail').classList.add('active');
+            }
+
+            closeWorkoutDetail() {
+                document.getElementById('overlay').classList.remove('active');
+                document.getElementById('workoutDetail').classList.remove('active');
+            }
+
+            formatDateForLookup(date) {
+                const year = date.getFullYear();
+                const month = String(date.getMonth() + 1).padStart(2, '0');
+                const day = String(date.getDate()).padStart(2, '0');
+                return `${year}-${month}-${day}`;
+            }
+
+            isToday(date) {
+                return date.toDateString() === this.actualToday.toDateString();
+            }
+        }
+
+        // Initialize calendar when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new WorkoutCalendar();
+            
+            // Mobile menu functionality
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const mobileMenuClose = document.getElementById('mobileMenuClose');
+            const mobileTeamName = document.getElementById('mobileTeamName');
+            
+            function openMobileMenu() {
+                mobileMenuOverlay.classList.add('active');
+                mobileMenu.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeMobileMenu() {
+                mobileMenuOverlay.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', openMobileMenu);
+            }
+            
+            if (mobileMenuClose) {
+                mobileMenuClose.addEventListener('click', closeMobileMenu);
+            }
+            
+            if (mobileMenuOverlay) {
+                mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+            }
+            
+            // Sync team name with mobile menu
+            const teamNameElement = document.getElementById('teamName');
+            if (teamNameElement && mobileTeamName) {
+                const observer = new MutationObserver(() => {
+                    mobileTeamName.textContent = teamNameElement.textContent;
+                });
+                observer.observe(teamNameElement, { childList: true, subtree: true });
+            }
+        });
+    </script>
+</body>
+</html>
