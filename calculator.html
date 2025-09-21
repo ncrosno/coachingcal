@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Training Calculator - Modern Block Periodization | CoachingCal</title>
+    <meta name="description" content="Free calculator for generating scientifically-based training plans using modern block periodization methodology. Perfect for high school cross country teams.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #667eea;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: #555;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: #667eea;
+        }
+        
+        .demo-btn {
+            background: #667eea;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .demo-btn:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Calculator Section */
+        .calculator-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .calculator-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        
+        .calculator-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .calculator-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            height: fit-content;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .form-group small {
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+            display: block;
+        }
+        
+        .calculate-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .results-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        
+        .results-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .results-content {
+            padding: 2rem;
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .summary-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .summary-card .value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.25rem;
+        }
+        
+        .summary-card .label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        
+        .schedule-table th {
+            background: #f8f9fa;
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 2px solid #e9ecef;
+            font-weight: 600;
+        }
+        
+        .schedule-table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .schedule-table .week-number {
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        .schedule-table .peak-week {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+        }
+        
+        .schedule-table .taper-week {
+            background: rgba(255, 193, 7, 0.1);
+        }
+        
+        .phase-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .phase-build {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .phase-peak {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .phase-taper {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        
+        .cycle-info {
+            background: #e8f5e8;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .cycle-info h3 {
+            color: #2e7d32;
+            margin-bottom: 0.5rem;
+        }
+        
+        .methodology {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 3rem;
+        }
+        
+        .methodology h2 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .methodology-card {
+            border-left: 4px solid #667eea;
+            padding-left: 1rem;
+        }
+        
+        .methodology-card h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: color 0.3s;
+        }
+        
+        .back-link:hover {
+            color: #5a6fd8;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .calculator-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .summary-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .schedule-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo">
+                <i class="fas fa-running"></i> CoachingCal
+            </a>
+            <div class="nav-links">
+                <a href="/#features" class="nav-link">Features</a>
+                <a href="/#preview" class="nav-link">How It Works</a>
+                <a href="/#contact" class="nav-link">Contact</a>
+                <a href="/bcs" class="demo-btn">Live Demo</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <a href="/" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+        
+        <!-- Calculator Hero -->
+        <section class="calculator-hero">
+            <h1><i class="fas fa-calculator"></i> Free Training Calculator</h1>
+            <p>Generate scientifically-based weekly mileage targets using modern block periodization methodology. Perfect for high school cross country teams.</p>
+        </section>
+
+        <!-- Calculator Interface -->
+        <div class="calculator-grid">
+            <!-- Input Form -->
+            <div class="calculator-form">
+                <h2 style="margin-bottom: 1.5rem; color: #333;"><i class="fas fa-cogs"></i> Training Parameters</h2>
+                
+                <div class="form-group">
+                    <label for="maxMileage">Peak Mileage Target</label>
+                    <input type="number" id="maxMileage" value="45" min="20" max="80" step="0.5">
+                    <small>Maximum weekly mileage (20-80 miles)</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="buildWeeks">Build Weeks</label>
+                    <input type="number" id="buildWeeks" value="12" min="4" max="20">
+                    <small>Total weeks including peak week (4-20 weeks)</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="taperWeeks">Taper Weeks</label>
+                    <input type="number" id="taperWeeks" value="3" min="1" max="6">
+                    <small>Weeks to taper after peak (1-6 weeks)</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="supercycleIncrease">Supercycle Increase (%)</label>
+                    <input type="number" id="supercycleIncrease" value="15" min="5" max="25" step="1">
+                    <small>Increase between cycle peaks (5-25%)</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="progressionRate">Weekly Progression Rate (%)</label>
+                    <input type="number" id="progressionRate" value="6" min="3" max="10" step="0.5">
+                    <small>Weekly progression within cycles (3-10%)</small>
+                </div>
+                
+                <button class="calculate-btn" onclick="generateTrainingPlan()">
+                    <i class="fas fa-chart-line"></i> Generate Training Plan
+                </button>
+            </div>
+            
+            <!-- Results -->
+            <div class="results-container">
+                <div class="results-header">
+                    <h2><i class="fas fa-chart-bar"></i> Training Schedule</h2>
+                    <p>Your personalized block periodization plan</p>
+                </div>
+                <div class="results-content" id="results">
+                    <div style="text-align: center; color: #666; padding: 3rem;">
+                        <i class="fas fa-arrow-left" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;"></i>
+                        <p>Enter your parameters and click "Generate Training Plan" to see your customized schedule.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Methodology Section -->
+        <section class="methodology">
+            <h2><i class="fas fa-graduation-cap"></i> Modern Block Periodization Methodology</h2>
+            <p>This calculator implements cutting-edge exercise science research optimized for high school athletes, providing superior adaptations compared to traditional linear periodization.</p>
+            
+            <div class="methodology-grid">
+                <div class="methodology-card">
+                    <h4><i class="fas fa-sync"></i> 4-Week Training Blocks</h4>
+                    <p>Each supercycle follows a progressive pattern: baseline → +6% → +6% → +6% (peak) → recovery week (70-80% of peak).</p>
+                </div>
+                
+                <div class="methodology-card">
+                    <h4><i class="fas fa-chart-line"></i> Linear Progression</h4>
+                    <p>Sustainable 6% weekly increases within each cycle, proven safe for adolescent athletes while maximizing adaptation.</p>
+                </div>
+                
+                <div class="methodology-card">
+                    <h4><i class="fas fa-heart"></i> Recovery Integration</h4>
+                    <p>Built-in recovery weeks prevent overtraining and allow for supercompensation between training blocks.</p>
+                </div>
+                
+                <div class="methodology-card">
+                    <h4><i class="fas fa-trophy"></i> Peak Optimization</h4>
+                    <p>Each cycle peak is strategically placed 10-15% below the previous cycle to maintain progression while allowing recovery.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function getProgressionRate(ratePercent) {
+            return ratePercent / 100.0;
+        }
+
+        function createSupercycle(peakMileage, progressionRate) {
+            const cycle = [peakMileage];
+            let current = peakMileage;
+            
+            for (let i = 0; i < 3; i++) {
+                current = current * (1 - progressionRate);
+                cycle.unshift(current);
+            }
+            
+            return cycle.map(mileage => Math.round(mileage * 2) / 2);
+        }
+
+        function generateBlockTargets(maxMileage, buildWeeks, taperWeeks, supercycleIncrease, progressionRate) {
+            const totalWeeks = buildWeeks + taperWeeks;
+            const weeklyTargets = new Array(totalWeeks).fill(0);
+            const peakWeekIndex = buildWeeks - 1;
+            
+            // Build super-cycles working backwards
+            const cycles = [];
+            let currentPeak = maxMileage;
+            let weeksNeeded = buildWeeks;
+            
+            while (weeksNeeded > 0) {
+                const supercycle = createSupercycle(currentPeak, progressionRate);
+                
+                const weeksToTake = Math.min(4, weeksNeeded);
+                let cyclePortion;
+                if (weeksToTake < 4) {
+                    cyclePortion = supercycle.slice(-weeksToTake);
+                } else {
+                    cyclePortion = supercycle;
+                }
+                
+                cycles.unshift(cyclePortion);
+                weeksNeeded -= weeksToTake;
+                
+                if (weeksNeeded > 0) {
+                    const firstWeek = supercycle[0];
+                    currentPeak = firstWeek * (1 + supercycleIncrease);
+                }
+            }
+            
+            // Fill weekly targets from cycles
+            let weekIdx = 0;
+            for (const cycle of cycles) {
+                for (const mileage of cycle) {
+                    if (weekIdx <= peakWeekIndex) {
+                        weeklyTargets[weekIdx] = mileage;
+                        weekIdx++;
+                    }
+                }
+            }
+            
+            // Simple taper calculation
+            if (taperWeeks >= 1) {
+                weeklyTargets[peakWeekIndex + 1] = Math.round(maxMileage * 0.69 * 10) / 10;
+            }
+            if (taperWeeks >= 2) {
+                weeklyTargets[peakWeekIndex + 2] = Math.round(maxMileage * 0.51 * 10) / 10;
+            }
+            if (taperWeeks >= 3) {
+                weeklyTargets[peakWeekIndex + 3] = Math.round(maxMileage * 0.40 * 10) / 10;
+            }
+            
+            for (let i = 3; i < taperWeeks; i++) {
+                const reductionFactor = 0.40 * Math.pow(0.8, i - 2);
+                const weekIndex = peakWeekIndex + 1 + i;
+                if (weekIndex < totalWeeks) {
+                    weeklyTargets[weekIndex] = Math.round(maxMileage * reductionFactor * 10) / 10;
+                }
+            }
+            
+            return { targets: weeklyTargets, cycles };
+        }
+
+        function identifyCycleStructure(targets, buildWeeks) {
+            const cycles = [];
+            const peakWeekIndex = buildWeeks - 1;
+            let currentWeek = peakWeekIndex;
+            let cycleCount = 1;
+            
+            while (currentWeek >= 0) {
+                const cycleStart = Math.max(0, currentWeek - 3);
+                const cycleLength = currentWeek - cycleStart + 1;
+                
+                const cycleInfo = {
+                    number: cycleCount,
+                    startWeek: cycleStart + 1,
+                    endWeek: currentWeek + 1,
+                    length: cycleLength,
+                    peakMileage: targets[currentWeek],
+                    type: cycleLength === 4 ? 'Full Training Block' : 'Partial Block'
+                };
+                cycles.unshift(cycleInfo);
+                
+                currentWeek = cycleStart - 1;
+                cycleCount++;
+            }
+            
+            return cycles;
+        }
+
+        function generateTrainingPlan() {
+            // Get form values
+            const maxMileage = parseFloat(document.getElementById('maxMileage').value);
+            const buildWeeks = parseInt(document.getElementById('buildWeeks').value);
+            const taperWeeks = parseInt(document.getElementById('taperWeeks').value);
+            const supercycleIncrease = parseFloat(document.getElementById('supercycleIncrease').value) / 100;
+            const progressionRate = getProgressionRate(parseFloat(document.getElementById('progressionRate').value));
+            
+            // Generate targets
+            const result = generateBlockTargets(maxMileage, buildWeeks, taperWeeks, supercycleIncrease, progressionRate);
+            const targets = result.targets;
+            const cycles = identifyCycleStructure(targets, buildWeeks);
+            
+            // Calculate summary stats
+            const startMiles = targets[0];
+            const peakMiles = Math.max(...targets);
+            const totalIncrease = ((peakMiles / startMiles) - 1) * 100;
+            const peakWeek = buildWeeks;
+            const totalWeeks = targets.length;
+            
+            // Generate results HTML
+            let html = `
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <div class="value">${startMiles}</div>
+                        <div class="label">Starting Miles</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="value">${peakMiles}</div>
+                        <div class="label">Peak Miles</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="value">${totalIncrease.toFixed(1)}%</div>
+                        <div class="label">Total Increase</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="value">${cycles.length}</div>
+                        <div class="label">Training Blocks</div>
+                    </div>
+                </div>
+                
+                <div class="cycle-info">
+                    <h3><i class="fas fa-info-circle"></i> Training Block Structure</h3>
+                    ${cycles.map(cycle => 
+                        `<strong>${cycle.type} ${cycle.number}:</strong> Weeks ${cycle.startWeek}-${cycle.endWeek} (Peak: ${cycle.peakMileage} miles)`
+                    ).join('<br>')}
+                </div>
+                
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Week</th>
+                            <th>Miles</th>
+                            <th>Phase</th>
+                            <th>Weekly Change</th>
+                            <th>Cycle Position</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            targets.forEach((miles, i) => {
+                const weekNum = i + 1;
+                let phase, phaseClass, rowClass = '';
+                
+                if (weekNum === peakWeek) {
+                    phase = 'PEAK';
+                    phaseClass = 'phase-peak';
+                    rowClass = 'peak-week';
+                } else if (weekNum < peakWeek) {
+                    phase = 'BUILD';
+                    phaseClass = 'phase-build';
+                } else {
+                    phase = 'TAPER';
+                    phaseClass = 'phase-taper';
+                    rowClass = 'taper-week';
+                }
+                
+                let changeStr = '---';
+                if (i > 0) {
+                    const changePct = ((targets[i] / targets[i-1]) - 1) * 100;
+                    changeStr = `${changePct >= 0 ? '+' : ''}${changePct.toFixed(1)}%`;
+                }
+                
+                // Determine cycle position
+                let cyclePos = '';
+                if (phase === 'BUILD' || phase === 'PEAK') {
+                    for (const cycle of cycles) {
+                        if (cycle.startWeek <= weekNum && weekNum <= cycle.endWeek) {
+                            const posInCycle = weekNum - cycle.startWeek + 1;
+                            if (cycle.length === 4) {
+                                const positions = ['Baseline/Recovery', 'Week 2', 'Week 3', 'Peak'];
+                                cyclePos = positions[posInCycle - 1];
+                            } else {
+                                if (posInCycle === cycle.length) {
+                                    cyclePos = 'Peak';
+                                } else {
+                                    cyclePos = `Week ${posInCycle}`;
+                                }
+                            }
+                            break;
+                        }
+                    }
+                }
+                
+                html += `
+                    <tr class="${rowClass}">
+                        <td class="week-number">${weekNum}</td>
+                        <td><strong>${miles}</strong></td>
+                        <td><span class="phase-badge ${phaseClass}">${phase}</span></td>
+                        <td>${changeStr}</td>
+                        <td>${cyclePos}</td>
+                    </tr>
+                `;
+            });
+            
+            html += `
+                    </tbody>
+                </table>
+                
+                <div style="margin-top: 2rem; padding: 1rem; background: #e8f5e8; border-radius: 8px;">
+                    <h4 style="color: #2e7d32; margin-bottom: 0.5rem;"><i class="fas fa-check-circle"></i> Your Training Plan is Ready!</h4>
+                    <p style="margin: 0 0 1rem 0; color: #2e7d32;">This scientifically-designed plan provides optimal progression while minimizing injury risk. Each 4-week block builds systematically toward your peak performance.</p>
+                    <button onclick="requestCustomProgram()" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-rocket"></i> Request Custom Program with These Targets
+                    </button>
+                </div>
+            `;
+            
+            document.getElementById('results').innerHTML = html;
+        }
+
+        function requestCustomProgram() {
+            // Get current targets
+            const maxMileage = parseFloat(document.getElementById('maxMileage').value);
+            const buildWeeks = parseInt(document.getElementById('buildWeeks').value);
+            const taperWeeks = parseInt(document.getElementById('taperWeeks').value);
+            const supercycleIncrease = parseFloat(document.getElementById('supercycleIncrease').value) / 100;
+            const progressionRate = getProgressionRate(parseFloat(document.getElementById('progressionRate').value));
+            
+            // Generate targets
+            const result = generateBlockTargets(maxMileage, buildWeeks, taperWeeks, supercycleIncrease, progressionRate);
+            const targets = result.targets;
+            
+            // Format targets as text
+            let targetsText = "";
+            targets.forEach((miles, i) => {
+                const weekNum = i + 1;
+                const peakWeek = buildWeeks;
+                
+                let suffix = "";
+                if (weekNum === peakWeek) {
+                    suffix = " (PEAK)";
+                } else if (weekNum > peakWeek) {
+                    suffix = " (taper)";
+                } else {
+                    // Check if this is a recovery week (looking for dips in the pattern)
+                    if (i > 0 && i < targets.length - 1 && targets[i] < targets[i-1] && targets[i] < targets[i+1]) {
+                        suffix = " (recovery)";
+                    }
+                }
+                
+                targetsText += `Week ${weekNum}: ${miles} miles${suffix}\n`;
+            });
+            
+            // Create URL with parameters
+            const params = new URLSearchParams();
+            params.set('weekly_targets', targetsText.trim());
+            params.set('peak_mileage', maxMileage.toString());
+            params.set('total_weeks', (buildWeeks + taperWeeks).toString());
+            params.set('peak_week', buildWeeks.toString());
+            
+            // Redirect to program generator
+            window.location.href = `/program-generator.html?${params.toString()}`;
+        }
+
+        // Generate initial plan on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            generateTrainingPlan();
+        });
+    </script>
+</body>
+</html> 

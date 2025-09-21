@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful - Your Custom Training Program | CoachingCal</title>
+    <meta name="description" content="Thank you for joining our beta program! Your custom cross country training calendar will be ready within 24 hours.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .success-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .success-icon {
+            font-size: 4rem;
+            color: #4CAF50;
+            margin-bottom: 1.5rem;
+            animation: bounceIn 0.6s ease-out;
+        }
+        
+        .success-title {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .success-subtitle {
+            font-size: 1.2rem;
+            color: #667eea;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        
+        .program-details {
+            background: #f8f9ff;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #667eea;
+        }
+        
+        .program-details h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .detail-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .detail-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+        
+        .detail-value {
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1rem;
+        }
+        
+        .confirmation-id {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: monospace;
+            margin-bottom: 2rem;
+            word-break: break-all;
+        }
+        
+        .next-steps {
+            background: #e8f5e8;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .next-steps h3 {
+            color: #2d5016;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .steps-list {
+            text-align: left;
+            color: #2d5016;
+        }
+        
+        .steps-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        
+        .step-icon {
+            color: #4CAF50;
+            margin-top: 0.2rem;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .status-indicator {
+            margin-bottom: 2rem;
+        }
+        
+        .status-message {
+            color: #4CAF50;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .loading-dots {
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        @media (max-width: 768px) {
+            .success-container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+            
+            .success-title {
+                font-size: 2rem;
+            }
+            
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+        
+        .email-notice {
+            background: #fff3cd;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .support-info {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        
+        <h1 class="success-title">Payment Successful!</h1>
+        <p class="success-subtitle">Welcome to the CoachingCal Beta Program</p>
+        
+        <div class="status-indicator">
+            <div class="status-message" id="statusMessage">
+                <i class="fas fa-cog fa-spin"></i> Preparing your custom training program<span class="loading-dots">...</span>
+            </div>
+        </div>
+        
+        <div class="program-details" id="programDetails" style="display: none;">
+            <h3><i class="fas fa-clipboard-list"></i> Your Program Details</h3>
+            <div class="details-grid" id="detailsGrid">
+                <!-- Details will be populated by JavaScript -->
+            </div>
+        </div>
+        
+        <div class="confirmation-id" id="confirmationId" style="display: none;">
+            <strong>Confirmation ID:</strong> <span id="sessionId"></span>
+        </div>
+        
+        <div class="next-steps">
+            <h3><i class="fas fa-route"></i> What Happens Next</h3>
+            <ol class="steps-list">
+                <li>
+                    <i class="fas fa-envelope step-icon"></i>
+                    <span>We'll email your complete training program within <strong>24 hours</strong></span>
+                </li>
+                <li>
+                    <i class="fas fa-user-check step-icon"></i>
+                    <span>Our team will review your details and customize the program</span>
+                </li>
+                <li>
+                    <i class="fas fa-comments step-icon"></i>
+                    <span>You'll receive beta support for any questions or adjustments</span>
+                </li>
+                <li>
+                    <i class="fas fa-calendar-check step-icon"></i>
+                    <span>Start implementing your science-based training calendar</span>
+                </li>
+            </ol>
+        </div>
+        
+        <div class="email-notice">
+            <i class="fas fa-info-circle"></i>
+            <strong>Check your email:</strong> A receipt has been sent to your email address. Your training program will be delivered to the same email within 24 hours.
+        </div>
+        
+        <div class="action-buttons">
+            <a href="/bcs/" class="btn btn-primary">
+                <i class="fas fa-eye"></i> View Example Program
+            </a>
+            <a href="/calculator.html" class="btn btn-secondary">
+                <i class="fas fa-calculator"></i> Try Calculator Again
+            </a>
+        </div>
+        
+        <div class="support-info">
+            <p><strong>Questions?</strong> Email us at <a href="mailto:support@coachingcal.com">support@coachingcal.com</a></p>
+            <p>Beta Program Support • Response within 24 hours</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Retrieve stored form data
+            const programData = JSON.parse(sessionStorage.getItem('programData'));
+            
+            // Get Stripe session ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const sessionId = urlParams.get('session_id');
+            
+            if (programData && sessionId) {
+                // Show confirmation ID
+                document.getElementById('sessionId').textContent = sessionId;
+                document.getElementById('confirmationId').style.display = 'block';
+                
+                // Populate program details
+                const detailsGrid = document.getElementById('detailsGrid');
+                
+                const details = [
+                    { label: 'School/Team', value: programData.school_name },
+                    { label: 'Coach', value: programData.coach_name },
+                    { label: 'Start Date', value: new Date(programData.start_date).toLocaleDateString() },
+                    { label: 'Duration', value: `${programData.total_weeks} weeks` },
+                    { label: 'Peak Week', value: `Week ${programData.peak_week}` },
+                    { label: 'Peak Mileage', value: `${programData.peak_mileage} miles` },
+                    { label: 'Contact Email', value: programData.email }
+                ];
+                
+                details.forEach(detail => {
+                    const detailElement = document.createElement('div');
+                    detailElement.className = 'detail-item';
+                    detailElement.innerHTML = `
+                        <div class="detail-label">${detail.label}</div>
+                        <div class="detail-value">${detail.value}</div>
+                    `;
+                    detailsGrid.appendChild(detailElement);
+                });
+                
+                // Show program details
+                document.getElementById('programDetails').style.display = 'block';
+                
+                // Update status message after a delay
+                setTimeout(() => {
+                    document.getElementById('statusMessage').innerHTML = 
+                        '<i class="fas fa-check" style="color: #4CAF50;"></i> Order confirmed! Program generation in progress.';
+                }, 2000);
+                
+                // Clear stored data
+                sessionStorage.removeItem('programData');
+                
+                // Optional: Send data to a webhook/analytics service
+                // This would typically be handled by Stripe webhooks on your backend
+                console.log('Order completed:', { sessionId, programData });
+                
+            } else {
+                // No data found - redirect back to form
+                document.querySelector('.success-container').innerHTML = `
+                    <div class="success-icon" style="color: #ff9800;">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h1 class="success-title">Session Not Found</h1>
+                    <p class="success-subtitle">Unable to retrieve your order information</p>
+                    <div class="action-buttons">
+                        <a href="/program-generator-stripe.html" class="btn btn-primary">
+                            <i class="fas fa-arrow-left"></i> Return to Form
+                        </a>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
