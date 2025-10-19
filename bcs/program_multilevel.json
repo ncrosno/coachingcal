@@ -1,0 +1,3602 @@
+{
+  "program_metadata": {
+    "start_date": "2025-08-04",
+    "total_weeks": 16,
+    "team_name": "Bradshaw XC Multi-Level",
+    "generated_date": "2025-08-01",
+    "generated_by": "Multi-Level Program Generator",
+    "levels": [
+      "advanced",
+      "intermediate",
+      "beginner"
+    ],
+    "peak_weeks": {
+      "advanced": {
+        "week": 11,
+        "mileage": 50.0
+      },
+      "intermediate": {
+        "week": 11,
+        "mileage": 37.5
+      },
+      "beginner": {
+        "week": 11,
+        "mileage": 25.0
+      }
+    }
+  },
+  "week_1": {
+    "week_metadata": {
+      "week_number": 1,
+      "start_date": "2025-08-04",
+      "end_date": "2025-08-10",
+      "phase": "base",
+      "mileage_targets": {
+        "advanced": 40.0,
+        "intermediate": 30.0,
+        "beginner": 20.0
+      },
+      "mileage_actual": {
+        "advanced": null,
+        "intermediate": null,
+        "beginner": null
+      }
+    },
+    "2025-08-04": {
+      "day_metadata": {
+        "day_of_week": "monday",
+        "day_name": "Monday",
+        "week_number": 1
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 6.0,
+        "description": "[Z2] 6.0 mile easy run - 0.5mi warmup + dynamic stretches + 4x100m strides + 5.25mi at comfortable aerobic pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.5,
+        "description": "[Z2] 4.5 mile easy run - 0.5mi warmup + dynamic stretches + 4x100m strides + 3.75mi at comfortable aerobic pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.0,
+        "description": "[Z2] 3.0 mile easy run - 0.5mi warmup + dynamic stretches + 4x100m strides + 2.25mi at comfortable aerobic pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-05": {
+      "day_metadata": {
+        "day_of_week": "tuesday",
+        "day_name": "Tuesday",
+        "week_number": 1
+      },
+      "workout_type": "tempo",
+      "intensity": "threshold",
+      "category": "tempo",
+      "advanced": {
+        "mileage": 7.5,
+        "description": "[LT] 7.5 mile tempo run - 1.0mi warmup + dynamic stretches + 1.0mi easy + 20.0min tempo at threshold pace (30 sec slower than 5K pace) + 2.2mi easy cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.63,
+        "description": "[LT] 5.63 mile tempo run - 1.0mi warmup + dynamic stretches + 1.0mi easy + 15.0min tempo at threshold pace (30 sec slower than 5K pace) + 1.13mi easy cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.75,
+        "description": "[LT] 3.75 mile tempo run - 1.0mi warmup + dynamic stretches + 0.5mi easy + 10.0min tempo at threshold pace (30 sec slower than 5K pace) + 0.55mi easy cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-06": {
+      "day_metadata": {
+        "day_of_week": "wednesday",
+        "day_name": "Wednesday",
+        "week_number": 1
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 6.0,
+        "description": "[Z2] 6.0 mile easy run - 1.0mi warmup + dynamic stretches + 5.0mi easy at relaxed pace, focus on breathing and form recovery",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.5,
+        "description": "[Z2] 4.5 mile easy run - 1.0mi warmup + dynamic stretches + 3.5mi easy at relaxed pace, focus on breathing and form recovery",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.0,
+        "description": "[Z2] 3.0 mile easy run - 1.0mi warmup + dynamic stretches + 2.0mi easy at relaxed pace, focus on breathing and form recovery",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-07": {
+      "day_metadata": {
+        "day_of_week": "thursday",
+        "day_name": "Thursday",
+        "week_number": 1
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 6.5,
+        "description": "[Z2] 6.5 mile easy run - 1.0mi warmup + dynamic stretches + 5.25mi easy at comfortable pace + 4x100m strides (85-90% effort)",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.88,
+        "description": "[Z2] 4.88 mile easy run - 1.0mi warmup + dynamic stretches + 3.63mi easy at comfortable pace + 4x100m strides (85-90% effort)",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.25,
+        "description": "[Z2] 3.25 mile easy run - 1.0mi warmup + dynamic stretches + 2.0mi easy at comfortable pace + 4x100m strides (85-90% effort)",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-08": {
+      "day_metadata": {
+        "day_of_week": "friday",
+        "day_name": "Friday",
+        "week_number": 1
+      },
+      "workout_type": "circuit",
+      "intensity": "high",
+      "category": "circuit",
+      "advanced": {
+        "mileage": 6.0,
+        "description": "[Strength] 6.0 mile circuit training - 1.0mi warmup + 30.0min circuit (squats, planks, lunges, step-ups) + 3.75mi easy + 4x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.5,
+        "description": "[Strength] 4.5 mile circuit training - 0.75mi warmup + 22.5min circuit (squats, planks, lunges, step-ups) + 2.81mi easy + 4x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.0,
+        "description": "[Strength] 3.0 mile circuit training - 0.5mi warmup + 15.0min circuit (squats, planks, lunges, step-ups) + 1.88mi easy + 4x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-09": {
+      "day_metadata": {
+        "day_of_week": "saturday",
+        "day_name": "Saturday",
+        "week_number": 1
+      },
+      "workout_type": "long_run",
+      "intensity": "zone2",
+      "category": "long_run",
+      "advanced": {
+        "mileage": 8.0,
+        "description": "[Z2] 8.0 mile long run - 1.0mi warmup + dynamic stretches + 7.0mi long run (start easy, gradually build to steady aerobic pace)",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 6.0,
+        "description": "[Z2] 6.0 mile long run - 1.0mi warmup + dynamic stretches + 5.0mi long run (start easy, gradually build to steady aerobic pace)",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.0,
+        "description": "[Z2] 4.0 mile long run - 1.0mi warmup + dynamic stretches + 3.0mi long run (start easy, gradually build to steady aerobic pace)",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-10": {
+      "day_metadata": {
+        "day_of_week": "sunday",
+        "day_name": "Sunday",
+        "week_number": 1
+      },
+      "workout_type": "rest",
+      "intensity": "rest",
+      "category": "rest",
+      "advanced": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    }
+  },
+  "week_2": {
+    "week_metadata": {
+      "week_number": 2,
+      "start_date": "2025-08-11",
+      "end_date": "2025-08-17",
+      "phase": "base",
+      "mileage_targets": {
+        "advanced": 44.0,
+        "intermediate": 33.0,
+        "beginner": 22.0
+      },
+      "mileage_actual": {
+        "advanced": null,
+        "intermediate": null,
+        "beginner": null
+      }
+    },
+    "2025-08-11": {
+      "day_metadata": {
+        "day_of_week": "monday",
+        "day_name": "Monday",
+        "week_number": 2
+      },
+      "workout_type": "cruise_intervals",
+      "intensity": "threshold",
+      "category": "intervals",
+      "advanced": {
+        "mileage": 7.0,
+        "description": "[LT] 7.0 mile cruise intervals - 1.0mi warmup + dynamic stretches + 3×5.0min at threshold pace (30 sec slower than 5K pace) with 90sec recovery + 4x100m strides + 2.25mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.25,
+        "description": "[LT] 5.25 mile cruise intervals - 1.0mi warmup + dynamic stretches + 3×3.75min at threshold pace (30 sec slower than 5K pace) with 90sec recovery + 4x100m strides + 1.44mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.5,
+        "description": "[LT] 3.5 mile cruise intervals - 1.0mi warmup + dynamic stretches + 3×2.5min at threshold pace (30 sec slower than 5K pace) with 90sec recovery + 4x100m strides + 0.63mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-12": {
+      "day_metadata": {
+        "day_of_week": "tuesday",
+        "day_name": "Tuesday",
+        "week_number": 2
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 7.0,
+        "description": "[Z2] 7.0 mile easy run - 1.0mi warmup + dynamic stretches + 6.0mi easy at relaxed recovery pace after yesterday's intervals, focus on form and breathing",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.25,
+        "description": "[Z2] 5.25 mile easy run - 1.0mi warmup + dynamic stretches + 4.25mi easy at relaxed recovery pace after yesterday's intervals, focus on form and breathing",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.5,
+        "description": "[Z2] 3.5 mile easy run - 1.0mi warmup + dynamic stretches + 2.5mi easy at relaxed recovery pace after yesterday's intervals, focus on form and breathing",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-13": {
+      "day_metadata": {
+        "day_of_week": "wednesday",
+        "day_name": "Wednesday",
+        "week_number": 2
+      },
+      "workout_type": "tire_pulls",
+      "intensity": "high",
+      "category": "tire_pulls",
+      "advanced": {
+        "mileage": 6.5,
+        "description": "[Strength] 6.5 mile tire pulls - 1.0mi warmup + dynamic stretches + 4×400m tire pulls (400m jog recovery) + 3.0mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.88,
+        "description": "[Strength] 4.88 mile tire pulls - 1.0mi warmup + dynamic stretches + 3×400m tire pulls (400m jog recovery) + 2.01mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.25,
+        "description": "[Strength] 3.25 mile tire pulls - 1.0mi warmup + dynamic stretches + 2×400m tire pulls (400m jog recovery) + 1.0mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-14": {
+      "day_metadata": {
+        "day_of_week": "thursday",
+        "day_name": "Thursday",
+        "week_number": 2
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 6.0,
+        "description": "[Z2] 6.0 mile easy run - 1.0mi warmup + dynamic stretches + 5.0mi easy at recovery pace after yesterday's strength work, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.5,
+        "description": "[Z2] 4.5 mile easy run - 1.0mi warmup + dynamic stretches + 3.5mi easy at recovery pace after yesterday's strength work, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.0,
+        "description": "[Z2] 3.0 mile easy run - 1.0mi warmup + dynamic stretches + 2.0mi easy at recovery pace after yesterday's strength work, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-15": {
+      "day_metadata": {
+        "day_of_week": "friday",
+        "day_name": "Friday",
+        "week_number": 2
+      },
+      "workout_type": "fartlek",
+      "intensity": "threshold",
+      "category": "fartlek",
+      "advanced": {
+        "mileage": 6.0,
+        "description": "[FARTLEK] 6.0 mile fartlek - 1.0mi warmup + dynamic stretches + 10×1.0min hard (5K effort) with 1.0min easy recovery + 2.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.5,
+        "description": "[FARTLEK] 4.5 mile fartlek - 1.0mi warmup + dynamic stretches + 10×0.75min hard (5K effort) with 0.75min easy recovery + 1.63mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.0,
+        "description": "[FARTLEK] 3.0 mile fartlek - 1.0mi warmup + dynamic stretches + 10×0.5min hard (5K effort) with 0.5min easy recovery + 0.75mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-16": {
+      "day_metadata": {
+        "day_of_week": "saturday",
+        "day_name": "Saturday",
+        "week_number": 2
+      },
+      "workout_type": "long_run",
+      "intensity": "zone2",
+      "category": "long_run",
+      "advanced": {
+        "mileage": 10.0,
+        "description": "[Z2] 10.0 mile long run - 1.0mi warmup + dynamic stretches + 9.0mi long run starting conservatively, settle into steady aerobic pace, optional negative split if feeling strong",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 7.5,
+        "description": "[Z2] 7.5 mile long run - 1.0mi warmup + dynamic stretches + 6.5mi long run starting conservatively, settle into steady aerobic pace, optional negative split if feeling strong",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 5.0,
+        "description": "[Z2] 5.0 mile long run - 1.0mi warmup + dynamic stretches + 4.0mi long run starting conservatively, settle into steady aerobic pace, optional negative split if feeling strong",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-17": {
+      "day_metadata": {
+        "day_of_week": "sunday",
+        "day_name": "Sunday",
+        "week_number": 2
+      },
+      "workout_type": "rest",
+      "intensity": "rest",
+      "category": "rest",
+      "advanced": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    }
+  },
+  "week_3": {
+    "week_metadata": {
+      "week_number": 3,
+      "start_date": "2025-08-18",
+      "end_date": "2025-08-24",
+      "phase": "base",
+      "mileage_targets": {
+        "advanced": 47.0,
+        "intermediate": 35.2,
+        "beginner": 23.5
+      },
+      "mileage_actual": {
+        "advanced": null,
+        "intermediate": null,
+        "beginner": null
+      }
+    },
+    "2025-08-18": {
+      "day_metadata": {
+        "day_of_week": "monday",
+        "day_name": "Monday",
+        "week_number": 3
+      },
+      "workout_type": "tempo",
+      "intensity": "threshold",
+      "category": "tempo",
+      "advanced": {
+        "mileage": 8.0,
+        "description": "[LT2] 8.0 mile tempo run - 1.0mi warmup + dynamic stretches + 20.0min tempo at threshold pace (30 sec slower than 5K pace) + 4x100m strides + 3.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 6.0,
+        "description": "[LT2] 6.0 mile tempo run - 1.0mi warmup + dynamic stretches + 15.0min tempo at threshold pace (30 sec slower than 5K pace) + 4x100m strides + 2.38mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.0,
+        "description": "[LT2] 4.0 mile tempo run - 1.0mi warmup + dynamic stretches + 10.0min tempo at threshold pace (30 sec slower than 5K pace) + 4x100m strides + 1.25mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-19": {
+      "day_metadata": {
+        "day_of_week": "tuesday",
+        "day_name": "Tuesday",
+        "week_number": 3
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 7.5,
+        "description": "[Z2] 7.5 mile easy run - 1.0mi warmup + dynamic stretches + 6.5mi easy at recovery pace after yesterday's tempo, focus on relaxed form",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.63,
+        "description": "[Z2] 5.63 mile easy run - 1.0mi warmup + dynamic stretches + 4.63mi easy at recovery pace after yesterday's tempo, focus on relaxed form",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.75,
+        "description": "[Z2] 3.75 mile easy run - 1.0mi warmup + dynamic stretches + 2.75mi easy at recovery pace after yesterday's tempo, focus on relaxed form",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-20": {
+      "day_metadata": {
+        "day_of_week": "wednesday",
+        "day_name": "Wednesday",
+        "week_number": 3
+      },
+      "workout_type": "circuit_training",
+      "intensity": "high",
+      "category": "circuit",
+      "advanced": {
+        "mileage": 8.0,
+        "description": "[Strength] 8.0 mile circuit training - 1.0mi warmup + dynamic stretches + 3 sets: 20 single-leg squats each side, 15 calf raises each side, 20 bench step-ups each side, 20y lunges, 2-lap jog (skip final jog after set 3) + 4.0mi cooldown run",
+        "completed": true,
+        "actual_mileage": 8.0,
+        "notes": "Modified due to wasp nest on bleachers - did circuit training instead of strength laps"
+      },
+      "intermediate": {
+        "mileage": 6.0,
+        "description": "[Strength] 6.0 mile circuit training - 1.0mi warmup + dynamic stretches + 3 sets: 20 single-leg squats each side, 15 calf raises each side, 20 bench step-ups each side, 20y lunges, 2-lap jog (skip final jog after set 3) + 2.88mi cooldown run",
+        "completed": true,
+        "actual_mileage": 6.0,
+        "notes": "Modified due to wasp nest on bleachers - did circuit training instead of strength laps"
+      },
+      "beginner": {
+        "mileage": 4.0,
+        "description": "[Strength] 4.0 mile circuit training - 1.0mi warmup + dynamic stretches + 3 sets: 20 single-leg squats each side, 15 calf raises each side, 20 bench step-ups each side, 20y lunges, 2-lap jog (skip final jog after set 3) + 1.5mi cooldown run",
+        "completed": true,
+        "actual_mileage": 4.0,
+        "notes": "Modified due to wasp nest on bleachers - did circuit training instead of strength laps"
+      }
+    },
+    "2025-08-21": {
+      "day_metadata": {
+        "day_of_week": "thursday",
+        "day_name": "Thursday",
+        "week_number": 3
+      },
+      "workout_type": "figure_eights",
+      "intensity": "moderate",
+      "category": "heat_modified",
+      "advanced": {
+        "mileage": 7.0,
+        "description": "[Z2] Figure-8s on grass field - 45 minutes of diagonal field runs (~115y at brisk pace) with walking recovery across field width, water breaks as needed due to 100°+ heat, shade available at corner",
+        "completed": true,
+        "actual_mileage": 4.0,
+        "notes": "Heat modification - over 100°F, did Figure-8s instead of planned easy run for safety"
+      },
+      "intermediate": {
+        "mileage": 5.25,
+        "description": "[Z2] Figure-8s on grass field - 45 minutes of diagonal field runs (~115y at brisk pace) with walking recovery across field width, water breaks as needed due to 100°+ heat, shade available at corner",
+        "completed": true,
+        "actual_mileage": 3.5,
+        "notes": "Heat modification - over 100°F, did Figure-8s instead of planned easy run for safety"
+      },
+      "beginner": {
+        "mileage": 3.5,
+        "description": "[Z2] Figure-8s on grass field - 45 minutes of diagonal field runs (~115y at brisk pace) with walking recovery across field width, water breaks as needed due to 100°+ heat, shade available at corner",
+        "completed": true,
+        "actual_mileage": 3.0,
+        "notes": "Heat modification - over 100°F, did Figure-8s instead of planned easy run for safety"
+      }
+    },
+    "2025-08-22": {
+      "day_metadata": {
+        "day_of_week": "friday",
+        "day_name": "Friday",
+        "week_number": 3
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 6.0,
+        "description": "[Z2] 6.0 mile pre-race easy run - 1.0mi warmup + dynamic stretches + 4.5mi easy at relaxed pace + 6x100m strides to activate for tomorrow's race",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.5,
+        "description": "[Z2] 4.5 mile pre-race easy run - 1.0mi warmup + dynamic stretches + 3.13mi easy at relaxed pace + 6x100m strides to activate for tomorrow's race",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.0,
+        "description": "[Z2] 3.0 mile pre-race easy run - 1.0mi warmup + dynamic stretches + 1.75mi easy at relaxed pace + 6x100m strides to activate for tomorrow's race",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-23": {
+      "day_metadata": {
+        "day_of_week": "saturday",
+        "day_name": "Saturday",
+        "week_number": 3
+      },
+      "workout_type": "race",
+      "intensity": "high",
+      "category": "race",
+      "advanced": {
+        "mileage": 8.0,
+        "description": "[RACE] Eagle Run @ Pleasant Grove - 1.0mi warmup + dynamic stretches + 0.25mi strides + 3.1mi race + 3.65mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 6.0,
+        "description": "[RACE] Eagle Run @ Pleasant Grove - 1.0mi warmup + dynamic stretches + 0.19mi strides + 2.33mi race + 2.49mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.0,
+        "description": "[RACE] Eagle Run @ Pleasant Grove - 1.0mi warmup + dynamic stretches + 0.13mi strides + 1.55mi race + 1.33mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-24": {
+      "day_metadata": {
+        "day_of_week": "sunday",
+        "day_name": "Sunday",
+        "week_number": 3
+      },
+      "workout_type": "rest",
+      "intensity": "rest",
+      "category": "rest",
+      "advanced": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    }
+  },
+  "week_4": {
+    "week_metadata": {
+      "week_number": 4,
+      "start_date": "2025-08-25",
+      "end_date": "2025-08-31",
+      "phase": "base",
+      "mileage_targets": {
+        "advanced": 50.0,
+        "intermediate": 37.5,
+        "beginner": 25.0
+      },
+      "mileage_actual": {
+        "advanced": null,
+        "intermediate": null,
+        "beginner": null
+      }
+    },
+    "2025-08-25": {
+      "day_metadata": {
+        "day_of_week": "monday",
+        "day_name": "Monday",
+        "week_number": 4
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 6.0,
+        "description": "[Z2] 6.0 mile easy run - 1.0mi warmup + dynamic stretches + 5.0mi easy at recovery pace, start of recovery week",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.5,
+        "description": "[Z2] 4.5 mile easy run - 1.0mi warmup + dynamic stretches + 3.5mi easy at recovery pace, start of recovery week",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.0,
+        "description": "[Z2] 3.0 mile easy run - 1.0mi warmup + dynamic stretches + 2.0mi easy at recovery pace, start of recovery week",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-26": {
+      "day_metadata": {
+        "day_of_week": "tuesday",
+        "day_name": "Tuesday",
+        "week_number": 4
+      },
+      "workout_type": "tire_pulls",
+      "intensity": "moderate",
+      "category": "strength",
+      "advanced": {
+        "mileage": 6.5,
+        "description": "[Strength] 6.5 mile tire pulls - 1.0mi warmup + dynamic stretches + 4×200m tire pulls (2min recovery) + 4x100m strides + 3.5mi easy cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.88,
+        "description": "[Strength] 4.88 mile tire pulls - 1.0mi warmup + dynamic stretches + 4×200m tire pulls (2min recovery) + 4x100m strides + 2.38mi easy cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.25,
+        "description": "[Strength] 3.25 mile tire pulls - 1.0mi warmup + dynamic stretches + 4×200m tire pulls (2min recovery) + 4x100m strides + 1.0mi easy cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-27": {
+      "day_metadata": {
+        "day_of_week": "wednesday",
+        "day_name": "Wednesday",
+        "week_number": 4
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 6.5,
+        "description": "[Z2] 6.5 mile easy run - recovery pace after yesterday's circuit training",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.88,
+        "description": "[Z2] 4.88 mile easy run - recovery pace after yesterday's circuit training",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.25,
+        "description": "[Z2] 3.25 mile easy run - recovery pace after yesterday's circuit training",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-28": {
+      "day_metadata": {
+        "day_of_week": "thursday",
+        "day_name": "Thursday",
+        "week_number": 4
+      },
+      "workout_type": "tempo",
+      "intensity": "threshold",
+      "category": "tempo",
+      "advanced": {
+        "mileage": 6.0,
+        "description": "[LT2] 6.0 mile tempo run - 1.0mi warmup + dynamic stretches + 15.0min tempo at threshold pace + 4x100m strides + 2.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.5,
+        "description": "[LT2] 4.5 mile tempo run - 1.0mi warmup + dynamic stretches + 11.25min tempo at threshold pace + 4x100m strides + 1.63mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.0,
+        "description": "[LT2] 3.0 mile tempo run - 1.0mi warmup + dynamic stretches + 7.5min tempo at threshold pace + 4x100m strides + 0.75mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-29": {
+      "day_metadata": {
+        "day_of_week": "friday",
+        "day_name": "Friday",
+        "week_number": 4
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 6.0,
+        "description": "[Z2] 6.0 mile easy run - comfortable pace, prepare for tomorrow's long run",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.5,
+        "description": "[Z2] 4.5 mile easy run - comfortable pace, prepare for tomorrow's long run",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.0,
+        "description": "[Z2] 3.0 mile easy run - comfortable pace, prepare for tomorrow's long run",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-30": {
+      "day_metadata": {
+        "day_of_week": "saturday",
+        "day_name": "Saturday",
+        "week_number": 4
+      },
+      "workout_type": "long_run",
+      "intensity": "zone2",
+      "category": "long_run",
+      "advanced": {
+        "mileage": 8.5,
+        "description": "[Z2] 8.5 mile long run - start easy, settle into steady aerobic pace, recovery week volume",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 6.38,
+        "description": "[Z2] 6.38 mile long run - start easy, settle into steady aerobic pace, recovery week volume",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.25,
+        "description": "[Z2] 4.25 mile long run - start easy, settle into steady aerobic pace, recovery week volume",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-08-31": {
+      "day_metadata": {
+        "day_of_week": "sunday",
+        "day_name": "Sunday",
+        "week_number": 4
+      },
+      "workout_type": "rest",
+      "intensity": "rest",
+      "category": "rest",
+      "advanced": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    }
+  },
+  "week_5": {
+    "week_metadata": {
+      "week_number": 5,
+      "start_date": "2025-09-01",
+      "end_date": "2025-09-07",
+      "phase": "base",
+      "mileage_targets": {
+        "advanced": 38.0,
+        "intermediate": 28.5,
+        "beginner": 19.0
+      },
+      "mileage_actual": {
+        "advanced": null,
+        "intermediate": null,
+        "beginner": null
+      }
+    },
+    "2025-09-01": {
+      "day_metadata": {
+        "day_of_week": "monday",
+        "day_name": "Monday",
+        "week_number": 5
+      },
+      "workout_type": "cruise_intervals",
+      "intensity": "threshold",
+      "category": "intervals",
+      "advanced": {
+        "mileage": 7.0,
+        "description": "[LT2] 7.0 mile cruise intervals - 1.0mi warmup + dynamic stretches + 4×5.0min at threshold pace (90sec recovery) + 4x100m strides + 2.25mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.25,
+        "description": "[LT2] 5.25 mile cruise intervals - 1.0mi warmup + dynamic stretches + 4×3.75min at threshold pace (90sec recovery) + 4x100m strides + 1.44mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.5,
+        "description": "[LT2] 3.5 mile cruise intervals - 1.0mi warmup + dynamic stretches + 4×2.5min at threshold pace (90sec recovery) + 4x100m strides + 0.63mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-02": {
+      "day_metadata": {
+        "day_of_week": "tuesday",
+        "day_name": "Tuesday",
+        "week_number": 5
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 6.5,
+        "description": "[Z2] 6.5 mile easy run - 1.0mi warmup + dynamic stretches + 5.5mi easy at relaxed aerobic pace, focus on recovery from yesterday's intervals",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.88,
+        "description": "[Z2] 4.88 mile easy run - 1.0mi warmup + dynamic stretches + 3.88mi easy at relaxed aerobic pace, focus on recovery from yesterday's intervals",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.25,
+        "description": "[Z2] 3.25 mile easy run - 1.0mi warmup + dynamic stretches + 2.25mi easy at relaxed aerobic pace, focus on recovery from yesterday's intervals",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-03": {
+      "day_metadata": {
+        "day_of_week": "wednesday",
+        "day_name": "Wednesday",
+        "week_number": 5
+      },
+      "workout_type": "tire_pulls",
+      "intensity": "high",
+      "category": "tire_pulls",
+      "advanced": {
+        "mileage": 7.0,
+        "description": "[Strength] 7.0 mile tire pulls - 2.0mi warmup + dynamic stretches + 5×400m tire pulls (400m jog recovery) + 2.0mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.25,
+        "description": "[Strength] 5.25 mile tire pulls - 1.5mi warmup + dynamic stretches + 3×400m tire pulls (400m jog recovery) + 1.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.5,
+        "description": "[Strength] 3.5 mile tire pulls - 1.0mi warmup + dynamic stretches + 2×400m tire pulls (400m jog recovery) + 1.0mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-04": {
+      "day_metadata": {
+        "day_of_week": "thursday",
+        "day_name": "Thursday",
+        "week_number": 5
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 6.5,
+        "description": "[Z2] 6.5 mile easy run - 1.0mi warmup + dynamic stretches + 5.5mi easy at comfortable pace, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.88,
+        "description": "[Z2] 4.88 mile easy run - 1.0mi warmup + dynamic stretches + 3.88mi easy at comfortable pace, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.25,
+        "description": "[Z2] 3.25 mile easy run - 1.0mi warmup + dynamic stretches + 2.25mi easy at comfortable pace, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-05": {
+      "day_metadata": {
+        "day_of_week": "friday",
+        "day_name": "Friday",
+        "week_number": 5
+      },
+      "workout_type": "track_intervals",
+      "intensity": "high",
+      "category": "intervals",
+      "advanced": {
+        "mileage": 6.0,
+        "description": "[INTERVAL] 6.0 mile track intervals - 1.0mi warmup + dynamic stretches + 6×600m at 5K pace (90sec recovery) + 4x100m strides + 2.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.5,
+        "description": "[INTERVAL] 4.5 mile track intervals - 1.0mi warmup + dynamic stretches + 4×600m at 5K pace (90sec recovery) + 4x100m strides + 1.63mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.0,
+        "description": "[INTERVAL] 3.0 mile track intervals - 1.0mi warmup + dynamic stretches + 3×600m at 5K pace (90sec recovery) + 4x100m strides + 0.75mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-06": {
+      "day_metadata": {
+        "day_of_week": "saturday",
+        "day_name": "Saturday",
+        "week_number": 5
+      },
+      "workout_type": "long_run",
+      "intensity": "zone2",
+      "category": "long_run",
+      "advanced": {
+        "mileage": 9.0,
+        "description": "[Z2] 9.0 mile long run - 1.0mi warmup + dynamic stretches + 8.0mi long run starting conservatively, settle into steady aerobic pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 6.75,
+        "description": "[Z2] 6.75 mile long run - 1.0mi warmup + dynamic stretches + 5.75mi long run starting conservatively, settle into steady aerobic pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.5,
+        "description": "[Z2] 4.5 mile long run - 1.0mi warmup + dynamic stretches + 3.5mi long run starting conservatively, settle into steady aerobic pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-07": {
+      "day_metadata": {
+        "day_of_week": "sunday",
+        "day_name": "Sunday",
+        "week_number": 5
+      },
+      "workout_type": "rest",
+      "intensity": "rest",
+      "category": "rest",
+      "advanced": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    }
+  },
+  "week_6": {
+    "week_metadata": {
+      "week_number": 6,
+      "start_date": "2025-09-08",
+      "end_date": "2025-09-14",
+      "phase": "build",
+      "mileage_targets": {
+        "advanced": 45.0,
+        "intermediate": 33.75,
+        "beginner": 22.5
+      },
+      "mileage_actual": {
+        "advanced": null,
+        "intermediate": null,
+        "beginner": null
+      }
+    },
+    "2025-09-08": {
+      "day_metadata": {
+        "day_of_week": "monday",
+        "day_name": "Monday",
+        "week_number": 6
+      },
+      "workout_type": "tempo",
+      "intensity": "threshold",
+      "category": "tempo",
+      "advanced": {
+        "mileage": 8.0,
+        "description": "[LT2] 8.0 mile tempo run - 1.0mi warmup + dynamic stretches + 4x100m strides + 20.0min tempo at threshold pace + 3.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 6.0,
+        "description": "[LT2] 6.0 mile tempo run - 1.0mi warmup + dynamic stretches + 4x100m strides + 15.0min tempo at threshold pace + 2.38mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.0,
+        "description": "[LT2] 4.0 mile tempo run - 1.0mi warmup + dynamic stretches + 4x100m strides + 10.0min tempo at threshold pace + 1.25mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-09": {
+      "day_metadata": {
+        "day_of_week": "tuesday",
+        "day_name": "Tuesday",
+        "week_number": 6
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 7.5,
+        "description": "[Z2] 7.5 mile easy run - 1.0mi warmup + dynamic stretches + 6.5mi easy at - recovery pace after yesterday's tempo",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.63,
+        "description": "[Z2] 5.63 mile easy run - 1.0mi warmup + dynamic stretches + 4.63mi easy at - recovery pace after yesterday's tempo",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.75,
+        "description": "[Z2] 3.75 mile easy run - 1.0mi warmup + dynamic stretches + 2.75mi easy at - recovery pace after yesterday's tempo",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-10": {
+      "day_metadata": {
+        "day_of_week": "wednesday",
+        "day_name": "Wednesday",
+        "week_number": 6
+      },
+      "workout_type": "strength_laps",
+      "intensity": "high",
+      "category": "strength",
+      "advanced": {
+        "mileage": 8.0,
+        "description": "[Strength] 8.0 mile strength laps - 1.0mi warmup + dynamic stretches + 2×12min strength laps with 3min water break + 4.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 6.0,
+        "description": "[Strength] 8.0 mile strength laps - 1.0mi warmup + dynamic stretches + 2×12min strength laps with 3min water break + 4.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.0,
+        "description": "[Strength] 8.0 mile strength laps - 1.0mi warmup + dynamic stretches + 2×12min strength laps with 3min water break + 4.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-11": {
+      "day_metadata": {
+        "day_of_week": "thursday",
+        "day_name": "Thursday",
+        "week_number": 6
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 7.5,
+        "description": "[Z2] 7.5 mile easy run - 1.0mi warmup + dynamic stretches + 6.5mi easy at - comfortable pace, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.63,
+        "description": "[Z2] 5.63 mile easy run - 1.0mi warmup + dynamic stretches + 4.63mi easy at - comfortable pace, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.75,
+        "description": "[Z2] 3.75 mile easy run - 1.0mi warmup + dynamic stretches + 2.75mi easy at - comfortable pace, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-12": {
+      "day_metadata": {
+        "day_of_week": "friday",
+        "day_name": "Friday",
+        "week_number": 6
+      },
+      "workout_type": "pre_race_easy",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 5.0,
+        "description": "[Z2] 5.0 mile pre-race easy - 1.0mi warmup + dynamic stretches + 6×100m strides + 3.5mi easy",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 3.75,
+        "description": "[Z2] 5.0 mile pre-race easy - 1.0mi warmup + dynamic stretches + 6×100m strides + 3.5mi easy",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 2.5,
+        "description": "[Z2] 5.0 mile pre-race easy - 1.0mi warmup + dynamic stretches + 6×100m strides + 3.5mi easy",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-13": {
+      "day_metadata": {
+        "day_of_week": "saturday",
+        "day_name": "Saturday",
+        "week_number": 6
+      },
+      "workout_type": "race",
+      "intensity": "high",
+      "category": "race",
+      "advanced": {
+        "mileage": 5.5,
+        "description": "[RACE] Evening meet - 1.0mi warmup + dynamic stretches + 0.25mi strides + 3.1mi race + 1mi cooldown (limited due to darkness)",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.5,
+        "description": "[RACE] Evening meet - 1.0mi warmup + dynamic stretches + 0.25mi strides + 3.1mi race + 1mi cooldown (limited due to darkness)",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.5,
+        "description": "[RACE] Evening meet - 1.0mi warmup + dynamic stretches + 0.25mi strides + 3.1mi race + 1mi cooldown (limited due to darkness)",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-14": {
+      "day_metadata": {
+        "day_of_week": "sunday",
+        "day_name": "Sunday",
+        "week_number": 6
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "recovery",
+      "advanced": {
+        "mileage": 3.5,
+        "description": "[Z2] 3.5 mile recovery run - 0.5mi warmup + dynamic stretches + 3mi easy recovery on their own",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 3.5,
+        "description": "[Z2] 3.5 mile recovery run - 0.5mi warmup + dynamic stretches + 3mi easy recovery on their own",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.5,
+        "description": "[Z2] 3.5 mile recovery run - 0.5mi warmup + dynamic stretches + 3mi easy recovery on their own",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    }
+  },
+  "week_7": {
+    "week_metadata": {
+      "week_number": 7,
+      "start_date": "2025-09-15",
+      "end_date": "2025-09-21",
+      "phase": "build",
+      "mileage_targets": {
+        "advanced": 22.0,
+        "intermediate": 16.5,
+        "beginner": 11.0
+      },
+      "mileage_actual": {
+        "advanced": null,
+        "intermediate": null,
+        "beginner": null
+      }
+    },
+    "2025-09-15": {
+      "day_metadata": {
+        "day_of_week": "monday",
+        "day_name": "Monday",
+        "week_number": 7
+      },
+      "workout_type": "track_intervals",
+      "intensity": "high",
+      "category": "intervals",
+      "advanced": {
+        "mileage": 8.0,
+        "description": "[INTERVAL] 8.0 mile track intervals - 1.0mi warmup + dynamic stretches + 8×400m at 5K pace (90sec recovery) + 4x100m strides + 3.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 6.0,
+        "description": "[INTERVAL] 6.0 mile track intervals - 1.0mi warmup + dynamic stretches + 6×400m at 5K pace (90sec recovery) + 4x100m strides + 2.38mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.0,
+        "description": "[INTERVAL] 4.0 mile track intervals - 1.0mi warmup + 4×400m at 5K pace (90sec recovery) + 4x100m strides + 1.25mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-16": {
+      "day_metadata": {
+        "day_of_week": "tuesday",
+        "day_name": "Tuesday",
+        "week_number": 7
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 7.5,
+        "description": "[Z2] 7.5 mile easy run - 1.0mi warmup + dynamic stretches + 6.5mi easy at recovery pace after yesterday's track workout",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.63,
+        "description": "[Z2] 5.63 mile easy run - 1.0mi warmup + dynamic stretches + 4.63mi easy at recovery pace after yesterday's track workout",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.75,
+        "description": "[Z2] 3.75 mile easy run - 1.0mi warmup + dynamic stretches + 2.75mi easy at recovery pace after yesterday's track workout",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-17": {
+      "day_metadata": {
+        "day_of_week": "wednesday",
+        "day_name": "Wednesday",
+        "week_number": 7
+      },
+      "workout_type": "circuit",
+      "intensity": "high",
+      "category": "circuit",
+      "advanced": {
+        "mileage": 8.0,
+        "description": "[Strength] 8.0 mile circuit training - 1.0mi warmup + 35.0min circuit (squats, planks, lunges, step-ups with 400m jog between sets) + 4.5mi easy + 4x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 6.0,
+        "description": "[Strength] 6.0 mile circuit training - 1.0mi warmup + 26.25min circuit (squats, planks, lunges, step-ups with 400m jog between sets) + 3.13mi easy + 4x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.0,
+        "description": "[Strength] 4.0 mile circuit training - 0.75mi warmup + 17.5min circuit (squats, planks, lunges, step-ups with 400m jog between sets) + 2.0mi easy + 4x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-18": {
+      "day_metadata": {
+        "day_of_week": "thursday",
+        "day_name": "Thursday",
+        "week_number": 7
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 7.5,
+        "description": "[Z2] 7.5 mile easy run - 1.0mi warmup + dynamic stretches + 6.5mi easy at comfortable pace, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.63,
+        "description": "[Z2] 5.63 mile easy run - 1.0mi warmup + dynamic stretches + 4.63mi easy at comfortable pace, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.75,
+        "description": "[Z2] 3.75 mile easy run - 1.0mi warmup + dynamic stretches + 2.75mi easy at comfortable pace, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-19": {
+      "day_metadata": {
+        "day_of_week": "friday",
+        "day_name": "Friday",
+        "week_number": 7
+      },
+      "workout_type": "cruise_intervals",
+      "intensity": "threshold",
+      "category": "intervals",
+      "advanced": {
+        "mileage": 7.0,
+        "description": "[LT2] 7.0 mile cruise intervals - 1.0mi warmup + dynamic stretches + 5×5.0min at threshold pace (90sec recovery) + 4x100m strides + 2.25mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.25,
+        "description": "[LT2] 5.25 mile cruise intervals - 1.0mi warmup + dynamic stretches + 5×3.75min at threshold pace (90sec recovery) + 4x100m strides + 1.44mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.5,
+        "description": "[LT2] 3.5 mile cruise intervals - 1.0mi warmup + 5×2.5min at threshold pace (90sec recovery) + 4x100m strides + 0.63mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-20": {
+      "day_metadata": {
+        "day_of_week": "saturday",
+        "day_name": "Saturday",
+        "week_number": 7
+      },
+      "workout_type": "long_run",
+      "intensity": "zone2",
+      "category": "long_run",
+      "advanced": {
+        "mileage": 10.0,
+        "description": "[Z2] 10.0 mile long run - 1.0mi warmup + dynamic stretches + 9.0mi long run starting easy, build to steady aerobic pace, maintain form throughout",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 7.5,
+        "description": "[Z2] 7.5 mile long run - 1.0mi warmup + dynamic stretches + 6.5mi long run starting easy, build to steady aerobic pace, maintain form throughout",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 5.0,
+        "description": "[Z2] 5.0 mile long run - 1.0mi warmup + dynamic stretches + 4.0mi long run starting easy, build to steady aerobic pace, maintain form throughout",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-21": {
+      "day_metadata": {
+        "day_of_week": "sunday",
+        "day_name": "Sunday",
+        "week_number": 7
+      },
+      "workout_type": "rest",
+      "intensity": "rest",
+      "category": "rest",
+      "advanced": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    }
+  },
+  "week_8": {
+    "week_metadata": {
+      "week_number": 8,
+      "start_date": "2025-09-22",
+      "end_date": "2025-09-28",
+      "phase": "build",
+      "mileage_targets": {
+        "advanced": 16.0,
+        "intermediate": 12.0,
+        "beginner": 8.0
+      },
+      "mileage_actual": {
+        "advanced": null,
+        "intermediate": null,
+        "beginner": null
+      }
+    },
+    "2025-09-22": {
+      "day_metadata": {
+        "day_of_week": "monday",
+        "day_name": "Monday",
+        "week_number": 8
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 7.0,
+        "description": "[Z2] 7.0 mile easy run - 1.0mi warmup + dynamic stretches + 6.0mi recovery week start at comfortable aerobic pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.25,
+        "description": "[Z2] 5.25 mile easy run - 1.0mi warmup + dynamic stretches + 4.25mi recovery week start at comfortable aerobic pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.5,
+        "description": "[Z2] 3.5 mile easy run - 1.0mi warmup + dynamic stretches + 2.5mi recovery week start at comfortable aerobic pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-23": {
+      "day_metadata": {
+        "day_of_week": "tuesday",
+        "day_name": "Tuesday",
+        "week_number": 8
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 5.0,
+        "description": "[Z2] 5.0 mile pre-race easy run - 1.0mi warmup + dynamic stretches + 6x100m strides + 3.75mi relaxed pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 3.75,
+        "description": "[Z2] 3.75 mile pre-race easy run - 1.0mi warmup + dynamic stretches + 6x100m strides + 2.5mi relaxed pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 2.5,
+        "description": "[Z2] 2.5 mile pre-race easy run - 1.0mi warmup + dynamic stretches + 6x100m strides + 1.25mi relaxed pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-24": {
+      "day_metadata": {
+        "day_of_week": "wednesday",
+        "day_name": "Wednesday",
+        "week_number": 8
+      },
+      "workout_type": "race",
+      "intensity": "high",
+      "category": "race",
+      "advanced": {
+        "mileage": 7.5,
+        "description": "[RACE] SVC #1 @ Folsom Lake College - 1.0mi warmup + dynamic stretches + 0.25mi strides + 3.1mi race + 3.15mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.63,
+        "description": "[RACE] SVC #1 @ Folsom Lake College - 1.0mi warmup + dynamic stretches + 0.19mi strides + 2.33mi race + 2.12mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.75,
+        "description": "[RACE] SVC #1 @ Folsom Lake College - 1.0mi warmup + dynamic stretches + 0.13mi strides + 1.55mi race + 1.08mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-25": {
+      "day_metadata": {
+        "day_of_week": "thursday",
+        "day_name": "Thursday",
+        "week_number": 8
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 6.5,
+        "description": "[Z2] 6.5 mile easy run - 1.0mi warmup + dynamic stretches + 5.5mi recovery pace after yesterday's race",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.88,
+        "description": "[Z2] 4.88 mile easy run - 1.0mi warmup + dynamic stretches + 3.88mi recovery pace after yesterday's race",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.25,
+        "description": "[Z2] 3.25 mile easy run - 1.0mi warmup + dynamic stretches + 2.25mi recovery pace after yesterday's race",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-26": {
+      "day_metadata": {
+        "day_of_week": "friday",
+        "day_name": "Friday",
+        "week_number": 8
+      },
+      "workout_type": "tire_pulls",
+      "intensity": "high",
+      "category": "tire_pulls",
+      "advanced": {
+        "mileage": 7.0,
+        "description": "[Strength] 7.0 mile tire pulls - 1.0mi warmup + dynamic stretches + 6×400m tire pulls (400m jog recovery) + 2.0mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.25,
+        "description": "[Strength] 5.25 mile tire pulls - 1.0mi warmup + dynamic stretches + 4×400m tire pulls (400m jog recovery) + 1.25mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.5,
+        "description": "[Strength] 3.5 mile tire pulls - 1.0mi warmup + dynamic stretches + 3×400m tire pulls (400m jog recovery) + 0.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-27": {
+      "day_metadata": {
+        "day_of_week": "saturday",
+        "day_name": "Saturday",
+        "week_number": 8
+      },
+      "workout_type": "long_run",
+      "intensity": "zone2",
+      "category": "long_run",
+      "advanced": {
+        "mileage": 8.5,
+        "description": "[Z2] 8.5 mile long run - 1.0mi warmup + dynamic stretches + 7.5mi recovery week volume, maintain steady aerobic pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 6.38,
+        "description": "[Z2] 6.38 mile long run - 1.0mi warmup + dynamic stretches + 5.38mi recovery week volume, maintain steady aerobic pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.25,
+        "description": "[Z2] 4.25 mile long run - 1.0mi warmup + dynamic stretches + 3.25mi recovery week volume, maintain steady aerobic pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-28": {
+      "day_metadata": {
+        "day_of_week": "sunday",
+        "day_name": "Sunday",
+        "week_number": 8
+      },
+      "workout_type": "rest",
+      "intensity": "rest",
+      "category": "rest",
+      "advanced": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    }
+  },
+  "week_9": {
+    "week_metadata": {
+      "week_number": 9,
+      "start_date": "2025-09-29",
+      "end_date": "2025-10-05",
+      "phase": "build",
+      "mileage_targets": {
+        "advanced": 43.5,
+        "intermediate": 32.6,
+        "beginner": 21.8
+      },
+      "mileage_actual": {
+        "advanced": null,
+        "intermediate": null,
+        "beginner": null
+      }
+    },
+    "2025-09-29": {
+      "day_metadata": {
+        "day_of_week": "monday",
+        "day_name": "Monday",
+        "week_number": 9
+      },
+      "workout_type": "tempo",
+      "intensity": "threshold",
+      "category": "tempo",
+      "advanced": {
+        "mileage": 8.0,
+        "description": "[LT2] 8.0 mile tempo run - 1.0mi warmup + dynamic stretches + 20min tempo at threshold pace (30 sec slower than 5K pace) + 4x100m strides + 3.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 6.0,
+        "description": "[LT2] 6.0 mile tempo run - 1.0mi warmup + dynamic stretches + 15min tempo at threshold pace (30 sec slower than 5K pace) + 4x100m strides + 2.38mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.0,
+        "description": "[LT2] 4.0 mile tempo run - 1.0mi warmup + dynamic stretches + 10min tempo at threshold pace (30 sec slower than 5K pace) + 4x100m strides + 1.25mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-09-30": {
+      "day_metadata": {
+        "day_of_week": "tuesday",
+        "day_name": "Tuesday",
+        "week_number": 9
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 7.0,
+        "description": "[Z2] 7.0 mile easy run - 1.0mi warmup + dynamic stretches + 6.0mi recovery pace after yesterday's tempo",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.25,
+        "description": "[Z2] 5.25 mile easy run - 1.0mi warmup + dynamic stretches + 4.25mi recovery pace after yesterday's tempo",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.5,
+        "description": "[Z2] 3.5 mile easy run - 1.0mi warmup + dynamic stretches + 2.5mi recovery pace after yesterday's tempo",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-01": {
+      "day_metadata": {
+        "day_of_week": "wednesday",
+        "day_name": "Wednesday",
+        "week_number": 9
+      },
+      "workout_type": "circuit_training",
+      "intensity": "strength",
+      "category": "circuit",
+      "advanced": {
+        "mileage": 4.5,
+        "description": "[SP] 4.5 mile circuit training - 1.0mi warmup + dynamic stretches + 4 sets (20 single-leg squats each side, 20 calf raises each side, 20 step-ups each side, 90sec plank, 400m jog) + 2.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 3.5,
+        "description": "[SP] 3.5 mile circuit training - 1.0mi warmup + dynamic stretches + 4 sets (15 single-leg squats each side, 15 calf raises each side, 15 step-ups each side, 60sec plank, 400m jog) + 1.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 2.25,
+        "description": "[SP] 2.25 mile circuit training - 1.0mi warmup + dynamic stretches + 3 sets (15 single-leg squats each side, 15 calf raises each side, 15 step-ups each side, 60sec plank, 400m jog) + 0.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-02": {
+      "day_metadata": {
+        "day_of_week": "thursday",
+        "day_name": "Thursday",
+        "week_number": 9
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 6.5,
+        "description": "[Z2] 6.5 mile easy run - 1.0mi warmup + dynamic stretches + 5.5mi comfortable pace, recovery from intervals",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.88,
+        "description": "[Z2] 4.88 mile easy run - 1.0mi warmup + dynamic stretches + 3.88mi comfortable pace, recovery from intervals",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.25,
+        "description": "[Z2] 3.25 mile easy run - 1.0mi warmup + dynamic stretches + 2.25mi comfortable pace, recovery from intervals",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-03": {
+      "day_metadata": {
+        "day_of_week": "friday",
+        "day_name": "Friday",
+        "week_number": 9
+      },
+      "workout_type": "track_intervals",
+      "intensity": "high",
+      "category": "intervals",
+      "advanced": {
+        "mileage": 6.0,
+        "description": "[AP] 6.0 mile track intervals - 1.0mi warmup + dynamic stretches + 5×600m at 5K pace (90sec recovery) + 4x100m strides + 1.88mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.5,
+        "description": "[AP] 4.5 mile track intervals - 1.0mi warmup + dynamic stretches + 4×600m at 5K pace (90sec recovery) + 4x100m strides + 1.13mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.0,
+        "description": "[AP] 3.0 mile track intervals - 1.0mi warmup + dynamic stretches + 3×600m at 5K pace (90sec recovery) + 4x100m strides + 0.38mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-04": {
+      "day_metadata": {
+        "day_of_week": "saturday",
+        "day_name": "Saturday",
+        "week_number": 9
+      },
+      "workout_type": "long_run",
+      "intensity": "zone2",
+      "category": "long_run",
+      "advanced": {
+        "mileage": 9.5,
+        "description": "[Z2] 9.5 mile long run - 1.0mi warmup + dynamic stretches + 8.5mi steady aerobic pace, focus on consistent effort",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 6.75,
+        "description": "[Z2] 6.75 mile long run - 1.0mi warmup + dynamic stretches + 5.75mi steady aerobic pace, focus on consistent effort",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.5,
+        "description": "[Z2] 4.5 mile long run - 1.0mi warmup + dynamic stretches + 3.5mi steady aerobic pace, focus on consistent effort",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-05": {
+      "day_metadata": {
+        "day_of_week": "sunday",
+        "day_name": "Sunday",
+        "week_number": 9
+      },
+      "workout_type": "rest",
+      "intensity": "rest",
+      "category": "rest",
+      "advanced": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    }
+  },
+  "week_10": {
+    "week_metadata": {
+      "week_number": 10,
+      "start_date": "2025-10-06",
+      "end_date": "2025-10-12",
+      "phase": "build",
+      "mileage_targets": {
+        "advanced": 45.5,
+        "intermediate": 34.1,
+        "beginner": 22.8
+      },
+      "mileage_actual": {
+        "advanced": null,
+        "intermediate": null,
+        "beginner": null
+      }
+    },
+    "2025-10-06": {
+      "day_metadata": {
+        "day_of_week": "monday",
+        "day_name": "Monday",
+        "week_number": 10
+      },
+      "workout_type": "cruise_intervals",
+      "intensity": "threshold",
+      "category": "intervals",
+      "advanced": {
+        "mileage": 8.0,
+        "description": "[LT2] 8.0 mile cruise intervals - 1.0mi warmup + dynamic stretches + 5×6.0min at threshold pace (90sec recovery) + 4x100m strides + 2.0mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 6.0,
+        "description": "[LT2] 6.0 mile cruise intervals - 1.0mi warmup + dynamic stretches + 5×4.5min at threshold pace (90sec recovery) + 4x100m strides + 1.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.25,
+        "description": "[LT2] 4.25 mile cruise intervals - 1.0mi warmup + dynamic stretches + 5×3.0min at threshold pace (90sec recovery) + 4x100m strides + 0.75mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-07": {
+      "day_metadata": {
+        "day_of_week": "tuesday",
+        "day_name": "Tuesday",
+        "week_number": 10
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 5.0,
+        "description": "[Z2] 5.0 mile pre-race easy run - 1.0mi warmup + dynamic stretches + 3.75mi relaxed pace + 6x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.13,
+        "description": "[Z2] 4.13 mile pre-race easy run - relaxed pace with 6x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 2.75,
+        "description": "[Z2] 2.75 mile pre-race easy run - relaxed pace with 6x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-08": {
+      "day_metadata": {
+        "day_of_week": "wednesday",
+        "day_name": "Wednesday",
+        "week_number": 10
+      },
+      "workout_type": "race",
+      "intensity": "high",
+      "category": "race",
+      "advanced": {
+        "mileage": 7.25,
+        "description": "[RACE] SVC #2 @ Rosemont - 1.0mi warmup + dynamic stretches + 0.25mi strides + 3.0mi race + 3.0mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.25,
+        "description": "[RACE] SVC #2 @ Rosemont - 1.0mi warmup + 0.25mi strides + 3.0mi race + 1.0mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.0,
+        "description": "[RACE] SVC #2 @ Rosemont - 0.75mi warmup + 0.25mi strides + 2.0mi race + 1.0mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-09": {
+      "day_metadata": {
+        "day_of_week": "thursday",
+        "day_name": "Thursday",
+        "week_number": 10
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 6.0,
+        "description": "[Z2] 6.0 mile easy run - 1.0mi warmup + dynamic stretches + 5.0mi recovery pace after yesterday's race",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.25,
+        "description": "[Z2] 5.25 mile easy run - recovery pace after yesterday's race",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.5,
+        "description": "[Z2] 3.5 mile easy run - recovery pace after yesterday's race",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-10": {
+      "day_metadata": {
+        "day_of_week": "friday",
+        "day_name": "Friday",
+        "week_number": 10
+      },
+      "workout_type": "stadium_stairs",
+      "intensity": "high",
+      "category": "stadium_stairs",
+      "advanced": {
+        "mileage": 7.5,
+        "description": "[SP] 7.5 mile strength laps - 1.0mi warmup + dynamic stretches + 2×12min strength laps (3min water break between sets) + 4x100m strides + 4.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.63,
+        "description": "[Strength] 5.63 mile stadium stairs - 1.5mi warmup + dynamic stretches + 10 trips up stadium stairs (jog down recovery) + 3.0mi easy + 4x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.75,
+        "description": "[Strength] 3.75 mile stadium stairs - 1.0mi warmup + dynamic stretches + 10 trips up stadium stairs (jog down recovery) + 2.0mi easy + 4x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-11": {
+      "day_metadata": {
+        "day_of_week": "saturday",
+        "day_name": "Saturday",
+        "week_number": 10
+      },
+      "workout_type": "long_run",
+      "intensity": "zone2",
+      "category": "long_run",
+      "advanced": {
+        "mileage": 11.0,
+        "description": "[Z2] 11.0 mile long run - 1.0mi warmup + dynamic stretches + 10.0mi start easy, build to steady aerobic pace, focus on maintaining form",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 8.25,
+        "description": "[Z2] 8.25 mile long run - start easy, build to steady aerobic pace, focus on maintaining form",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 5.5,
+        "description": "[Z2] 5.5 mile long run - start easy, build to steady aerobic pace, focus on maintaining form",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-12": {
+      "day_metadata": {
+        "day_of_week": "sunday",
+        "day_name": "Sunday",
+        "week_number": 10
+      },
+      "workout_type": "rest",
+      "intensity": "rest",
+      "category": "rest",
+      "advanced": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    }
+  },
+  "week_11": {
+    "week_metadata": {
+      "week_number": 11,
+      "start_date": "2025-10-13",
+      "end_date": "2025-10-19",
+      "phase": "build",
+      "mileage_targets": {
+        "advanced": 45.5,
+        "intermediate": 34.1,
+        "beginner": 22.8
+      },
+      "mileage_actual": {
+        "advanced": null,
+        "intermediate": null,
+        "beginner": null
+      }
+    },
+    "2025-10-13": {
+      "day_metadata": {
+        "day_of_week": "monday",
+        "day_name": "Monday",
+        "week_number": 11
+      },
+      "workout_type": "track_intervals",
+      "intensity": "high",
+      "category": "intervals",
+      "advanced": {
+        "mileage": 8.5,
+        "description": "[AP] 8.5 mile track intervals - 1.0mi warmup + dynamic stretches + 8×600m at 5K pace (90sec recovery) + 4x100m strides + 3.0mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 6.38,
+        "description": "[INTERVAL] 6.38 mile track intervals - 1.5mi warmup + 6×600m at 5K pace (90sec recovery) + 4x100m strides + 1.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.25,
+        "description": "[INTERVAL] 4.25 mile track intervals - 1.0mi warmup + 4×600m at 5K pace (90sec recovery) + 4x100m strides + 1.0mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-14": {
+      "day_metadata": {
+        "day_of_week": "tuesday",
+        "day_name": "Tuesday",
+        "week_number": 11
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 7.5,
+        "description": "[Z2] 7.5 mile easy run - 1.0mi warmup + dynamic stretches + 6.5mi recovery pace after yesterday's track workout",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.63,
+        "description": "[Z2] 5.63 mile easy run - recovery pace after yesterday's track workout",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.75,
+        "description": "[Z2] 3.75 mile easy run - recovery pace after yesterday's track workout",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-15": {
+      "day_metadata": {
+        "day_of_week": "wednesday",
+        "day_name": "Wednesday",
+        "week_number": 11
+      },
+      "workout_type": "tire_pulls",
+      "intensity": "high",
+      "category": "tire_pulls",
+      "advanced": {
+        "mileage": 8.0,
+        "description": "[SP] 8.0 mile tire pulls - 1.0mi warmup + dynamic stretches + 7×400m tire pulls (400m jog recovery) + 2.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 6.0,
+        "description": "[Strength] 6.0 mile tire pulls - 1.5mi warmup + dynamic stretches + 5×400m tire pulls (400m jog recovery) + 1.13mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.0,
+        "description": "[Strength] 4.0 mile tire pulls - 1.0mi warmup + dynamic stretches + 3×400m tire pulls (400m jog recovery) + 0.75mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-16": {
+      "day_metadata": {
+        "day_of_week": "thursday",
+        "day_name": "Thursday",
+        "week_number": 11
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 7.5,
+        "description": "[Z2] 7.5 mile easy run - 1.0mi warmup + dynamic stretches + 6.5mi comfortable pace, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.63,
+        "description": "[Z2] 5.63 mile easy run - comfortable pace, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.75,
+        "description": "[Z2] 3.75 mile easy run - comfortable pace, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-17": {
+      "day_metadata": {
+        "day_of_week": "friday",
+        "day_name": "Friday",
+        "week_number": 11
+      },
+      "workout_type": "tempo",
+      "intensity": "threshold",
+      "category": "tempo",
+      "advanced": {
+        "mileage": 6.5,
+        "description": "[LT2] 6.5 mile tempo run - 1.0mi warmup + dynamic stretches + 25min tempo at threshold pace + 4x100m strides + 2.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.88,
+        "description": "[LT] 4.88 mile tempo run - 1.5mi warmup + 18.75min tempo at threshold pace + 4x100m strides + 1.13mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.25,
+        "description": "[LT] 3.25 mile tempo run - 1.0mi warmup + 12.5min tempo at threshold pace + 4x100m strides + 0.75mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-18": {
+      "day_metadata": {
+        "day_of_week": "saturday",
+        "day_name": "Saturday",
+        "week_number": 11
+      },
+      "workout_type": "long_run",
+      "intensity": "zone2",
+      "category": "long_run",
+      "advanced": {
+        "mileage": 12.0,
+        "description": "[Z2] 12.0 mile long run - 1.0mi warmup + dynamic stretches + 11.0mi peak week long run, maintain steady aerobic pace throughout",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 9.0,
+        "description": "[Z2] 9.0 mile long run - peak week long run, maintain steady aerobic pace throughout",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 6.0,
+        "description": "[Z2] 6.0 mile long run - peak week long run, maintain steady aerobic pace throughout",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-19": {
+      "day_metadata": {
+        "day_of_week": "sunday",
+        "day_name": "Sunday",
+        "week_number": 11
+      },
+      "workout_type": "rest",
+      "intensity": "rest",
+      "category": "rest",
+      "advanced": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    }
+  },
+  "week_12": {
+    "week_metadata": {
+      "week_number": 12,
+      "start_date": "2025-10-20",
+      "end_date": "2025-10-26",
+      "phase": "taper",
+      "mileage_targets": {
+        "advanced": 39.5,
+        "intermediate": 29.6,
+        "beginner": 19.8
+      },
+      "mileage_actual": {
+        "advanced": null,
+        "intermediate": null,
+        "beginner": null
+      }
+    },
+    "2025-10-20": {
+      "day_metadata": {
+        "day_of_week": "monday",
+        "day_name": "Monday",
+        "week_number": 12
+      },
+      "workout_type": "intervals",
+      "intensity": "high",
+      "category": "intervals",
+      "advanced": {
+        "mileage": 6.5,
+        "description": "[AP] 6.5 mile race pace intervals - 1.0mi warmup + dynamic stretches + 5×800m at 5K pace (2min recovery) + 4x100m strides + 2.0mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.75,
+        "description": "[AP] 4.75 mile race pace intervals - 1.0mi warmup + dynamic stretches + 4×800m at 5K pace (2min recovery) + 4x100m strides + 1.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.25,
+        "description": "[AP] 3.25 mile race pace intervals - 1.0mi warmup + dynamic stretches + 3×800m at 5K pace (2min recovery) + 4x100m strides + 1.0mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-21": {
+      "day_metadata": {
+        "day_of_week": "tuesday",
+        "day_name": "Tuesday",
+        "week_number": 12
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 6.0,
+        "description": "[Z2] 6.0 mile easy run - 1.0mi warmup + dynamic stretches + 5.0mi recovery pace after yesterday's intervals",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.5,
+        "description": "[Z2] 4.5 mile easy run - 1.0mi warmup + dynamic stretches + 3.5mi recovery pace after yesterday's intervals",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.0,
+        "description": "[Z2] 3.0 mile easy run - 1.0mi warmup + dynamic stretches + 2.0mi recovery pace after yesterday's intervals",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-22": {
+      "day_metadata": {
+        "day_of_week": "wednesday",
+        "day_name": "Wednesday",
+        "week_number": 12
+      },
+      "workout_type": "circuit",
+      "intensity": "high",
+      "category": "circuit",
+      "advanced": {
+        "mileage": 6.5,
+        "description": "[Strength] 6.5 mile circuit training - 1.0mi warmup + 25.0min circuit (taper volume) + 4.0mi easy + 4x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.88,
+        "description": "[Strength] 4.88 mile circuit training - 0.75mi warmup + 18.75min circuit (taper volume) + 3.0mi easy + 4x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.25,
+        "description": "[Strength] 3.25 mile circuit training - 0.5mi warmup + 12.5min circuit (taper volume) + 2.0mi easy + 4x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-23": {
+      "day_metadata": {
+        "day_of_week": "thursday",
+        "day_name": "Thursday",
+        "week_number": 12
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 6.0,
+        "description": "[Z2] 6.0 mile easy run - 1.0mi warmup + dynamic stretches + 5.0mi comfortable recovery pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.5,
+        "description": "[Z2] 4.5 mile easy run - 1.0mi warmup + dynamic stretches + 3.5mi comfortable recovery pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.0,
+        "description": "[Z2] 3.0 mile easy run - 1.0mi warmup + dynamic stretches + 2.0mi comfortable recovery pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-24": {
+      "day_metadata": {
+        "day_of_week": "friday",
+        "day_name": "Friday",
+        "week_number": 12
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 5.0,
+        "description": "[Z2] 5.0 mile pre-race easy run - 1.0mi warmup + dynamic stretches + 3.75mi relaxed pace + 6x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.13,
+        "description": "[Z2] 4.13 mile pre-race easy run - relaxed pace with 6x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 2.75,
+        "description": "[Z2] 2.75 mile pre-race easy run - relaxed pace with 6x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-25": {
+      "day_metadata": {
+        "day_of_week": "saturday",
+        "day_name": "Saturday",
+        "week_number": 12
+      },
+      "workout_type": "race",
+      "intensity": "high",
+      "category": "race",
+      "advanced": {
+        "mileage": 7.5,
+        "description": "[RACE] Flat Sac Invitational - 1.0mi warmup + dynamic stretches + 4x100m strides + 3.0mi race + 3.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.75,
+        "description": "[RACE] Flat Sac Invitational - 1.0mi warmup + dynamic stretches + 4x100m strides + 2.25mi race + 2.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 4.0,
+        "description": "[RACE] Flat Sac Invitational - 1.0mi warmup + dynamic stretches + 4x100m strides + 1.5mi race + 1.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-26": {
+      "day_metadata": {
+        "day_of_week": "sunday",
+        "day_name": "Sunday",
+        "week_number": 12
+      },
+      "workout_type": "rest",
+      "intensity": "rest",
+      "category": "rest",
+      "advanced": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    }
+  },
+  "week_13": {
+    "week_metadata": {
+      "week_number": 13,
+      "start_date": "2025-10-27",
+      "end_date": "2025-11-02",
+      "phase": "taper",
+      "mileage_targets": {
+        "advanced": 42.0,
+        "intermediate": 31.5,
+        "beginner": 21.0
+      },
+      "mileage_actual": {
+        "advanced": null,
+        "intermediate": null,
+        "beginner": null
+      }
+    },
+    "2025-10-27": {
+      "day_metadata": {
+        "day_of_week": "monday",
+        "day_name": "Monday",
+        "week_number": 13
+      },
+      "workout_type": "cruise_intervals",
+      "intensity": "threshold",
+      "category": "intervals",
+      "advanced": {
+        "mileage": 6.0,
+        "description": "[LT] 6.0 mile cruise intervals - 1.0mi warmup + dynamic stretches + 3×5.0min at threshold pace (90sec recovery) + 4x100m strides + 2.0mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 4.5,
+        "description": "[LT] 4.5 mile cruise intervals - 1.0mi warmup + dynamic stretches + 3×3.75min at threshold pace (90sec recovery) + 4x100m strides + 1.25mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.0,
+        "description": "[LT] 3.0 mile cruise intervals - 1.0mi warmup + dynamic stretches + 3×2.5min at threshold pace (90sec recovery) + 4x100m strides + 0.75mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-28": {
+      "day_metadata": {
+        "day_of_week": "tuesday",
+        "day_name": "Tuesday",
+        "week_number": 13
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 5.0,
+        "description": "[Z2] 5.0 mile pre-race easy run - 1.0mi warmup + dynamic stretches + 6x100m strides + 3.75mi relaxed pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 3.75,
+        "description": "[Z2] 3.75 mile pre-race easy run - 1.0mi warmup + dynamic stretches + 6x100m strides + 2.5mi relaxed pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 2.5,
+        "description": "[Z2] 2.5 mile pre-race easy run - 1.0mi warmup + dynamic stretches + 6x100m strides + 1.25mi relaxed pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-29": {
+      "day_metadata": {
+        "day_of_week": "wednesday",
+        "day_name": "Wednesday",
+        "week_number": 13
+      },
+      "workout_type": "race",
+      "intensity": "high",
+      "category": "race",
+      "advanced": {
+        "mileage": 7.5,
+        "description": "[RACE] SVC Championships @ Folsom Lake College - 1.0mi warmup + dynamic stretches + 4x100m strides + 3.0mi race + 3.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.75,
+        "description": "[RACE] SVC Championships @ Folsom Lake College - 1.0mi warmup + dynamic stretches + 4x100m strides + 2.25mi race + 2.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.75,
+        "description": "[RACE] SVC Championships @ Folsom Lake College - 1.0mi warmup + dynamic stretches + 4x100m strides + 1.5mi race + 1.25mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-30": {
+      "day_metadata": {
+        "day_of_week": "thursday",
+        "day_name": "Thursday",
+        "week_number": 13
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 5.0,
+        "description": "[Z2] 5.0 mile easy run - 1.0mi warmup + dynamic stretches + 4.0mi recovery pace after yesterday's race",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 3.75,
+        "description": "[Z2] 3.75 mile easy run - 1.0mi warmup + dynamic stretches + 2.75mi recovery pace after yesterday's race",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 2.5,
+        "description": "[Z2] 2.5 mile easy run - 1.0mi warmup + dynamic stretches + 1.5mi recovery pace after yesterday's race",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-10-31": {
+      "day_metadata": {
+        "day_of_week": "friday",
+        "day_name": "Friday",
+        "week_number": 13
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 4.0,
+        "description": "[Z2] 4.0 mile easy run - 1.0mi warmup + dynamic stretches + 3.0mi easy shakeout",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 3.0,
+        "description": "[Z2] 3.0 mile easy run - 1.0mi warmup + dynamic stretches + 2.0mi easy shakeout",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 2.0,
+        "description": "[Z2] 2.0 mile easy run - 1.0mi warmup + dynamic stretches + 1.0mi easy shakeout",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-11-01": {
+      "day_metadata": {
+        "day_of_week": "saturday",
+        "day_name": "Saturday",
+        "week_number": 13
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 4.5,
+        "description": "[Z2] 4.5 mile easy run - 1.0mi warmup + dynamic stretches + 3.5mi light jog + 4x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 3.5,
+        "description": "[Z2] 3.5 mile easy run - 1.0mi warmup + dynamic stretches + 2.5mi light jog + 4x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 2.25,
+        "description": "[Z2] 2.25 mile easy run - 1.0mi warmup + dynamic stretches + 1.25mi light jog + 4x100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-11-02": {
+      "day_metadata": {
+        "day_of_week": "sunday",
+        "day_name": "Sunday",
+        "week_number": 13
+      },
+      "workout_type": "rest",
+      "intensity": "rest",
+      "category": "rest",
+      "advanced": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    }
+  },
+  "week_14": {
+    "week_metadata": {
+      "week_number": 14,
+      "start_date": "2025-11-03",
+      "end_date": "2025-11-09",
+      "phase": "taper",
+      "mileage_targets": {
+        "advanced": 45.0,
+        "intermediate": 33.8,
+        "beginner": 22.5
+      },
+      "mileage_actual": {
+        "advanced": null,
+        "intermediate": null,
+        "beginner": null
+      }
+    },
+    "2025-11-03": {
+      "day_metadata": {
+        "day_of_week": "monday",
+        "day_name": "Monday",
+        "week_number": 14
+      },
+      "workout_type": "track_intervals",
+      "intensity": "high",
+      "category": "intervals",
+      "advanced": {
+        "mileage": 5.0,
+        "description": "[INTERVAL] 5.0 mile track intervals - 1.0mi warmup + dynamic stretches + 4×400m at 5K pace (90sec recovery) + 4x100m strides + 2.0mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 3.75,
+        "description": "[INTERVAL] 3.75 mile track intervals - 1.0mi warmup + dynamic stretches + 3×400m at 5K pace (90sec recovery) + 4x100m strides + 1.25mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 2.5,
+        "description": "[INTERVAL] 2.5 mile track intervals - 1.0mi warmup + dynamic stretches + 2×400m at 5K pace (90sec recovery) + 4x100m strides + 0.75mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-11-04": {
+      "day_metadata": {
+        "day_of_week": "tuesday",
+        "day_name": "Tuesday",
+        "week_number": 14
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 4.0,
+        "description": "[Z2] 4.0 mile easy run - 1.0mi warmup + dynamic stretches + 3.0mi easy pace, stay loose",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 3.0,
+        "description": "[Z2] 3.0 mile easy run - 1.0mi warmup + dynamic stretches + 2.0mi easy pace, stay loose",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 2.0,
+        "description": "[Z2] 2.0 mile easy run - 1.0mi warmup + dynamic stretches + 1.0mi easy pace, stay loose",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-11-05": {
+      "day_metadata": {
+        "day_of_week": "wednesday",
+        "day_name": "Wednesday",
+        "week_number": 14
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 3.5,
+        "description": "[Z2] 3.5 mile easy run - 1.0mi warmup + dynamic stretches + 2.5mi light jog, focus on relaxation",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 2.75,
+        "description": "[Z2] 2.75 mile easy run - 1.0mi warmup + dynamic stretches + 1.75mi light jog, focus on relaxation",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 1.75,
+        "description": "[Z2] 1.75 mile easy run - 1.0mi warmup + dynamic stretches + 0.75mi light jog, focus on relaxation",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-11-06": {
+      "day_metadata": {
+        "day_of_week": "thursday",
+        "day_name": "Thursday",
+        "week_number": 14
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 3.0,
+        "description": "[Z2] 3.0 mile shakeout run - 1.0mi warmup + dynamic stretches + 2.0mi very easy pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 2.25,
+        "description": "[Z2] 2.25 mile shakeout run - 1.0mi warmup + dynamic stretches + 1.25mi very easy pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 1.5,
+        "description": "[Z2] 1.5 mile shakeout run - 1.0mi warmup + dynamic stretches + 0.5mi very easy pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-11-07": {
+      "day_metadata": {
+        "day_of_week": "friday",
+        "day_name": "Friday",
+        "week_number": 14
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 1.5,
+        "description": "[Z2] 1.5 mile pre-race jog - 1.0mi warmup + dynamic stretches + 4×100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 1.25,
+        "description": "[Z2] 1.25 mile pre-race jog - 1.0mi warmup + dynamic stretches + 3×100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.75,
+        "description": "[Z2] 0.75 mile pre-race jog - dynamic stretches only + 2×100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-11-08": {
+      "day_metadata": {
+        "day_of_week": "saturday",
+        "day_name": "Saturday",
+        "week_number": 14
+      },
+      "workout_type": "race",
+      "intensity": "high",
+      "category": "race",
+      "advanced": {
+        "mileage": 6.5,
+        "description": "[RACE] Sub Sections @ Angels Camp - 1.0mi warmup + dynamic stretches + 4x100m strides + 3.0mi race + 2.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 5.0,
+        "description": "[RACE] Sub Sections @ Angels Camp - 1.0mi warmup + dynamic stretches + 4x100m strides + 2.25mi race + 1.75mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 3.25,
+        "description": "[RACE] Sub Sections @ Angels Camp - 1.0mi warmup + dynamic stretches + 4x100m strides + 1.5mi race + 0.75mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-11-09": {
+      "day_metadata": {
+        "day_of_week": "sunday",
+        "day_name": "Sunday",
+        "week_number": 14
+      },
+      "workout_type": "rest",
+      "intensity": "rest",
+      "category": "rest",
+      "advanced": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    }
+  },
+  "week_15": {
+    "week_metadata": {
+      "week_number": 15,
+      "start_date": "2025-11-10",
+      "end_date": "2025-11-16",
+      "phase": "taper",
+      "mileage_targets": {
+        "advanced": 47.5,
+        "intermediate": 35.6,
+        "beginner": 23.8
+      },
+      "mileage_actual": {
+        "advanced": null,
+        "intermediate": null,
+        "beginner": null
+      }
+    },
+    "2025-11-10": {
+      "day_metadata": {
+        "day_of_week": "monday",
+        "day_name": "Monday",
+        "week_number": 15
+      },
+      "workout_type": "strides",
+      "intensity": "high",
+      "category": "strides",
+      "advanced": {
+        "mileage": 3.5,
+        "description": "[SPEED] 3.5 mile strides workout - 1.5mi warmup + 6×100m strides (full recovery) + 1.5mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 2.63,
+        "description": "[SPEED] 2.63 mile strides workout - 1.13mi warmup + 4×100m strides (full recovery) + 1.13mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 1.75,
+        "description": "[SPEED] 1.75 mile strides workout - 0.75mi warmup + 3×100m strides (full recovery) + 0.75mi cooldown",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-11-11": {
+      "day_metadata": {
+        "day_of_week": "tuesday",
+        "day_name": "Tuesday",
+        "week_number": 15
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 3.0,
+        "description": "[Z2] 3.0 mile easy run - very easy pace, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 2.25,
+        "description": "[Z2] 2.25 mile easy run - very easy pace, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 1.5,
+        "description": "[Z2] 1.5 mile easy run - very easy pace, stay relaxed",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-11-12": {
+      "day_metadata": {
+        "day_of_week": "wednesday",
+        "day_name": "Wednesday",
+        "week_number": 15
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 2.5,
+        "description": "[Z2] 2.5 mile easy run - light jog, focus on relaxation",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 1.88,
+        "description": "[Z2] 1.88 mile easy run - light jog, focus on relaxation",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 1.25,
+        "description": "[Z2] 1.25 mile easy run - light jog, focus on relaxation",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-11-13": {
+      "day_metadata": {
+        "day_of_week": "thursday",
+        "day_name": "Thursday",
+        "week_number": 15
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 2.0,
+        "description": "[Z2] 2.0 mile shakeout run - very easy pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 1.5,
+        "description": "[Z2] 1.5 mile shakeout run - very easy pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 1.0,
+        "description": "[Z2] 1.0 mile shakeout run - very easy pace",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-11-14": {
+      "day_metadata": {
+        "day_of_week": "friday",
+        "day_name": "Friday",
+        "week_number": 15
+      },
+      "workout_type": "easy_run",
+      "intensity": "zone2",
+      "category": "easy_run",
+      "advanced": {
+        "mileage": 1.0,
+        "description": "[Z2] 1.0 mile pre-race jog - very light with 4×100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 0.75,
+        "description": "[Z2] 0.75 mile pre-race jog - very light with 3×100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.5,
+        "description": "[Z2] 0.5 mile pre-race jog - very light with 2×100m strides",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-11-15": {
+      "day_metadata": {
+        "day_of_week": "saturday",
+        "day_name": "Saturday",
+        "week_number": 15
+      },
+      "workout_type": "race",
+      "intensity": "high",
+      "category": "race",
+      "advanced": {
+        "mileage": 4.0,
+        "description": "[RACE] Section Championships @ Folsom HS - 1.5mi warmup + 0.25mi strides + 3.1mi race + minimal cooldown (championship focus)",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 3.0,
+        "description": "[RACE] Section Championships @ Folsom HS - 1.13mi warmup + 0.19mi strides + 2.33mi race + minimal cooldown (championship focus)",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 2.0,
+        "description": "[RACE] Section Championships @ Folsom HS - 0.75mi warmup + 0.13mi strides + 1.55mi race + minimal cooldown (championship focus)",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    },
+    "2025-11-16": {
+      "day_metadata": {
+        "day_of_week": "sunday",
+        "day_name": "Sunday",
+        "week_number": 15
+      },
+      "workout_type": "rest",
+      "intensity": "rest",
+      "category": "rest",
+      "advanced": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.0,
+        "description": "Complete rest day",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    }
+  },
+  "week_16": {
+    "week_metadata": {
+      "week_number": 16,
+      "start_date": "2025-11-17",
+      "end_date": "2025-11-30",
+      "phase": "off-season",
+      "mileage_targets": {
+        "advanced": 41.5,
+        "intermediate": 31.1,
+        "beginner": 20.8
+      },
+      "mileage_actual": {
+        "advanced": null,
+        "intermediate": null,
+        "beginner": null
+      }
+    },
+    "2025-11-29": {
+      "day_metadata": {
+        "day_of_week": "saturday",
+        "day_name": "Saturday",
+        "week_number": 16
+      },
+      "workout_type": "race",
+      "intensity": "high",
+      "category": "race",
+      "advanced": {
+        "mileage": 0.0,
+        "description": "[RACE] State Championships @ Fresno - optional for qualifiers only",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "intermediate": {
+        "mileage": 0.0,
+        "description": "[RACE] State Championships @ Fresno - optional for qualifiers only",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      },
+      "beginner": {
+        "mileage": 0.0,
+        "description": "[RACE] State Championships @ Fresno - optional for qualifiers only",
+        "completed": false,
+        "actual_mileage": null,
+        "notes": null
+      }
+    }
+  }
+}
